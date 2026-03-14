@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+\title{Platform for Continuous Evaluation of Romanian Literature}
+\author{
+Iacob Teodora\\
+Martinas Ioana Maria\\
+Mercas Ioana Elisabeta\\
+Sandu Theodor\\
+Sacarescu Rebecca Maria
+}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Abstract}
+This project proposes a web platform for continuous evaluation of Romanian literature editions, combining automatic data ingestion, user reviews, ranking transparency, and search capabilities. The current implementation already defines an end-to-end architecture with a Scrapy crawler for collecting metadata, a FastAPI backend for business logic, PostgreSQL for persistent storage, Meilisearch for full-text lookup, and a Streamlit interface for interaction. Users can browse catalog entries, submit reviews, inspect rankings, and export datasets in CSV or JSON format. The platform includes practical trust and governance features such as rate-limited review submission, moderation endpoints for approval or rejection, and an audit trail that records score updates through score events. The scoring model applies Bayesian shrinkage to avoid unstable rankings when the number of reviews is small, while confidence values communicate ranking reliability. From a software engineering perspective, the project emphasizes modularity, API-first integration, and reproducible deployment with Docker and migration tooling. The NLP module is treated as optional but high-value: sentiment classification fine-tuned on LaRoSeDa and theme extraction from reviews, both integrated only after quality validation.
+
+\noindent\textbf{Keywords:} Romanian literature; web platform; FastAPI; Scrapy; PostgreSQL; Meilisearch; ranking transparency; moderation; audit trail; NLP
+
+\section{Understanding the requirements}
+
+\subsection{Briefly describe what you understood from the given assignment}
+The assignment requires building a practical, data-driven software system that can ingest book-edition metadata, allow review submission, compute and expose transparent rankings, and provide operational endpoints for search, export, and moderation. The solution must integrate multiple components (crawler, backend API, database, search engine, UI), ensure data quality through deduplication and normalization, and support traceability of scoring decisions. It also implies planning-oriented deliverables: explicit objectives, phased implementation, realistic risk analysis, and clear team responsibility allocation.
+
+\subsection{What are the main objectives you need to achieve?}
+\begin{enumerate}[leftmargin=*]
+	\item Deliver a functional end-to-end pipeline: crawl/ingest $\rightarrow$ store/index $\rightarrow$ expose through API/UI.
+	\item Support core user flows: browse editions, search catalog, submit reviews, and view rankings.
+	\item Ensure transparency and governance: moderation workflow, score-event audit trail, and data export.
+	\item Improve reliability and fairness with rate limiting, anomaly checks, and confidence-aware scoring.
+	\item Add the optional NLP module (LaRoSeDa-based sentiment + review theme extraction) with measurable quality metrics.
+	\item Provide reproducible deployment and maintainability via Docker, migrations, and modular service design.
+\end{enumerate}
+
+\section{Implementation planning}
+
+\subsection{What technologies or programming languages do you intend to use?}
+\begin{itemize}[leftmargin=*]
+	\item Python as the primary language for crawler, backend, and UI.
+	\item FastAPI for REST API development.
+	\item PostgreSQL for relational persistence.
+	\item Meilisearch for fast full-text search.
+	\item Streamlit for MVP interface and operator workflows.
+	\item Docker Compose for local orchestration and reproducibility.
+\end{itemize}
+
+\subsection{What libraries or frameworks do you consider useful for your project?}
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Backend:} FastAPI, SQLAlchemy (async), asyncpg, Alembic, Pydantic, SlowAPI, httpx.
+	\item \textbf{Crawler:} Scrapy, BeautifulSoup4 (for future richer parsing).
+	\item \textbf{Search:} meilisearch Python client.
+	\item \textbf{UI:} Streamlit, httpx.
+	\item \textbf{Optional NLP module:} Hugging Face Datasets/Transformers with LaRoSeDa for sentiment fine-tuning, plus topic/theme extraction (e.g., KeyBERT or BERTopic) for review insights.
+\end{itemize}
+
+\subsection{How will you organize the implementation stages?}
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Phase 1: Foundations and setup}
+	\textbf{Implemented already:} project structure, Docker services (PostgreSQL + Meilisearch), dependency files, startup scripts, and DB migrations.
+	\textbf{Next:} add environment-specific profiles and stricter startup health checks for all components.
+
+	\item \textbf{Phase 2: Ingestion pipeline}
+	\textbf{Implemented already:} Scrapy sample spider, normalization + dedup pipelines, ingest endpoint, and basic ISBN/title/author cleanup.
+	\textbf{Next:} replace sample source with real Romanian sources, strengthen deduplication rules, and improve crawl coverage.
+
+	\item \textbf{Phase 3: Core API features}
+	\textbf{Implemented already:} editions, reviews, rankings, moderation, audit, and export endpoints; score updates with event logging.
+	\textbf{Next:} improve validation, add richer error handling, and extend moderation policies.
+
+	\item \textbf{Phase 4: Search and indexing}
+	\textbf{Implemented already:} Meilisearch integration, index creation, ingest-to-index document flow, and search endpoint.
+	\textbf{Next:} tune relevance, add typo tolerance strategy, and monitor index freshness.
+
+	\item \textbf{Phase 5: UI integration}
+	\textbf{Implemented already:} Streamlit pages for catalog, search, ranking, moderation, export, and review submission.
+	\textbf{Next:} improve UX consistency, add loading/error states, and polish mobile behavior.
+
+	\item \textbf{Phase 6: Quality and hardening}
+	\textbf{Implemented already:} rate limiting is active; anti-abuse helper exists.
+	\textbf{Next:} integrate anti-abuse checks in review flow, add automated tests, run performance profiling, and prepare NLP data for sentiment experiments.
+
+	\item \textbf{Phase 7: NLP sentiment integration}
+	\textbf{Implemented already:} NLP folder scaffold exists.
+	\textbf{Next:} implement the optional NLP module: fine-tune a Romanian sentiment model using LaRoSeDa, add theme extraction from reviews, evaluate with macro-F1 (sentiment) and qualitative analysis (themes), expose metadata in API, and visualize outputs in UI.
+
+	\item \textbf{Phase 8: Documentation and delivery}
+	\textbf{Implemented already:} README quick-start and API usage notes; current planning report.
+	\textbf{Next:} finalize user/developer docs, prepare demo script, and freeze release checklist.
+\end{itemize}
+
+\subsection{What are the main technical challenges you anticipate?}
+\begin{itemize}[leftmargin=*]
+	\item Keeping data consistent across crawler, database, and search index under partial failures.
+	\item Deduplication quality (ISBN inconsistencies, title variations, author normalization).
+	\item Fair ranking behavior for low-review items and prevention of score manipulation.
+	\item Designing moderation and anti-abuse rules that reduce spam without blocking valid users.
+	\item Coordinating asynchronous operations (background crawler runs, indexing, DB sessions).
+	\item Maintaining acceptable response times as catalog and review volume grows.
+\end{itemize}
+
+\subsection{How will you manage resources and allocate time for each phase?}
+Proposed allocation over an 8-week window:
+\begin{itemize}[leftmargin=*]
+	\item Week 1: Phase 1 (setup, schema, infrastructure).
+	\item Weeks 2--3: Phase 2 (crawler and ingestion pipeline).
+	\item Weeks 3--4: Phase 3 (core API and scoring/audit logic).
+	\item Week 5: Phase 4 (search integration and relevance checks).
+	\item Week 6: Phase 5 (UI integration and user flow validation).
+	\item Week 7: Phase 6 (testing, hardening, bug fixing, performance, NLP data preparation).
+	\item Week 8: Phase 7 and Phase 8 (optional NLP integration + documentation/demo/final refinements).
+\end{itemize}
+Resource strategy: reserve at least 20\% of total effort for integration/testing buffer; run weekly checkpoints with measurable deliverables and risk review.
+
+\subsection{How will you distribute responsibilities for each teammate?}
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Iacob Teodora -- Crawler and ingestion lead (20\% workload):}
+	Design and maintain Scrapy spiders/pipelines, source adapters, data normalization, and ingestion quality checks; prepares Romanian review text datasets for NLP and supports integration tests for crawl-to-API flow.
+
+	\item \textbf{Sandu Theodor -- Frontend/UI lead (20\% workload):}
+	Own Streamlit interface, user flows (catalog/search/review/moderation/export), UI validation, and usability improvements across desktop/mobile; integrates sentiment indicators and filters in UI views.
+
+	\item \textbf{Martinas Ioana Maria -- Backend API lead (20\% workload):}
+	Own FastAPI endpoint logic, request/response validation, security/rate-limit integration, and backend error-handling improvements; exposes NLP sentiment fields/endpoints.
+
+	\item \textbf{Mercas Ioana Elisabeta -- Data model and scoring lead (20\% workload):}
+	Own SQLAlchemy models, Alembic migrations, score computation logic, ranking consistency checks, and audit-trail correctness; adds schema support for sentiment scores and confidence.
+
+	\item \textbf{Sacarescu Rebecca Maria -- Search, QA, and release lead (20\% workload):}
+	Own Meilisearch relevance/indexing tuning, end-to-end test scenarios, regression tracking, documentation quality, and release readiness checks; leads NLP evaluation protocol (metrics, error analysis, acceptance threshold).
+\end{itemize}
+NLP execution method (optional module): collect and clean review text, fine-tune sentiment on LaRoSeDa, validate using macro-F1, implement theme extraction for review topics, perform qualitative error analysis, and integrate only after reaching the agreed acceptance threshold.
+
+Cross-team policy: all members review pull requests; critical features (scoring, moderation, data ingest, search, and NLP) require at least one peer approval before merge, and each member contributes in every phase through primary + secondary tasks to keep workload balanced.
+
+\end{document}
