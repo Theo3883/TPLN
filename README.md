@@ -1,49 +1,122 @@
 # Platformă Evaluare Literatură Română
 
-Platformă web pentru evaluarea continuă a literaturii române: crawler, recenzii, ranking-uri transparente.
+Platformă web pentru evaluarea continuă a edițiilor de literatură română: crawler, recenzii, ranking-uri transparente, moderare și export date.
+
+## Ce este implementat
+
+### Crawler (`crawler/`)
+- Trei crawlere BeautifulSoup4 + httpx pentru surse reale românești: **bookzone.ro**, **carturesti.ro**, **libris.ro**
+- Extragere metadata: titlu, autori, ISBN, editură, an apariție, copertă
+- Normalizare ISBN (10/13 cifre) și an publicare în fiecare crawler
+- `run_all.py` — rulează toate trei crawlerele și afișează statistici per sursă (total cărți, cărți cu ISBN)
+- Output JSON în `crawler/output/` (bookzone.json, carturesti.json, libris.json)
+
+### Backend API (`backend/`) — FastAPI + PostgreSQL + Meilisearch
+- **Ediții**: `GET /editions`, `GET /editions/{id}` — catalog cu paginare
+- **Recenzii**: `GET /editions/{id}/reviews`, `POST /reviews` — adăugare recenzie cu rate-limiting (SlowAPI)
+- **Ranking**: `GET /rankings` — scoring Bayesian cu shrinkage; include câmpuri de confidence
+- **Audit**: `GET /audit/editions/{id}` — trail complet al actualizărilor de scor prin score events
+- **Export**: `GET /export?format=csv|json` — export catalog
+- **Ingestie**: `POST /ingest` — ingestie din crawler cu deduplicare (ISBN + titlu normalizat), `POST /ingest/run-crawler` — trigger manual
+- **Moderare**: `GET /moderation/pending`, `POST /moderation/{id}/approve`, `POST /moderation/{id}/reject`
+- **Căutare**: `GET /search?q=...` — full-text search prin Meilisearch
+- Migrare schemă DB cu Alembic (`versions/001_initial_schema.py`)
+- Crawlerul pornește automat la startup-ul backend-ului
+
+### UI (`ui/`) — Streamlit
+- **Catalog**: listare ediții, click pentru detaliu + recenzii
+- **Căutare**: full-text search cu afișare rezultate
+- **Ranking**: tabel cu scoruri și confidence
+- **Moderare**: aprobare/respingere recenzii în așteptare
+- **Export**: descărcare date CSV sau JSON
+- Buton lateral pentru declanșarea manuală a crawlerului
+
+### Infrastructură
+- `docker-compose.yml` — PostgreSQL + Meilisearch containerizate
+- `start.sh` / `start.ps1` — startup complet cu un singur comandă
 
 ## Tehnologii
 
-- **Crawler**: Scrapy
-- **Backend**: FastAPI (Python)
-- **DB**: PostgreSQL
-- **Căutare**: Meilisearch
-- **UI**: Streamlit (MVP)
+| Componentă | Tehnologie |
+|---|---|
+| Crawler | BeautifulSoup4 + httpx |
+| Backend | FastAPI, SQLAlchemy (async), asyncpg, Alembic, Pydantic, SlowAPI |
+| Baza de date | PostgreSQL |
+| Căutare full-text | Meilisearch |
+| UI | Streamlit |
+| Orchestrare | Docker Compose |
 
 ## Pornire rapidă
 
-**Pornire completă (Docker + pip install + backend + UI):**
-
 ```bash
+# Linux/macOS
 ./start.sh
-```
 
-Crawlerul rulează automat la pornirea backend-ului.
+# Windows
+.\start.ps1
+```
 
 ### Pornire manuală
 
-1. `docker-compose up -d`
-2. `cd backend && pip install -r requirements.txt && alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000`
-3. `cd ui && pip install -r requirements.txt && streamlit run app.py`
+```bash
+docker-compose up -d
+cd backend
+pip install -r requirements.txt
+alembic upgrade head
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+# într-un terminal separat:
+cd ui
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-## API
+### Rulare crawler independent
 
-- Documentație interactivă: http://localhost:8000/docs
-- `GET /editions` – catalog
-- `GET /editions/{id}` – detaliu ediție
-- `GET /editions/{id}/reviews` – recenzii
-- `POST /reviews` – adaugă recenzie (rate-limited)
-- `GET /rankings` – ranking
-- `GET /audit/editions/{id}` – audit trail
-- `GET /export?format=csv|json` – export date
-- `POST /ingest` – ingestie crawler
+```bash
+cd crawler
+pip install -r requirements.txt
+python run_all.py
+```
 
-## Structură
+## Endpoint-uri API principale
+
+| Metodă | Cale | Descriere |
+|---|---|---|
+| GET | `/editions` | Catalog ediții (paginat) |
+| GET | `/editions/{id}` | Detaliu ediție |
+| GET | `/editions/{id}/reviews` | Recenzii pentru o ediție |
+| POST | `/reviews` | Adaugă recenzie (rate-limited) |
+| GET | `/rankings` | Ranking cu scoring Bayesian |
+| GET | `/search?q=` | Căutare full-text |
+| GET | `/audit/editions/{id}` | Audit trail scor |
+| GET | `/export?format=csv\|json` | Export date |
+| POST | `/ingest` | Ingestie date crawler |
+| POST | `/ingest/run-crawler` | Pornire crawler |
+| GET | `/moderation/pending` | Recenzii în așteptare |
+| POST | `/moderation/{id}/approve` | Aprobare recenzie |
+| POST | `/moderation/{id}/reject` | Respingere recenzie |
+
+Documentație interactivă: http://localhost:8000/docs
+
+## Structură proiect
 
 ```
-proiect-tpln/
-├── backend/       # FastAPI
-├── crawler/       # Scrapy
-├── ui/            # Streamlit
+TPLN/
+├── backend/          # FastAPI + SQLAlchemy + Alembic
+│   ├── app/
+│   │   ├── api/      # endpoints: editions, reviews, rankings, search, audit, export, ingest, moderation
+│   │   ├── core/     # config, database, security/rate-limiting
+│   │   ├── models/   # SQLAlchemy: Author, Book, Edition, Review, Reviewer, ScoreEvent
+│   │   ├── schemas/  # Pydantic schemas
+│   │   └── services/ # scoring, search, anti-abuse, crawler_runner
+│   └── alembic/      # migrări DB
+├── crawler/          # BeautifulSoup4 crawlere
+│   ├── crawl_bookzone.py
+│   ├── crawl_carturesti.py
+│   ├── crawl_libris.py
+│   ├── run_all.py
+│   └── output/       # bookzone.json, carturesti.json, libris.json
+├── ui/               # Streamlit: catalog, căutare, ranking, moderare, export
+├── nlp/              # modul NLP opțional (sentiment LaRoSeDa — în lucru)
 └── docker-compose.yml
 ```
