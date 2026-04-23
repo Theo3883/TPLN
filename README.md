@@ -9,6 +9,7 @@ Platformă web pentru evaluarea continuă a edițiilor de literatură română: 
 - Extragere metadata: titlu, autori, ISBN, editură, an apariție, copertă
 - Normalizare ISBN (10/13 cifre) și an publicare în fiecare crawler
 - `run_all.py` — rulează toate trei crawlerele și afișează statistici per sursă (total cărți, cărți cu ISBN)
+- `scheduler.py` — rulează crawlerele automat la fiecare oră; poate fi pornit local sau ca serviciu Docker
 - Output JSON în `crawler/output/` (bookzone.json, carturesti.json, libris.json)
 
 ### Backend API (`backend/`) — FastAPI + PostgreSQL + Meilisearch
@@ -32,7 +33,7 @@ Platformă web pentru evaluarea continuă a edițiilor de literatură română: 
 - Buton lateral pentru declanșarea manuală a crawlerului
 
 ### Infrastructură
-- `docker-compose.yml` — PostgreSQL + Meilisearch containerizate
+- `docker-compose.yml` — PostgreSQL + Meilisearch + serviciu crawler containerizate; crawlerul rulează automat la fiecare oră
 - `start.sh` / `start.ps1` — startup complet cu un singur comandă
 
 ## Tehnologii
@@ -75,8 +76,23 @@ streamlit run app.py
 ```bash
 cd crawler
 pip install -r requirements.txt
+# O singură rulare:
 python run_all.py
+# Scheduler orar (rulare continuă):
+python scheduler.py
 ```
+
+### Crawler ca serviciu Docker (scheduler orar)
+
+Serviciu `crawler` inclus în `docker-compose.yml` — pornit automat alături de celelalte servicii:
+
+```bash
+docker-compose up -d
+# sau doar crawlerul:
+docker-compose up -d crawler
+```
+
+Output-ul JSON este montat în `crawler/output/` pe host. Intervalul implicit este 1 oră.
 
 ## Endpoint-uri API principale
 

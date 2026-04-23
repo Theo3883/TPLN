@@ -25,6 +25,15 @@ services:
     volumes:
       - meilisearch_data:/meili_data
 
+  crawler:
+    build:
+      context: ./crawler
+    volumes:
+      - ./crawler/output:/crawler/output
+    restart: unless-stopped
+    environment:
+      CRAWLER_INTERVAL: "3600"
+
 volumes:
   postgres_data:
   meilisearch_data:
