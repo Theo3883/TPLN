@@ -290,3 +290,5 @@ allure-report/
 *.bak
 *.orig
 *.rej
+
+/romanian-lit-eva/
