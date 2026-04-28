@@ -1,0 +1,294 @@
+# =========================
+# OS / Filesystem metadata
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# =========================
+# Editor / IDE settings
+# =========================
+.idea/
+.vscode/
+.vscode-test/
+*.code-workspace
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+
+# JetBrains
+*.iml
+out/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# =========================
+# Logs / Runtime files
+# =========================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.pid.lock
+*.seed
+*.out
+*.err
+*.stackdump
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local
+*.secret
+*.secrets
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# =========================
+# Archives / packages
+# =========================
+*.7z
+*.gz
+*.zip
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.rar
+*.iso
+
+# =========================
+# Generic binary/object files
+# =========================
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.class
+*.jar
+*.war
+*.nar
+*.min.*.map
+
+# =========================
+# Build / coverage / cache
+# =========================
+build/
+dist/
+tmp/
+temp/
+cache/
+.cache/
+.cache-loader/
+.eslintcache
+.stylelintcache
+.parcel-cache/
+.nyc_output/
+coverage/
+coverage-final.json
+
+# =========================
+# Node.js / JavaScript / TypeScript
+# =========================
+node_modules/
+bower_components/
+jspm_packages/
+
+# Package manager artifacts
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-shrinkwrap.json
+
+# Framework outputs
+.next/
+.nuxt/
+.svelte-kit/
+.angular/
+.astro/
+storybook-static/
+vite.svg
+*.tsbuildinfo
+
+# Turbo / Nx / Monorepo tools
+.turbo/
+.nx/
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.py,cover
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build artifacts
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+*.egg
+dist/
+build/
+site/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =========================
+# Java / Kotlin / Gradle
+# =========================
+.gradle/
+build/
+out/
+*.class
+
+# Maven
+target/
+
+# =========================
+# .NET / C#
+# =========================
+bin/
+obj/
+*.rsuser
+*.userprefs
+
+# =========================
+# Go
+# =========================
+bin/
+*.test
+coverage.out
+
+# =========================
+# Rust
+# =========================
+target/
+Cargo.lock
+
+# =========================
+# C / C++ / CMake
+# =========================
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+Makefile
+makedep*
+libtool
+aclocal.m4
+m4/
+autom4te.cache/
+
+# =========================
+# Swift / Xcode
+# =========================
+.build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+
+# =========================
+# PHP / Composer
+# =========================
+vendor/
+composer.lock
+
+# =========================
+# Ruby
+# =========================
+.bundle/
+vendor/bundle/
+*.gem
+
+# =========================
+# Terraform / IaC
+# =========================
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# =========================
+# Docker / containers
+# =========================
+.docker/
+
+# =========================
+# Database / local data
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# =========================
+# Testing artifacts
+# =========================
+test-results/
+playwright-report/
+allure-results/
+allure-report/
+
+# =========================
+# Misc project-local files
+# =========================
+.history/
+.tmp/
+*.bak
+*.orig
+*.rej
+
+/romanian-lit-eva/

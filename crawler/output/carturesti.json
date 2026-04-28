@@ -1,27 +1,5 @@
 [
   {
-    "title": "A de la arsenic",
-    "authors": [
-      "Katryn Harkup"
-    ],
-    "isbn": "9786067761047",
-    "publisher": "RAO",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/457853-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/a-de-la-arsenic-457853"
-  },
-  {
-    "title": "Un tramvai numit dorinta",
-    "authors": [
-      "Tennessee Williams"
-    ],
-    "isbn": "9786067105292",
-    "publisher": "Art",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/134701924-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/un-tramvai-numit-dorinta-134701924"
-  },
-  {
     "title": "Eu: Elton John",
     "authors": [
       "Elton John"
@@ -53,17 +31,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/223352202-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/ursul-si-privighetoarea-223352202"
-  },
-  {
-    "title": "Orase de hartie",
-    "authors": [
-      "John Green"
-    ],
-    "isbn": "9786067191615",
-    "publisher": "Trei",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/247452-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/orase-de-hartie-247452"
   },
   {
     "title": "Terra Insecta",
@@ -152,15 +119,15 @@
     "source_url": "https://carturesti.ro/carte/nu-degeaba-ii-spune-munca-1020574768"
   },
   {
-    "title": "Cele o suta de mii de regate",
+    "title": "Cum sa nu-i faci la cap",
     "authors": [
-      "N.K. Jemisin"
+      "Oliver James"
     ],
-    "isbn": "9786068673110",
-    "publisher": "Paladin",
+    "isbn": "9786069801062",
+    "publisher": "Vellant",
     "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1035367-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/cele-o-suta-de-mii-de-regate-1035367"
+    "cover_image": "https://cdn.dc5.ro/img-prod/1034512318-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/cum-sa-nu-i-faci-la-cap-1034512318"
   },
   {
     "title": "Cine a fost Charles Darwin?",
@@ -229,17 +196,6 @@
     "source_url": "https://carturesti.ro/carte/62-model-de-asamblare-1047000"
   },
   {
-    "title": "Nimic mai putin",
-    "authors": [
-      "Anna Todd"
-    ],
-    "isbn": "9786064005151",
-    "publisher": "Trei",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/105165489-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/nimic-mai-putin-105165489"
-  },
-  {
     "title": "Poeme Donea",
     "authors": [
       "Cornel Donea"
@@ -249,17 +205,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1055946625-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/poeme-donea-1055946625"
-  },
-  {
-    "title": "Amurgul Evului Mediu",
-    "authors": [
-      "Johan Huizinga"
-    ],
-    "isbn": "9786069783313",
-    "publisher": "Pandora M",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1061548053-1-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/amurgul-evului-mediu-1061548053"
   },
   {
     "title": "Acid pentru copii",
@@ -318,6 +263,17 @@
     "source_url": "https://carturesti.ro/carte/un-zeu-naruit-110543709"
   },
   {
+    "title": "Iubiri dificile",
+    "authors": [
+      "Italo Calvino"
+    ],
+    "isbn": "9786067105452",
+    "publisher": "Art",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/110543739-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/iubiri-dificile-110543739"
+  },
+  {
     "title": "Cavalerul",
     "authors": [
       "Gene Wolfe"
@@ -363,17 +319,6 @@
     "source_url": "https://carturesti.ro/carte/anomalia-1114144713"
   },
   {
-    "title": "De unul singur",
-    "authors": [
-      "Fan Shen"
-    ],
-    "isbn": "9789735070717",
-    "publisher": "Humanitas",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1116035661-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/de-unul-singur-1116035661"
-  },
-  {
     "title": "Memoriile unui batran crocodil",
     "authors": [
       "Tennessee Williams"
@@ -383,17 +328,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/111621102-1-240.jpeg",
     "source_url": "https://carturesti.ro/carte/memoriile-unui-batran-crocodil-111621102"
-  },
-  {
-    "title": "Arta macelaritului",
-    "authors": [
-      "Lindsey Fitzharris"
-    ],
-    "isbn": "9786067224344",
-    "publisher": "Publica",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1135294209-1-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/arta-macelaritului-1135294209"
   },
   {
     "title": "Pereti albi",
@@ -449,17 +383,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1149019021-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/saga-lui-erik-vikingul-1149019021"
-  },
-  {
-    "title": "Scriitor, marinar, soldat, spion",
-    "authors": [
-      "Nicholas Reynolds"
-    ],
-    "isbn": "9789735069971",
-    "publisher": "Humanitas",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1153288246-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/scriitor-marinar-soldat-spion-1153288246"
   },
   {
     "title": "Musca din cascaval",
@@ -702,17 +625,6 @@
     "source_url": "https://carturesti.ro/carte/focul-invizibil-1236660970"
   },
   {
-    "title": "Omul care a rezolvat piata",
-    "authors": [
-      "Gregory Zuckerman"
-    ],
-    "isbn": "9786067224429",
-    "publisher": "Publica",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1243939129-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/omul-care-a-rezolvat-piata-1243939129"
-  },
-  {
     "title": "Fake news, hateri si cyberbullying",
     "authors": [
       "Mauro Munafo"
@@ -942,17 +854,6 @@
     "source_url": "https://carturesti.ro/carte/mamma-mu-se-da-cu-sania-1357201857"
   },
   {
-    "title": "Casa Gucci",
-    "authors": [
-      "Sara Gay Forden"
-    ],
-    "isbn": "9786064312549",
-    "publisher": "Nemira",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1361178677-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/casa-gucci-1361178677"
-  },
-  {
     "title": "Ia o piersica",
     "authors": [
       "David Chang"
@@ -1052,17 +953,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1385591296-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/12-zile-cu-dash-si-lily-1385591296"
-  },
-  {
-    "title": "Imi depasesc anxietatea si frica",
-    "authors": [
-      "Christophe Andre"
-    ],
-    "isbn": "9786064011824",
-    "publisher": "Trei",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1409615405-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/imi-depasesc-anxietatea-si-frica-1409615405"
   },
   {
     "title": "Orasul solitar",
@@ -1254,15 +1144,15 @@
     "source_url": "https://carturesti.ro/carte/madame-piaf-si-cantecul-iubirii-1495247885"
   },
   {
-    "title": "Regasirea sensului",
+    "title": "Chirurgul si cutitul de gheata",
     "authors": [
-      "Jamie Wheal"
+      "Sam Kean"
     ],
-    "isbn": "9786067224733",
+    "isbn": "9786067224719",
     "publisher": "Publica",
     "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1505377257-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/regasirea-sensului-1505377257"
+    "cover_image": "https://cdn.dc5.ro/img-prod/1505377245-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/chirurgul-si-cutitul-de-gheata-1505377245"
   },
   {
     "title": "Degenerat",
@@ -1341,17 +1231,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1522631860-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/painea-uriasilor-1522631860"
-  },
-  {
-    "title": "Tantrum",
-    "authors": [
-      "Rebecca Schrag Hershberg"
-    ],
-    "isbn": "9786064411075",
-    "publisher": "Curtea Veche Publishing",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1525691302-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/tantrum-1525691302"
   },
   {
     "title": "Legea lupilor",
@@ -1551,17 +1430,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1627992089-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/calea-spre-iluminare-1627992089"
-  },
-  {
-    "title": "Regina rosie",
-    "authors": [
-      "Juan Gomez-Jurado"
-    ],
-    "isbn": "9786069639009",
-    "publisher": "Bookzone",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1627992109-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/regina-rosie-1627992109"
   },
   {
     "title": "1+1&gt;2",
@@ -1765,17 +1633,6 @@
     "source_url": "https://carturesti.ro/carte/vaccinul-1696839265"
   },
   {
-    "title": "Sezonul uraganelor",
-    "authors": [
-      "Fernanda Melchor"
-    ],
-    "isbn": "9786069785188",
-    "publisher": "Pandora M",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1709301157-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/sezonul-uraganelor-1709301157"
-  },
-  {
     "title": "Ascultati",
     "authors": [
       "Adriana Carcu"
@@ -1965,17 +1822,6 @@
     "source_url": "https://carturesti.ro/carte/komplot-1778324908"
   },
   {
-    "title": "Ultimul zbor",
-    "authors": [
-      "Julie Clark"
-    ],
-    "isbn": "9786064011060",
-    "publisher": "Trei",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1778325247-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/ultimul-zbor-1778325247"
-  },
-  {
     "title": "Limbajul corporal digital",
     "authors": [
       "Erica Dhawan"
@@ -2085,15 +1931,26 @@
     "source_url": "https://carturesti.ro/carte/asculta-ma-cum-soptesc-1867163701"
   },
   {
-    "title": "Termina ce ai inceput",
+    "title": "De ce iubim",
     "authors": [
-      "Ayelet Fishbach"
+      "Anna Machin"
     ],
-    "isbn": "9786067225327",
+    "isbn": "9786064014696",
+    "publisher": "Trei",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1867163741-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/de-ce-iubim-1867163741"
+  },
+  {
+    "title": "Conflict distructiv",
+    "authors": [
+      "Amanda Ripley"
+    ],
+    "isbn": "9786067225372",
     "publisher": "Publica",
     "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1890587021-1-240.png",
-    "source_url": "https://carturesti.ro/carte/termina-ce-ai-inceput-1890587021"
+    "cover_image": "https://cdn.dc5.ro/img-prod/1879933469-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/conflict-distructiv-1879933469"
   },
   {
     "title": "Thich Nhat Hanh. O viata traita constient",
@@ -2118,6 +1975,127 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1907643441-0-240.png",
     "source_url": "https://carturesti.ro/carte/de-la-idee-la-bani-in-arta-si-muzica-1907643441"
+  },
+  {
+    "title": "Fericirea incepe azi",
+    "authors": [
+      "Jamie McGuire"
+    ],
+    "isbn": "9789737077356",
+    "publisher": "Trei",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/9789737077356-2098080-240.jpg",
+    "source_url": "https://carturesti.ro/carte/fericirea-incepe-azi-192596"
+  },
+  {
+    "title": "Wanting",
+    "authors": [
+      "Luke Burgis"
+    ],
+    "isbn": "9786067225365",
+    "publisher": "Publica",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1947734191-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/wanting-1947734191"
+  },
+  {
+    "title": "Pistolul cu otrava",
+    "authors": [
+      "Serhii Plokhy"
+    ],
+    "isbn": "9786064013552",
+    "publisher": "Trei",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1958480469-1-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/pistolul-cu-otrava-1958480469"
+  },
+  {
+    "title": "Amazon descatusat",
+    "authors": [
+      "Brad Stone"
+    ],
+    "isbn": "9786067225402",
+    "publisher": "Publica",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1964396703-1-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/amazon-descatusat-1964396703"
+  },
+  {
+    "title": "Cei care cumpara stele",
+    "authors": [
+      "Anca Mizumschi"
+    ],
+    "isbn": "9786064015440",
+    "publisher": "Trei",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1964397278-1-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/cei-care-cumpara-stele-1964397278"
+  },
+  {
+    "title": "Taci si saruta-ma!",
+    "authors": [
+      "Rachel Gibson"
+    ],
+    "isbn": "9786069133149",
+    "publisher": "ACT si Politon",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/19674007-1-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/taci-si-saruta-ma-19674007"
+  },
+  {
+    "title": "Regina",
+    "authors": [
+      "Matthew Dennison"
+    ],
+    "isbn": "9786064314536",
+    "publisher": "Nemira",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1975193613-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/regina-1975193613"
+  },
+  {
+    "title": "Galveston",
+    "authors": [
+      "Nic Pizzolatto"
+    ],
+    "isbn": "9786068673271",
+    "publisher": "Paladin",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1975256-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/galveston-1975256"
+  },
+  {
+    "title": "Scurta domnie a lui Pepin al IV-lea - Colectia Nobel",
+    "authors": [
+      "John Steinbeck"
+    ],
+    "isbn": "9789731247694",
+    "publisher": "Art",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/9789731247694-2439898-240.jpg",
+    "source_url": "https://carturesti.ro/carte/scurta-domnie-a-lui-pepin-al-iv-lea-colectia-nobel-197558"
+  },
+  {
+    "title": "Familia lui Pascual Duarte",
+    "authors": [
+      "Camilo Jose Cela"
+    ],
+    "isbn": "9789731248738",
+    "publisher": "Art",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/9789731248738-2439906-240.jpg",
+    "source_url": "https://carturesti.ro/carte/familia-lui-pascual-duarte-197559"
+  },
+  {
+    "title": "Calendar Girl. Volumul I",
+    "authors": [
+      "Audrey Carlan"
+    ],
+    "isbn": "9786067710519",
+    "publisher": "Univers",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1976418-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/calendar-girl-volumul-i-1976418"
   },
   {
     "title": "Vinegar Girl",
@@ -2153,17 +2131,6 @@
     "source_url": "https://carturesti.ro/carte/new-boy-5051535922"
   },
   {
-    "title": "Macbeth",
-    "authors": [
-      "Jo Nesbo"
-    ],
-    "isbn": "9781784878849",
-    "publisher": "Vintage Classics",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/5051535919-0-240.png",
-    "source_url": "https://carturesti.ro/carte/macbeth-5051535919"
-  },
-  {
     "title": "Hag-Seed",
     "authors": [
       "Margaret Atwood"
@@ -2195,5 +2162,49 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/5051535910-0-240.png",
     "source_url": "https://carturesti.ro/carte/dunbar-5051535910"
+  },
+  {
+    "title": "Warm Bodies",
+    "authors": [
+      "Isaac Marion"
+    ],
+    "isbn": "9781529979718",
+    "publisher": "Vintage Classics",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/5051535730-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/warm-bodies-5051535730"
+  },
+  {
+    "title": "The Porpoise",
+    "authors": [
+      "Mark Haddon"
+    ],
+    "isbn": "9781529979701",
+    "publisher": "Vintage Classics",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/5051535727-0-240.webp",
+    "source_url": "https://carturesti.ro/carte/the-porpoise-5051535727"
+  },
+  {
+    "title": "Hunter x Hunter (3-in-1 Edition) - Volume 5",
+    "authors": [
+      "Yoshihiro Togashi"
+    ],
+    "isbn": "9781974762002",
+    "publisher": "VIZ Media",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/5113223613-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/hunter-x-hunter-3-in-1-edition-volume-5-5113223613"
+  },
+  {
+    "title": "Seek the Traitor&#039;s Son",
+    "authors": [
+      "Veronica Roth"
+    ],
+    "isbn": "9781037401275",
+    "publisher": "Tor",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/5131453788-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/seek-the-traitor-s-son-5131453788"
   }
 ]

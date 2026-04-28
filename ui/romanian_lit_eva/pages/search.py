@@ -1,0 +1,79 @@
+from __future__ import annotations
+
+import streamlit as st
+
+from romanian_lit_eva.api.client import ApiError, PlatformApiClient
+from romanian_lit_eva.pages.base import Page
+from romanian_lit_eva.services.mappers import to_edition_card
+from romanian_lit_eva.services.navigation import Navigator
+from romanian_lit_eva.ui.components import safe, section_header_markup
+
+
+class SearchPage(Page):
+    def __init__(self, navigator: Navigator, api_client: PlatformApiClient):
+        self.navigator = navigator
+        self.api_client = api_client
+
+    def render(self) -> None:
+        st.markdown(
+            section_header_markup("Full-Text Lookup", "Fast, typo-tolerant search powered by Meilisearch indexing schema."),
+            unsafe_allow_html=True,
+        )
+
+        query = st.text_input(
+            "Search by title, author, isbn or themes",
+            placeholder="Search by title, author, isbn or themes...",
+        )
+
+        if not query.strip():
+            st.markdown(
+                """
+                <div style='text-align:center;opacity:.32;padding:3.6rem 0;'>
+                  <div style='font-size:2.3rem;'>⌕</div>
+                  <div style='font-family:Cormorant Garamond, Georgia, serif;font-size:1.5rem;font-style:italic;'>Ready to search...</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            return
+
+        try:
+            results = [to_edition_card(raw) for raw in self.api_client.search_editions(query)]
+        except ApiError as exc:
+            st.error(f"Search error: {exc}")
+            return
+
+        st.caption(f"{len(results)} results found")
+        if not results:
+            st.markdown(
+                """
+                <div style='text-align:center;padding:3.2rem 0;'>
+                  <div style='font-family:Cormorant Garamond, Georgia, serif;font-size:1.5rem;font-style:italic;opacity:.58;'>No editions found</div>
+                  <div class='muted'>Try adjusting your search terms or checking for typos.</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            return
+
+        for item in results:
+            row = st.columns([6, 1])
+            with row[0]:
+                st.markdown(
+                    f"""
+                    <div class='card' style='border-radius:16px;margin-bottom:.5rem;'>
+                      <div style='display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;'>
+                        <div>
+                          <div style='font-family:Cormorant Garamond, Georgia, serif;font-size:1.45rem;line-height:1.1;'>{safe(item.title)}</div>
+                          <div class='muted' style='font-size:.9rem;margin-top:.25rem;'>{safe(item.authors)} - {safe(item.publisher)}</div>
+                        </div>
+                        <div class='mono' style='font-size:.72rem;padding:.2rem .45rem;border-radius:4px;background:rgba(26,26,26,.05);'>{safe(item.year)}</div>
+                      </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+            with row[1]:
+                st.markdown(f"<div class='mono' style='font-size:1.35rem;text-align:center;padding-top:.8rem;'>{item.score:.1f}</div>", unsafe_allow_html=True)
+                if st.button("Open", key=f"search_open_{item.id}", use_container_width=True):
+                    self.navigator.go_edition(item.id)
