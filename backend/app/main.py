@@ -1,50 +1,76 @@
-from contextlib import asynccontextmanager
+"""
+main.py — Entry point FastAPI.
+Modificări adăugate de Martinaș Ioana Maria (Backend API lead):
+  - Înregistrare error handlers globali
+  - Rate limiting extins (moderation + ingest)
+  - Router NLP sentiment
+  - Logging configurat
+"""
+
+import logging
 
 from fastapi import FastAPI
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 
-from app.api import editions, reviews, rankings, audit, export, search, ingest, moderation
-from app.core.database import engine
 from app.core.security import limiter
+from app.core.error_handlers import register_error_handlers
 
+# Importuri routere existente
+from app.api import editions, reviews, rankings, moderation, export, ingest, search, audit
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    import asyncio
-    from app.services.search import get_search_client
-    from app.services.crawler_runner import run_crawler
-    from app.core.config import settings
-    try:
-        client = get_search_client()
-        client.create_index(settings.meilisearch_index, {"primaryKey": "id"})
-    except Exception:
-        pass
-    asyncio.create_task(run_crawler())
-    yield
-    await engine.dispose()
+# Router NLP sentiment (nou)
+from app.api import sentiment
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
+)
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="Platformă Evaluare Literatură Română",
-    description="API pentru catalog, recenzii și ranking-uri de literatură română",
-    version="0.1.0",
-    lifespan=lifespan,
+    description=(
+        "API pentru evaluarea continuă a edițiilor de literatură română: "
+        "catalog, recenzii, ranking-uri transparente, moderare, export și NLP sentiment."
+    ),
+    version="1.0.0",
 )
+
+# --- Rate limiting middleware ---
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
 
-app.include_router(search.router, prefix="", tags=["search"])
-app.include_router(editions.router, prefix="/editions", tags=["editions"])
-app.include_router(reviews.router, prefix="/editions", tags=["reviews"])
-app.include_router(reviews.create_router, prefix="", tags=["reviews"])
-app.include_router(rankings.router, prefix="/rankings", tags=["rankings"])
-app.include_router(audit.router, prefix="/audit", tags=["audit"])
-app.include_router(export.router, prefix="/export", tags=["export"])
-app.include_router(ingest.router, prefix="/ingest", tags=["ingest"])
-app.include_router(moderation.router, prefix="/moderation", tags=["moderation"])
+# --- Error handlers globali (Martinaș Ioana Maria) ---
+register_error_handlers(app)
+
+# --- Routere existente ---
+app.include_router(editions.router, prefix="/editions", tags=["Ediții"])
+app.include_router(reviews.router, prefix="/editions", tags=["Recenzii"])
+app.include_router(reviews.create_router, tags=["Recenzii"])
+app.include_router(rankings.router, prefix="/rankings", tags=["Ranking"])
+app.include_router(moderation.router, prefix="/moderation", tags=["Moderare"])
+app.include_router(export.router, prefix="/export", tags=["Export"])
+app.include_router(ingest.router, prefix="/ingest", tags=["Ingestie"])
+app.include_router(search.router, tags=["Căutare"])
+app.include_router(audit.router, prefix="/audit", tags=["Audit"])
+
+# --- Router NLP sentiment (Martinaș Ioana Maria) ---
+app.include_router(
+    sentiment.router,
+    prefix="/sentiment",
+    tags=["NLP Sentiment"],
+)
 
 
-@app.get("/")
-async def root():
-    return {"message": "Platformă Evaluare Literatură Română", "docs": "/docs"}
+@app.get("/health", tags=["System"])
+async def health_check():
+    """Endpoint de health check — verifică că aplicația rulează."""
+    return {"status": "ok", "service": "literatura-romana-api"}
+
+
+@app.on_event("startup")
+async def on_startup():
+    logger.info("Aplicația a pornit. Endpoint-uri disponibile la /docs")
