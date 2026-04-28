@@ -1,19 +1,22 @@
-"""Internal API for crawler ingestion."""
+"""
+Ingest endpoints cu rate limiting adăugat pe /run-crawler.
+Modificare: Martinaș Ioana Maria — rate limiting pe trigger crawler.
+"""
 
 import asyncio
 
-from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel
-
-from app.services.crawler_runner import run_crawler_now
+from fastapi import APIRouter, Depends, HTTPException, Request
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from app.core.database import get_db
-from app.models import Author, Book, Edition
-from app.services.search import get_search_client
 from app.core.config import settings
+from app.core.database import get_db
+from app.core.security import limiter
+from app.models import Author, Book, Edition
+from app.services.crawler_runner import run_crawler_now
+from app.services.search import get_search_client
 
 router = APIRouter()
 
@@ -25,11 +28,24 @@ def _normalize(s: str) -> str:
 
 
 class IngestItem(BaseModel):
-    title: str
-    authors: list[str] = []
-    isbn: str | None = None
-    publisher: str | None = None
-    year: int | None = None
+    """Schema de ingestie cu validare îmbunătățită."""
+    title: str = Field(..., min_length=1, max_length=500, description="Titlul cărții")
+    authors: list[str] = Field(default_factory=list, description="Lista de autori")
+    isbn: str | None = Field(default=None, description="ISBN-10 sau ISBN-13")
+    publisher: str | None = Field(default=None, max_length=255)
+    year: int | None = Field(default=None, ge=1800, le=2100, description="Anul publicării")
+
+    @field_validator("title")
+    @classmethod
+    def title_not_blank(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("Titlul nu poate fi gol.")
+        return v.strip()
+
+    @field_validator("authors")
+    @classmethod
+    def authors_not_empty_strings(cls, v: list[str]) -> list[str]:
+        return [a.strip() for a in v if a and a.strip()]
 
 
 @router.post("")
@@ -37,13 +53,8 @@ async def ingest_edition(
     data: IngestItem,
     db: AsyncSession = Depends(get_db),
 ):
-    """
-    Ingest a book/edition from crawler.
-    Dedup by ISBN; merge by normalized title for Book.
-    """
+    """Ingestează o ediție din crawler. Deduplicare după ISBN și titlu normalizat."""
     title = data.title.strip()
-    if not title:
-        raise HTTPException(status_code=400, detail="title required")
 
     isbn = None
     if data.isbn:
@@ -72,9 +83,7 @@ async def ingest_edition(
         if existing:
             return {"status": "duplicate", "edition_id": existing.id}
 
-    r = await db.execute(
-        select(Book).where(Book.normalized_title == normalized_title)
-    )
+    r = await db.execute(select(Book).where(Book.normalized_title == normalized_title))
     book = r.scalar_one_or_none()
     if not book:
         book = Book(title=title, normalized_title=normalized_title)
@@ -110,7 +119,14 @@ async def ingest_edition(
 
 
 @router.post("/run-crawler")
-async def trigger_crawler():
-    """Trigger crawler to run. Returns immediately; crawler runs in background."""
+@limiter.limit("5/hour")
+async def trigger_crawler(request: Request):
+    """
+    Declanșează crawlerul manual.
+    Rate limited: maxim 5 rulări/oră per IP pentru a preveni abuzul.
+    """
     asyncio.create_task(run_crawler_now())
-    return {"status": "started", "message": "Crawler pornit. Așteaptă câteva secunde și reîmprospătează catalogul."}
+    return {
+        "status": "started",
+        "message": "Crawlerul a pornit în background. Reîmprospătează catalogul în câteva secunde.",
+    }
