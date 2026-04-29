@@ -42,8 +42,31 @@ class PlatformApiClient:
     def get_edition(self, edition_id: int) -> dict:
         return self._get(f"/editions/{edition_id}")
 
-    def search_editions(self, query: str) -> list[dict]:
-        return self._get("/search/editions", {"q": query})
+    def search_editions(
+        self,
+        query: str,
+        *,
+        year_min: int | None = None,
+        year_max: int | None = None,
+        score_min: float | None = None,
+        confidence_min: float | None = None,
+        sort: str = "relevance",
+    ) -> list[dict]:
+        params = {
+            "q": query,
+            "sort": sort,
+        }
+
+        if year_min is not None:
+            params["year_min"] = year_min
+        if year_max is not None:
+            params["year_max"] = year_max
+        if score_min is not None:
+            params["score_min"] = score_min
+        if confidence_min is not None:
+            params["confidence_min"] = confidence_min
+
+        return self._get("/search/editions", params)
 
     def list_rankings(self, limit: int = 60) -> list[dict]:
         return self._get("/rankings", {"limit": limit})

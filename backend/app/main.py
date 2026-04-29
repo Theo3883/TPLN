@@ -16,8 +16,8 @@ async def lifespan(app: FastAPI):
     from app.services.crawler_runner import run_crawler
     from app.core.config import settings
     try:
-        client = get_search_client()
-        client.create_index(settings.meilisearch_index, {"primaryKey": "id"})
+        from app.services.search import configure_search_index
+        configure_search_index()
     except Exception:
         pass
     asyncio.create_task(run_crawler())
