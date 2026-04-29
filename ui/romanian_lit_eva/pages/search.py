@@ -16,7 +16,10 @@ class SearchPage(Page):
 
     def render(self) -> None:
         st.markdown(
-            section_header_markup("Full-Text Lookup", "Fast, typo-tolerant search powered by Meilisearch indexing schema."),
+            section_header_markup(
+                "Full-Text Lookup",
+                "Fast, typo-tolerant search powered by Meilisearch indexing schema.",
+            ),
             unsafe_allow_html=True,
         )
 
@@ -24,6 +27,63 @@ class SearchPage(Page):
             "Search by title, author, isbn or themes",
             placeholder="Search by title, author, isbn or themes...",
         )
+
+        with st.expander("Advanced filters", expanded=False):
+            col1, col2, col3, col4 = st.columns(4)
+
+            with col1:
+                year_min = st.number_input(
+                    "Year min",
+                    min_value=0,
+                    max_value=2100,
+                    value=0,
+                    step=1,
+                )
+
+            with col2:
+                year_max = st.number_input(
+                    "Year max",
+                    min_value=0,
+                    max_value=2100,
+                    value=0,
+                    step=1,
+                )
+
+            with col3:
+                score_min = st.slider(
+                    "Minimum score",
+                    min_value=0.0,
+                    max_value=5.0,
+                    value=0.0,
+                    step=0.1,
+                )
+
+            with col4:
+                confidence_min = st.slider(
+                    "Minimum confidence",
+                    min_value=0.0,
+                    max_value=1.0,
+                    value=0.0,
+                    step=0.05,
+                )
+
+            sort = st.selectbox(
+                "Sort results",
+                options=[
+                    "relevance",
+                    "score_desc",
+                    "year_desc",
+                    "confidence_desc",
+                    "reviews_desc",
+                ],
+                format_func=lambda value: {
+                    "relevance": "Relevance",
+                    "score_desc": "Score descending",
+                    "year_desc": "Year descending",
+                    "confidence_desc": "Confidence descending",
+                    "reviews_desc": "Most reviewed",
+                }[value],
+            )
 
         if not query.strip():
             st.markdown(
@@ -38,12 +98,23 @@ class SearchPage(Page):
             return
 
         try:
-            results = [to_edition_card(raw) for raw in self.api_client.search_editions(query)]
+            results = [
+                to_edition_card(raw)
+                for raw in self.api_client.search_editions(
+                    query,
+                    year_min=year_min if year_min else None,
+                    year_max=year_max if year_max else None,
+                    score_min=score_min if score_min > 0 else None,
+                    confidence_min=confidence_min if confidence_min > 0 else None,
+                    sort=sort,
+                )
+            ]
         except ApiError as exc:
             st.error(f"Search error: {exc}")
             return
 
         st.caption(f"{len(results)} results found")
+
         if not results:
             st.markdown(
                 """
@@ -73,7 +144,11 @@ class SearchPage(Page):
                     """,
                     unsafe_allow_html=True,
                 )
+
             with row[1]:
-                st.markdown(f"<div class='mono' style='font-size:1.35rem;text-align:center;padding-top:.8rem;'>{item.score:.1f}</div>", unsafe_allow_html=True)
+                st.markdown(
+                    f"<div class='mono' style='font-size:1.35rem;text-align:center;padding-top:.8rem;'>{item.score:.1f}</div>",
+                    unsafe_allow_html=True,
+                )
                 if st.button("Open", key=f"search_open_{item.id}", use_container_width=True):
                     self.navigator.go_edition(item.id)

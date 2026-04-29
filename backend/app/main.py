@@ -20,6 +20,20 @@ from app.core.error_handlers import register_error_handlers
 # Importuri routere existente
 from app.api import editions, reviews, rankings, moderation, export, ingest, search, audit
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    import asyncio
+    from app.services.search import get_search_client
+    from app.services.crawler_runner import run_crawler
+    from app.core.config import settings
+    try:
+        from app.services.search import configure_search_index
+        configure_search_index()
+    except Exception:
+        pass
+    asyncio.create_task(run_crawler())
+    yield
+    await engine.dispose()
 # Router NLP sentiment (nou)
 from app.api import sentiment
 

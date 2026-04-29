@@ -15,6 +15,7 @@ from app.core.config import settings
 from app.core.database import get_db
 from app.core.security import limiter
 from app.models import Author, Book, Edition
+from app.services.search import sync_edition_to_search
 from app.services.crawler_runner import run_crawler_now
 from app.services.search import get_search_client
 
@@ -102,16 +103,7 @@ async def ingest_edition(
     await db.refresh(edition)
 
     try:
-        client = get_search_client()
-        index = client.index(settings.meilisearch_index)
-        doc = {
-            "id": edition.id,
-            "title": book.title,
-            "authors": " ".join(a.name for a in author_objs),
-            "isbn": edition.isbn or "",
-            "publisher": edition.publisher or "",
-        }
-        index.add_documents([doc])
+        await sync_edition_to_search(edition, book, author_objs)
     except Exception:
         pass
 
