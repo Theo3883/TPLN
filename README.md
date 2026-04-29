@@ -1,6 +1,6 @@
 # Platformă Evaluare Literatură Română
 
-Platformă web pentru evaluarea continuă a edițiilor de literatură română: crawler, recenzii, ranking-uri transparente, moderare și export date.
+Platformă web pentru evaluarea continuă a edițiilor de literatură română: crawler, recenzii, ranking-uri transparente, moderare, export date și analiză NLP sentiment.
 
 ## Ce este implementat
 
@@ -14,13 +14,15 @@ Platformă web pentru evaluarea continuă a edițiilor de literatură română: 
 
 ### Backend API (`backend/`) — FastAPI + PostgreSQL + Meilisearch
 - **Ediții**: `GET /editions`, `GET /editions/{id}` — catalog cu paginare
-- **Recenzii**: `GET /editions/{id}/reviews`, `POST /reviews` — adăugare recenzie cu rate-limiting (SlowAPI)
+- **Recenzii**: `GET /editions/{id}/reviews`, `POST /reviews` — adăugare recenzie cu rate-limiting (SlowAPI); validare strictă Pydantic (rating 1.0–5.0 în pași de 0.5, conținut minim 20 caractere)
 - **Ranking**: `GET /rankings` — scoring Bayesian cu shrinkage; include câmpuri de confidence
 - **Audit**: `GET /audit/editions/{id}` — trail complet al actualizărilor de scor prin score events
 - **Export**: `GET /export?format=csv|json` — export catalog
-- **Ingestie**: `POST /ingest` — ingestie din crawler cu deduplicare (ISBN + titlu normalizat), `POST /ingest/run-crawler` — trigger manual
-- **Moderare**: `GET /moderation/pending`, `POST /moderation/{id}/approve`, `POST /moderation/{id}/reject`
+- **Ingestie**: `POST /ingest` — ingestie din crawler cu deduplicare (ISBN + titlu normalizat), `POST /ingest/run-crawler` — trigger manual (rate-limited 5/oră)
+- **Moderare**: `GET /moderation/pending`, `POST /moderation/{id}/approve`, `POST /moderation/{id}/reject` — rate-limited 60/oră
 - **Căutare**: `GET /search?q=...` — full-text search prin Meilisearch
+- **NLP Sentiment**: `POST /sentiment/analyze` — analiză sentiment text românesc bazată pe LaRoSeDa; `GET /sentiment/reviews/{id}` — sentiment per recenzie; `GET /sentiment/editions/{id}` — rezumat agregat sentiment pentru o ediție
+- **Error handling**: răspunsuri de eroare consistente în format JSON pentru 400, 404, 409, 422, 503, 500
 - Migrare schemă DB cu Alembic (`versions/001_initial_schema.py`)
 - Crawlerul pornește automat la startup-ul backend-ului
 
@@ -31,6 +33,11 @@ Platformă web pentru evaluarea continuă a edițiilor de literatură română: 
 - **Moderare**: aprobare/respingere recenzii în așteptare
 - **Export**: descărcare date CSV sau JSON
 - Buton lateral pentru declanșarea manuală a crawlerului
+
+### NLP (`nlp/`)
+- Modul de analiză sentiment pentru recenzii românești bazat pe lexiconul LaRoSeDa (Tache et al., EACL 2021)
+- Detectare termeni pozitivi/negativi cu suport pentru negații și intensificatori
+- Returnează label (pozitiv/negativ/neutru), scor în [-1, 1] și nivel de încredere
 
 ### Infrastructură
 - `docker-compose.yml` — PostgreSQL + Meilisearch + serviciu crawler containerizate; crawlerul rulează automat la fiecare oră
@@ -44,6 +51,7 @@ Platformă web pentru evaluarea continuă a edițiilor de literatură română: 
 | Backend | FastAPI, SQLAlchemy (async), asyncpg, Alembic, Pydantic, SlowAPI |
 | Baza de date | PostgreSQL |
 | Căutare full-text | Meilisearch |
+| NLP | Lexicon LaRoSeDa (Tache et al., EACL 2021) |
 | UI | Streamlit |
 | Orchestrare | Docker Compose |
 
@@ -107,10 +115,14 @@ Output-ul JSON este montat în `crawler/output/` pe host. Intervalul implicit es
 | GET | `/audit/editions/{id}` | Audit trail scor |
 | GET | `/export?format=csv\|json` | Export date |
 | POST | `/ingest` | Ingestie date crawler |
-| POST | `/ingest/run-crawler` | Pornire crawler |
+| POST | `/ingest/run-crawler` | Pornire crawler (rate-limited) |
 | GET | `/moderation/pending` | Recenzii în așteptare |
-| POST | `/moderation/{id}/approve` | Aprobare recenzie |
-| POST | `/moderation/{id}/reject` | Respingere recenzie |
+| POST | `/moderation/{id}/approve` | Aprobare recenzie (rate-limited) |
+| POST | `/moderation/{id}/reject` | Respingere recenzie (rate-limited) |
+| POST | `/sentiment/analyze` | Analiză sentiment text românesc |
+| GET | `/sentiment/reviews/{id}` | Sentiment pentru o recenzie |
+| GET | `/sentiment/editions/{id}` | Rezumat sentiment pentru o ediție |
+| GET | `/health` | Health check aplicație |
 
 Documentație interactivă: http://localhost:8000/docs
 
@@ -120,10 +132,10 @@ Documentație interactivă: http://localhost:8000/docs
 TPLN/
 ├── backend/          # FastAPI + SQLAlchemy + Alembic
 │   ├── app/
-│   │   ├── api/      # endpoints: editions, reviews, rankings, search, audit, export, ingest, moderation
-│   │   ├── core/     # config, database, security/rate-limiting
+│   │   ├── api/      # endpoints: editions, reviews, rankings, search, audit, export, ingest, moderation, sentiment
+│   │   ├── core/     # config, database, security/rate-limiting, error-handlers
 │   │   ├── models/   # SQLAlchemy: Author, Book, Edition, Review, Reviewer, ScoreEvent
-│   │   ├── schemas/  # Pydantic schemas
+│   │   ├── schemas/  # Pydantic schemas cu validatori
 │   │   └── services/ # scoring, search, anti-abuse, crawler_runner
 │   └── alembic/      # migrări DB
 ├── crawler/          # BeautifulSoup4 crawlere
@@ -133,6 +145,15 @@ TPLN/
 │   ├── run_all.py
 │   └── output/       # bookzone.json, carturesti.json, libris.json
 ├── ui/               # Streamlit: catalog, căutare, ranking, moderare, export
-├── nlp/              # modul NLP opțional (sentiment LaRoSeDa — în lucru)
+├── nlp/
+│   └── sentiment/    # analiză sentiment română (LaRoSeDa lexicon, Tache et al. EACL 2021)
+│       └── analyzer.py
 └── docker-compose.yml
 ```
+
+## Referințe
+
+- LaRoSeDa dataset: https://huggingface.co/datasets/universityofbucharest/laroseda
+- Tache et al. (2021). LaRoSeDa: A Large Romanian Sentiment Data Set. EACL 2021: https://aclanthology.org/2021.eacl-main.81.pdf
+- FastAPI Documentation: https://fastapi.tiangolo.com/
+- Streamlit Documentation: https://docs.streamlit.io/
