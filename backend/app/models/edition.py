@@ -20,6 +20,7 @@ class Edition(Base):
     isbn = Column(String(17), unique=True, nullable=True, index=True)
     publisher = Column(String(255), nullable=True)
     year = Column(Integer, nullable=True)
+    cover_image = Column(String(1024), nullable=True)
     score = Column(Float, nullable=True)
     confidence = Column(Float, nullable=True)
     review_count = Column(Integer, default=0, nullable=False)

@@ -81,3 +81,6 @@ class PlatformApiClient:
 
     def run_crawler(self) -> dict:
         return self._post("/ingest/run-crawler")
+
+    def run_crawler(self) -> dict:
+        return self._post("/ingest/run-crawler")

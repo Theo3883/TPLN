@@ -16,6 +16,7 @@ def to_edition_card(raw: dict) -> EditionCard:
         score=float(raw.get("score") or 0),
         confidence=float(raw.get("confidence") or 0),
         review_count=int(raw.get("review_count") or 0),
+        cover_image=raw.get("cover_image") or None,
     )
 
 

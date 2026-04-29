@@ -39,7 +39,7 @@ class CatalogPage(Page):
                 st.markdown(
                     f"""
                     <div class='card'>
-                      {cover_markup(item.title[:1])}
+                      {cover_markup(item.title[:1], image_url=item.cover_image)}
                       <div style='display:flex;justify-content:space-between;gap:.8rem;margin-top:1rem;align-items:flex-start;'>
                         <div style='font-family:Cormorant Garamond, Georgia, serif;font-size:1.4rem;line-height:1.15;'>{safe(item.title)}</div>
                         <div class='mono' style='font-size:.68rem;background:rgba(26,26,26,.06);padding:.22rem .45rem;border-radius:4px;'>{safe(item.year)}</div>

@@ -34,6 +34,7 @@ class IngestItem(BaseModel):
     isbn: str | None = Field(default=None, description="ISBN-10 sau ISBN-13")
     publisher: str | None = Field(default=None, max_length=255)
     year: int | None = Field(default=None, ge=1800, le=2100, description="Anul publicării")
+    cover_image: str | None = Field(default=None, max_length=1024)
 
     @field_validator("title")
     @classmethod
@@ -95,6 +96,7 @@ async def ingest_edition(
         isbn=isbn or None,
         publisher=data.publisher or None,
         year=data.year,
+        cover_image=data.cover_image or None,
     )
     edition.authors = author_objs
     db.add(edition)

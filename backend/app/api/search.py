@@ -39,6 +39,7 @@ async def search_editions(
             isbn=e.isbn,
             publisher=e.publisher,
             year=e.year,
+            cover_image=e.cover_image,
             score=e.score,
             confidence=e.confidence,
             review_count=e.review_count,

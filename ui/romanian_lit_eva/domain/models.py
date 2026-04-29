@@ -12,6 +12,7 @@ class EditionCard:
     score: float
     confidence: float
     review_count: int
+    cover_image: str | None = None
 
 
 @dataclass(frozen=True)

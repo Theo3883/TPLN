@@ -39,7 +39,7 @@ class EditionDetailPage(Page):
 
         left, right = st.columns([1, 1.5], gap="large")
         with left:
-            st.markdown(cover_markup(edition.title[:1]), unsafe_allow_html=True)
+            st.markdown(cover_markup(edition.title[:1], image_url=edition.cover_image), unsafe_allow_html=True)
         with right:
             st.markdown(f"<h1 class='section-title' style='margin-bottom:.2rem;'>{safe(edition.title)}</h1>", unsafe_allow_html=True)
             st.markdown(

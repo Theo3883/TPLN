@@ -21,6 +21,7 @@ class EditionBase(BaseModel):
     isbn: str | None = None
     publisher: str | None = None
     year: int | None = None
+    cover_image: str | None = None
 
 
 class EditionCreate(EditionBase):
