@@ -1,15 +1,37 @@
-import { useState } from 'react';
-import { mockReviews, mockBooks } from '../data/mock';
+import { useState, useEffect } from 'react';
+import { useEditions } from '../lib/useApi';
+import api from '../lib/api';
 import { Shield, Check, X, Search, Filter } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import StarRating from '../components/ui/StarRating';
 
 export default function Moderation() {
-  const [queue, setQueue] = useState(mockReviews.filter(r => r.status === 'pending'));
+  const { data: books = [] } = useEditions(200);
+  const [queue, setQueue] = useState<any[]>([]);
 
-  const handleDecision = (id: string, decision: 'approved' | 'rejected') => {
-    // In a real app, calls FastAPI /moderation endpoint
-    setQueue(prev => prev.filter(r => r.id !== id));
+  useEffect(() => {
+    let mounted = true;
+    api.listPendingReviews()
+      .then((res: any) => {
+        if (!mounted) return;
+        const list = Array.isArray(res) ? res : res.items ?? [];
+        setQueue(list);
+      })
+      .catch(() => {
+        setQueue([]);
+      });
+    return () => { mounted = false; };
+  }, []);
+
+  const handleDecision = async (id: string, decision: 'approved' | 'rejected') => {
+    try {
+      if (decision === 'approved') await api.approveReview(id);
+      else await api.rejectReview(id);
+      setQueue(prev => prev.filter(r => String(r.id) !== String(id)));
+    } catch (err) {
+      // ignore for now; UI could show error
+      console.error(err);
+    }
   };
 
   return (
@@ -68,7 +90,7 @@ export default function Moderation() {
                </motion.div>
              ) : (
                queue.map((review) => {
-                 const book = mockBooks.find(b => b.id === review.bookId);
+                 const book = books.find((b: any) => String(b.id) === String(review.bookId ?? review.edition_id ?? review.editionId));
                  return (
                    <motion.div 
                      key={review.id}

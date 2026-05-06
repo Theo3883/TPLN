@@ -292,3 +292,6 @@ allure-report/
 *.rej
 
 start_rebecca.ps1
+
+
+**/__pycache__/

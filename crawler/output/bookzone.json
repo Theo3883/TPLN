@@ -1,694 +1,5 @@
 [
   {
-    "title": "Abel",
-    "authors": [
-      "Alessandro Baricco"
-    ],
-    "isbn": "9786060976882",
-    "publisher": "Humanitas",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDDMD7/abel-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/abel"
-  },
-  {
-    "title": "Gluma",
-    "authors": [
-      "Milan Kundera"
-    ],
-    "isbn": "9786060977490",
-    "publisher": "Humanitas",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEDD7/gluma-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/gluma"
-  },
-  {
-    "title": "Limba si Literatura Romana pregatire Bacalaureat. Autorii canonici de la text la sens in operele literare",
-    "authors": [
-      "Cristina Popa"
-    ],
-    "isbn": "9786303611839",
-    "publisher": "Corint",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEED7/limba-si-literatura-romana-pregatire-bacalaureat-autorii-canonici-de-la-text-la-sens-in-operele-literare-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/limba-si-literatura-romana-pregatire-bacalaureat-autorii-canonici-de-la-text-la-sens-in-operele-literare"
-  },
-  {
-    "title": "Exercitii de gramatica pentru clasa a III-a. Scriem corect!",
-    "authors": [
-      "Anca-​Elena Cristea"
-    ],
-    "isbn": "9786303612256",
-    "publisher": "Corint",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEFD7/exercitii-de-gramatica-pentru-clasa-a-iii-a-scriem-corect-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/exercitii-de-gramatica-pentru-clasa-a-iii-a-scriem-corect"
-  },
-  {
-    "title": "Urmeaza-mi vocea",
-    "authors": [
-      "Ariana Godoy"
-    ],
-    "isbn": "9786303611952",
-    "publisher": "Corint",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEGD7/urmeaza-mi-vocea-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/urmeaza-mi-vocea"
-  },
-  {
-    "title": "Iubita",
-    "authors": [
-      "Michelle Frances"
-    ],
-    "isbn": "9786303612140",
-    "publisher": null,
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEHD7/iubita-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/iubita"
-  },
-  {
-    "title": "Dorinta mea intunecata (editie speciala)",
-    "authors": [
-      "L.J. Shen"
-    ],
-    "isbn": "5948492841969",
-    "publisher": "Corint",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEZD7/dorinta-mea-intunecata-editie-speciala-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/dorinta-mea-intunecata-editie-speciala"
-  },
-  {
-    "title": "Dorinta mea intunecata",
-    "authors": [
-      "L.J. Shen"
-    ],
-    "isbn": "9786303611297",
-    "publisher": "Corint",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEJD7/dorinta-mea-intunecata-bg5.jpg",
-    "source_url": "https://bookzone.ro/carte/dorinta-mea-intunecata"
-  },
-  {
-    "title": "Pisica de la ora cinci",
-    "authors": [
-      "Rodica Bretin"
-    ],
-    "isbn": "9786303611938",
-    "publisher": "Corint",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEKD7/pisica-de-la-ora-cinci-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/pisica-de-la-ora-cinci"
-  },
-  {
-    "title": "Zapezi de tei",
-    "authors": [
-      "ANCA NEDELCU"
-    ],
-    "isbn": "9786064030061",
-    "publisher": "EDITURA TREI",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDELD7/zapezi-de-tei-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/zapezi-de-tei"
-  },
-  {
-    "title": "Chasing the Wild (Elire Books)",
-    "authors": [
-      "Elliott Rose"
-    ],
-    "isbn": "9786303153308",
-    "publisher": "Elire Books",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDEMD7/chasing-the-wild-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/chasing-the-wild"
-  },
-  {
-    "title": "Almanah de integrame deconectante Nr.40",
-    "authors": [],
-    "isbn": null,
-    "publisher": "Alias Publishing",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFDD7/almanah-de-integrame-deconectante-nr-40-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/almanah-de-integrame-deconectante-nr-40"
-  },
-  {
-    "title": "Almanah Rebus 2026",
-    "authors": [],
-    "isbn": null,
-    "publisher": "Alias Publishing",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFED7/almanah-rebus-2026-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/almanah-rebus-2026"
-  },
-  {
-    "title": "Integrame Premium, Nr.12/ 2026",
-    "authors": [],
-    "isbn": null,
-    "publisher": "Alias Publishing",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFFD7/integrame-premium-nr-12-2026-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/integrame-premium-nr-12-2026"
-  },
-  {
-    "title": "Integrame de vacanta, Nr.10/ 2026",
-    "authors": [],
-    "isbn": null,
-    "publisher": "Alias Publishing",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFGD7/integrame-de-vacanta-nr-10-2026-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/integrame-de-vacanta-nr-10-2026"
-  },
-  {
-    "title": "Nesfarsita zi de ieri",
-    "authors": [
-      "George Arion"
-    ],
-    "isbn": "9786306542819",
-    "publisher": "Crime Scene Press",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFHD7/nesfarsita-zi-de-ieri-editura-crime-scene-press-bg2.jpg",
-    "source_url": "https://bookzone.ro/carte/nesfarsita-zi-de-ieri-editura-crime-scene-press"
-  },
-  {
-    "title": "Indestructibila",
-    "authors": [
-      "Vonda Wright"
-    ],
-    "isbn": "9786303556505",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFZD7/indestructibila-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/indestructibila"
-  },
-  {
-    "title": "Weavingshaw",
-    "authors": [
-      "Heba Al-Wasity"
-    ],
-    "isbn": "9786303556857",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFJD7/weavingshaw-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/weavingshaw"
-  },
-  {
-    "title": "Opt milioane de cai spre fericire",
-    "authors": [
-      "Hiroko Yoda"
-    ],
-    "isbn": "9786303556901",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFLD7/opt-milioane-de-cai-spre-fericire-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/opt-milioane-de-cai-spre-fericire"
-  },
-  {
-    "title": "Protocol terapeutic pentru disfunctia glandelor suprarenale",
-    "authors": [
-      "Dr. Izabella Wentz"
-    ],
-    "isbn": "9786303556918",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDFMD7/protocol-terapeutic-pentru-disfunctia-glandelor-suprarenale-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/protocol-terapeutic-pentru-disfunctia-glandelor-suprarenale"
-  },
-  {
-    "title": "Nu crede tot ce gandesti",
-    "authors": [
-      "Joseph Nguyen"
-    ],
-    "isbn": "9786303556895",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGDD7/nu-crede-tot-ce-gandesti-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/nu-crede-tot-ce-gandesti"
-  },
-  {
-    "title": "Sandwich",
-    "authors": [
-      "Catherine Newman"
-    ],
-    "isbn": "9786303557168",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGED7/sandwich-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/sandwich"
-  },
-  {
-    "title": "Jurnalul unui fotbalist de buzunar. Serenade, salate si surprize. Cartea a doua",
-    "authors": [
-      "Alec Blenche"
-    ],
-    "isbn": "9786303557434",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGFD7/jurnalul-unui-fotbalist-de-buzunar-serenade-salate-si-surprize-cartea-a-doua-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/jurnalul-unui-fotbalist-de-buzunar-serenade-salate-si-surprize-cartea-a-doua"
-  },
-  {
-    "title": "Fostii",
-    "authors": [
-      "Leodora Darlington"
-    ],
-    "isbn": "9786303557182",
-    "publisher": "Litera",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGGD7/fostii-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/fostii"
-  },
-  {
-    "title": "Cautatorii de scoici",
-    "authors": [
-      "Rosamunde Pilcher"
-    ],
-    "isbn": "9786060069256",
-    "publisher": "RAO",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGHD7/cautatorii-de-scoici-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/cautatorii-de-scoici"
-  },
-  {
-    "title": "Septembrie",
-    "authors": [
-      "Rosamunde Pilcher"
-    ],
-    "isbn": "9786060069706",
-    "publisher": "RAO",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGZD7/septembrie-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/septembrie"
-  },
-  {
-    "title": "Povestile iernii",
-    "authors": [],
-    "isbn": null,
-    "publisher": "Erc Press",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGJD7/povestile-iernii-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/povestile-iernii"
-  },
-  {
-    "title": "Elibereaza-te din temnita emotionala",
-    "authors": [
-      "Augusto Cury"
-    ],
-    "isbn": "9786066393393",
-    "publisher": "ForYou",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGKD7/elibereaza-te-din-temnita-emotionala-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/elibereaza-te-din-temnita-emotionala"
-  },
-  {
-    "title": "Gata cu vorba",
-    "authors": [
-      "Andrew Clements"
-    ],
-    "isbn": "9786303217642",
-    "publisher": "Grupul Art",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGLD7/gata-cu-vorba-editura-art-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/gata-cu-vorba-editura-art"
-  },
-  {
-    "title": "Carte de rugaciuni pentru marturisire si iertare",
-    "authors": [],
-    "isbn": null,
-    "publisher": "Sofia",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDGMD7/carte-de-rugaciuni-pentru-marturisire-si-iertare-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/carte-de-rugaciuni-pentru-marturisire-si-iertare"
-  },
-  {
-    "title": "Ai grija ce-ti doresti",
-    "authors": [
-      "Katherine Center"
-    ],
-    "isbn": "9786064419071",
-    "publisher": "Curtea Veche",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDHDD7/ai-grija-ce-ti-doresti-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/ai-grija-ce-ti-doresti"
-  },
-  {
-    "title": "Rupe cercul",
-    "authors": [
-      "Dr. Mariel Buqué"
-    ],
-    "isbn": "9786064027856",
-    "publisher": "EDITURA TREI",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDHED7/rupe-cercul-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/rupe-cercul"
-  },
-  {
-    "title": "Metoda clinica a lui Bion",
-    "authors": [
-      "R.D. Hinshelwood"
-    ],
-    "isbn": "9786064029942",
-    "publisher": "EDITURA TREI",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDHFD7/metoda-clinica-a-lui-bion-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/metoda-clinica-a-lui-bion"
-  },
-  {
-    "title": "Vrajitor Ratacitor",
-    "authors": [],
-    "isbn": null,
-    "publisher": "EDITURA TREI",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDHGD7/vrajitor-ratacitor-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/vrajitor-ratacitor"
-  },
-  {
-    "title": "Adaptarea la viata",
-    "authors": [],
-    "isbn": null,
-    "publisher": "EDITURA TREI",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDHZD7/adaptarea-la-viata-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/adaptarea-la-viata"
-  },
-  {
-    "title": "Cand perfect nu e suficient",
-    "authors": [
-      "Martin M Antony"
-    ],
-    "isbn": "9786306614585",
-    "publisher": "Philobia",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDJGD7/cand-perfect-nu-e-suficient-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/cand-perfect-nu-e-suficient"
-  },
-  {
-    "title": "Visele lucide",
-    "authors": [
-      "Andrew Holecek"
-    ],
-    "isbn": "9786306614578",
-    "publisher": "Philobia",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDJHD7/visele-lucide-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/visele-lucide"
-  },
-  {
-    "title": "Cum sa dezvolti un proiect educational de succes",
-    "authors": [
-      "Anca Popovici Borzea"
-    ],
-    "isbn": "9786303443348",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDJZD7/cum-sa-dezvolti-un-proiect-educational-de-succes-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/cum-sa-dezvolti-un-proiect-educational-de-succes"
-  },
-  {
-    "title": "Istoria Imperiului Bizantin",
-    "authors": [
-      "A.A. Vasiliev"
-    ],
-    "isbn": "9789734607914",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDJJD7/istoria-imperiului-bizantinn-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/istoria-imperiului-bizantinn"
-  },
-  {
-    "title": "Taramul dulcii vesnicii",
-    "authors": [
-      "Harper Lee"
-    ],
-    "isbn": "9786303443478",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDJKD7/taramul-dulcii-vesnicii-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/taramul-dulcii-vesnicii"
-  },
-  {
-    "title": "Sa ne ramana bucuria",
-    "authors": [
-      "Kevin Lambert"
-    ],
-    "isbn": "9786303443270",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDJLD7/sa-ne-ramana-bucuria-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/sa-ne-ramana-bucuria"
-  },
-  {
-    "title": "Anul in care Dumnezeu a murit",
-    "authors": [
-      "James Lacey"
-    ],
-    "isbn": "9786303443294",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDJMD7/anul-in-care-dumnezeu-a-murit-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/anul-in-care-dumnezeu-a-murit"
-  },
-  {
-    "title": "Fara speranta",
-    "authors": [
-      "Nadejda Mandelstam"
-    ],
-    "isbn": "9786303443263",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKDD7/fara-speranta-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/fara-speranta"
-  },
-  {
-    "title": "Eros, magie si asasinarea profesorului Culianu",
-    "authors": [
-      "Ted Anton"
-    ],
-    "isbn": "9786303443317",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKED7/eros-magie-si-asasinarea-profesorului-culianu-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/eros-magie-si-asasinarea-profesorului-culianu"
-  },
-  {
-    "title": "Ingerii de bronz",
-    "authors": [
-      "Angela MARTIN"
-    ],
-    "isbn": "9786303443324",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKFD7/ingerii-de-bronz-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/ingerii-de-bronz"
-  },
-  {
-    "title": "Razboi sau pace",
-    "authors": [
-      "Alina Mungiu-Pippidi"
-    ],
-    "isbn": "9786303443133",
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKGD7/razboi-sau-pace-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/razboi-sau-pace"
-  },
-  {
-    "title": "Teste DELF. Nivelurile A2, B1, B2",
-    "authors": [],
-    "isbn": null,
-    "publisher": "Polirom",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKHD7/teste-delf-nivelurile-a2-b1-b2-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/teste-delf-nivelurile-a2-b1-b2"
-  },
-  {
-    "title": "Sunt un copil perfect, la fel ca tine",
-    "authors": [
-      "Ioana Sas-Adascalitii"
-    ],
-    "isbn": "9789730395310",
-    "publisher": null,
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKZD7/sunt-un-copil-perfect-la-fel-ca-tine-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/sunt-un-copil-perfect-la-fel-ca-tine"
-  },
-  {
-    "title": "Misiunea de salvare a taticilor ocupati",
-    "authors": [
-      "Ioana Sas-Adascalitii"
-    ],
-    "isbn": "9786069952368",
-    "publisher": null,
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKJD7/misiunea-de-salvare-a-taticilor-ocupati-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/misiunea-de-salvare-a-taticilor-ocupati"
-  },
-  {
-    "title": "Pachet Dincolo de ce se spune",
-    "authors": [
-      "Caroline Fleck"
-    ],
-    "isbn": null,
-    "publisher": "Bookzone",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKKD7/pachet-dincolo-de-ce-se-spune-bkz-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/pachet-dincolo-de-ce-se-spune-bkz"
-  },
-  {
-    "title": "Pachet Vocea care nu raneste",
-    "authors": [
-      "Hal Runkel"
-    ],
-    "isbn": null,
-    "publisher": "Bookzone",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKLD7/pachet-vocea-care-nu-raneste-bkz-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/pachet-vocea-care-nu-raneste-bkz"
-  },
-  {
-    "title": "Pachet Cum intri intr-o discutie",
-    "authors": [
-      "Hal Runkel"
-    ],
-    "isbn": null,
-    "publisher": "Bookzone",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDKMD7/pachet-cum-intri-intr-o-discutie-bkz-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/pachet-cum-intri-intr-o-discutie-bkz"
-  },
-  {
-    "title": "Pachet Ce se simte acasa",
-    "authors": [
-      "Atena Boca"
-    ],
-    "isbn": null,
-    "publisher": "Bookzone",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDLDD7/pachet-ce-se-simte-acasa-bkz-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/pachet-ce-se-simte-acasa-bkz"
-  },
-  {
-    "title": "Pachet Calmul care se invata",
-    "authors": [
-      "Hal Runkel"
-    ],
-    "isbn": null,
-    "publisher": "Bookzone",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDLED7/pachet-calmul-care-se-invata-bkz-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/pachet-calmul-care-se-invata-bkz"
-  },
-  {
-    "title": "Semne de carte de colorat: Unicorni",
-    "authors": [],
-    "isbn": null,
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDLGD7/semne-de-carte-de-colorat-unicorni-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/semne-de-carte-de-colorat-unicorni"
-  },
-  {
-    "title": "Ne jucam si invatam. Forme, fructe, obiecte, numere, animale",
-    "authors": [],
-    "isbn": null,
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDLHD7/ne-jucam-si-invatam-forme-fructe-obiecte-numere-animale-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/ne-jucam-si-invatam-forme-fructe-obiecte-numere-animale"
-  },
-  {
-    "title": "Semne de carte de colorat: Natura",
-    "authors": [],
-    "isbn": null,
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDLZD7/semne-de-carte-de-colorat-natura-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/semne-de-carte-de-colorat-natura"
-  },
-  {
-    "title": "Motanul incaltat. Puzzle",
-    "authors": [],
-    "isbn": null,
-    "publisher": "DPH",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDLMD7/motanul-incaltat-puzzle-bg1.webp",
-    "source_url": "https://bookzone.ro/carte/motanul-incaltat-puzzle"
-  },
-  {
-    "title": "Decodificarea personalitatii. Cum sa intelegem oamenii",
-    "authors": [
-      "Samuel Barondes"
-    ],
-    "isbn": "9786068653686",
-    "publisher": "METEOR PRESS",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDMFD7/decodificarea-personalitatii-cum-sa-intelegem-oamenii-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/decodificarea-personalitatii-cum-sa-intelegem-oamenii"
-  },
-  {
-    "title": "30 de activitati de relaxare pentru copii",
-    "authors": [
-      "Gilles Diederichs"
-    ],
-    "isbn": "5948495003913",
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDMGD7/30-de-activitati-de-relaxare-pentru-copii-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/30-de-activitati-de-relaxare-pentru-copii"
-  },
-  {
-    "title": "30 de activitati pentru dezvoltarea increderii copiilor",
-    "authors": [
-      "Gilles Diederichs"
-    ],
-    "isbn": "5948495003937",
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDMHD7/30-de-activitati-pentru-dezvoltarea-increderii-copiilor-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/30-de-activitati-pentru-dezvoltarea-increderii-copiilor"
-  },
-  {
-    "title": "52 de jetoane pentru a invata sa citesti",
-    "authors": [
-      "Emmanuelle Polimeni"
-    ],
-    "isbn": "5948495006389",
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDMZD7/52-de-jetoane-pentru-a-invata-sa-citesti-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/52-de-jetoane-pentru-a-invata-sa-citesti"
-  },
-  {
-    "title": "Activitati matematice. Inmultirea numerelor 8-9 ani",
-    "authors": [
-      "Simon Tudhope"
-    ],
-    "isbn": "5948495011840",
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDMJD7/activitati-matematice-inmultirea-numerelor-8-9-ani-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/activitati-matematice-inmultirea-numerelor-8-9-ani"
-  },
-  {
-    "title": "Ceasul desteptator al lui Platon si alte inventii antice uimitoare",
-    "authors": [
-      "James M. Russell"
-    ],
-    "isbn": "5948495003678",
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDMKD7/ceasul-desteptator-al-lui-platon-si-alte-inventii-antice-uimitoare-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/ceasul-desteptator-al-lui-platon-si-alte-inventii-antice-uimitoare"
-  },
-  {
-    "title": "Copilarie fara bullying",
-    "authors": [
-      "Catherine Dolto"
-    ],
-    "isbn": "5948495004842",
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": null,
-    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEDMLD7/copilarie-fara-bullying-bg1.jpg",
-    "source_url": "https://bookzone.ro/carte/copilarie-fara-bullying"
-  },
-  {
     "title": "Viata e in alta parte",
     "authors": [
       "Milan Kundera"
@@ -2154,5 +1465,704 @@
     "year": null,
     "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJEHD7/numerele-1-10count-to-ten-planse-educationale-bg1.webp",
     "source_url": "https://bookzone.ro/carte/numerele-1-10count-to-ten-planse-educationale"
+  },
+  {
+    "title": "Alfabetul in limba engleza. Planse educationale",
+    "authors": [],
+    "isbn": null,
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJEZD7/alfabetul-in-limba-engleza-planse-educationale-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/alfabetul-in-limba-engleza-planse-educationale"
+  },
+  {
+    "title": "Alfabetul. Planse educationale",
+    "authors": [],
+    "isbn": null,
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJEJD7/alfabetul-planse-educationale-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/alfabetul-planse-educationale"
+  },
+  {
+    "title": "Revelatii despre sanatate din Rai si de pe Pamant",
+    "authors": [
+      "Dr.Stephen Sinatra"
+    ],
+    "isbn": "9786068998121",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJEKD7/revelatii-despre-sanatate-din-rai-si-de-pe-pamant-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/revelatii-despre-sanatate-din-rai-si-de-pe-pamant"
+  },
+  {
+    "title": "Omul devine ceea ce gandeste",
+    "authors": [
+      "James Allen"
+    ],
+    "isbn": "9786068998145",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJELD7/omul-devine-ceea-ce-gandeste-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/omul-devine-ceea-ce-gandeste"
+  },
+  {
+    "title": "Regina Maria",
+    "authors": [
+      "Nicolae Iorga"
+    ],
+    "isbn": "9786068998114",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJEMD7/regina-maria-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/regina-maria"
+  },
+  {
+    "title": "Regele Ferdinand I",
+    "authors": [
+      "Nicolae Iorga"
+    ],
+    "isbn": "9786068998107",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFDD7/regele-ferdinand-i-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/regele-ferdinand-i"
+  },
+  {
+    "title": "Meditatii",
+    "authors": [
+      "Marcus Aurelius"
+    ],
+    "isbn": "9786068894829",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFED7/meditatii-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/meditatii"
+  },
+  {
+    "title": "Psihologia multimilor",
+    "authors": [
+      "Gustave le Bon"
+    ],
+    "isbn": "9786068894737",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFFD7/psihologia-multimilor-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/psihologia-multimilor"
+  },
+  {
+    "title": "Doctrina secreta a templierilor",
+    "authors": [
+      "Jules Loiseleur"
+    ],
+    "isbn": "9786068894805",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFGD7/doctrina-secreta-a-templierilor-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/doctrina-secreta-a-templierilor"
+  },
+  {
+    "title": "Istoria francmasoneriei",
+    "authors": [
+      "Albert G. Mackey"
+    ],
+    "isbn": "9786068894768",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFHD7/istoria-francmasoneriei-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/istoria-francmasoneriei"
+  },
+  {
+    "title": "Legendele Olimpului: Zeii",
+    "authors": [
+      "Gheorghe Popa-Lisseanu"
+    ],
+    "isbn": "9786068894720",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFZD7/legendele-olimpului-zeii-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/legendele-olimpului-zeii"
+  },
+  {
+    "title": "Cuvantul tau este bagheta magica",
+    "authors": [
+      "Florence Scovel Shinn"
+    ],
+    "isbn": "9786068894683",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFJD7/cuvantul-tau-este-bagheta-magica-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/cuvantul-tau-este-bagheta-magica"
+  },
+  {
+    "title": "Puterea cuvantului rostit",
+    "authors": [
+      "Florence Scovel Shinn"
+    ],
+    "isbn": "9786068998077",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFKD7/puterea-cuvantului-rostit-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/puterea-cuvantului-rostit"
+  },
+  {
+    "title": "Usa secreta spre succes",
+    "authors": [
+      "Florence Scovel Shinn"
+    ],
+    "isbn": "9786068894997",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFLD7/usa-secreta-spre-succes-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/usa-secreta-spre-succes"
+  },
+  {
+    "title": "Jocul Vietii si cum sa-l joci",
+    "authors": [
+      "Florence Scovel Shinn"
+    ],
+    "isbn": "9786068894881",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJFMD7/jocul-vietii-si-cum-sa-l-joci-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/jocul-vietii-si-cum-sa-l-joci"
+  },
+  {
+    "title": "Tara pe care o iubesc",
+    "authors": [
+      "Regina Maria a României"
+    ],
+    "isbn": "9786068998060",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGDD7/tara-pe-care-o-iubesc-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/tara-pe-care-o-iubesc"
+  },
+  {
+    "title": "Povestea vietii mele Vol. 4",
+    "authors": [
+      "Regina Maria a României"
+    ],
+    "isbn": "9786068998046",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGED7/povestea-vietii-mele-vol-4-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/povestea-vietii-mele-vol-4"
+  },
+  {
+    "title": "Povestea vietii mele Vol. 3",
+    "authors": [
+      "Regina Maria a României"
+    ],
+    "isbn": "9786068998039",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGFD7/povestea-vietii-mele-vol-3-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/povestea-vietii-mele-vol-3"
+  },
+  {
+    "title": "Povestea vietii mele Vol. 2",
+    "authors": [
+      "Regina Maria a României"
+    ],
+    "isbn": "9786068998022",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGGD7/povestea-vietii-mele-vol-2-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/povestea-vietii-mele-vol-2"
+  },
+  {
+    "title": "Povestea vietii mele. Set 4 volume + Cutie de Colectie",
+    "authors": [
+      "Regina Maria a României"
+    ],
+    "isbn": "9786068998015",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGHD7/povestea-vietii-mele-set-4-volume--cutie-de-colectie-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/povestea-vietii-mele-set-4-volume--cutie-de-colectie"
+  },
+  {
+    "title": "Inmultirea. Planse educationale",
+    "authors": [],
+    "isbn": null,
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGZD7/inmultirea-planse-educationale-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/inmultirea-planse-educationale"
+  },
+  {
+    "title": "Scaderea. Planse educationale",
+    "authors": [],
+    "isbn": null,
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGJD7/scaderea-planse-educationale-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/scaderea-planse-educationale"
+  },
+  {
+    "title": "Adunarea. Planse educationale",
+    "authors": [],
+    "isbn": null,
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGKD7/adunarea-planse-educationale-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/adunarea-planse-educationale"
+  },
+  {
+    "title": "Povestea vietii mele Vol. 1",
+    "authors": [
+      "Regina Maria a României"
+    ],
+    "isbn": "9786068998008",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGLD7/povestea-vietii-mele-vol-1-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/povestea-vietii-mele-vol-1"
+  },
+  {
+    "title": "Copilul de la Auschwitz",
+    "authors": [
+      "Lily Graham"
+    ],
+    "isbn": "9786068998091",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJGMD7/copilul-de-la-auschwitz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/copilul-de-la-auschwitz"
+  },
+  {
+    "title": "Nestemata pierduta",
+    "authors": [
+      "Raluca Butnariu"
+    ],
+    "isbn": "9786068894980",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHDD7/nestemata-pierduta-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/nestemata-pierduta"
+  },
+  {
+    "title": "Ferdinand I. Regele Romaniei",
+    "authors": [
+      "Cristian Mosneanu"
+    ],
+    "isbn": "9786068894959",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHED7/ferdinand-i-regele-romaniei-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/ferdinand-i-regele-romaniei"
+  },
+  {
+    "title": "Cartea lui Adam si a Evei",
+    "authors": [],
+    "isbn": null,
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHFD7/cartea-lui-adam-si-a-evei-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/cartea-lui-adam-si-a-evei"
+  },
+  {
+    "title": "Cartea Intelepciunii lui Solomon",
+    "authors": [],
+    "isbn": null,
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHGD7/cartea-intelepciunii-lui-solomon-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/cartea-intelepciunii-lui-solomon"
+  },
+  {
+    "title": "Cartea lui Enoh",
+    "authors": [
+      "R.H. CHARLES"
+    ],
+    "isbn": "9786068998336",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHHD7/cartea-lui-enoh-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/cartea-lui-enoh"
+  },
+  {
+    "title": "Petru Cercel. Colectia Centenarul Marii Uniri",
+    "authors": [
+      "Cristian Mosneanu"
+    ],
+    "isbn": "9786068894652",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHZD7/petru-cercel-colectia-centenarul-marii-uniri-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/petru-cercel-colectia-centenarul-marii-uniri"
+  },
+  {
+    "title": "Hotul de carti",
+    "authors": [
+      "Markus Zusak"
+    ],
+    "isbn": "9786303520506",
+    "publisher": "RAO",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHKD7/hotul-de-carti-markus-zusak-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/hotul-de-carti-markus-zusak"
+  },
+  {
+    "title": "Wildest Dreams",
+    "authors": [
+      "L.J. Shen"
+    ],
+    "isbn": "9786306546404",
+    "publisher": "Midnight Books",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJHMD7/wildest-dreams-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/wildest-dreams-bkz"
+  },
+  {
+    "title": "Crowntide",
+    "authors": [
+      "Alex Aster"
+    ],
+    "isbn": "9786303056432",
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZDD7/crowntide-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/crowntide-bkz"
+  },
+  {
+    "title": "Lightlark Saga",
+    "authors": [
+      "Alex Aster"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZED7/lightlark-saga-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/lightlark-saga-bkz"
+  },
+  {
+    "title": "Pachet Sacrificiul Vrajitoarei",
+    "authors": [
+      "Alex Aster"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZFD7/pachet-sacrificiul-vrajitoarei-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-sacrificiul-vrajitoarei-bkz"
+  },
+  {
+    "title": "Pachet Alchimia Umbrelor",
+    "authors": [
+      "Alex Aster"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZGD7/pachet-alchimia-umbrelor-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-alchimia-umbrelor-bkz"
+  },
+  {
+    "title": "Pachet Nu Lasa Inima Sa Conduca",
+    "authors": [
+      "Alex Aster"
+    ],
+    "isbn": null,
+    "publisher": "Midnight Books",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZHD7/pachet-nu-lasa-inima-sa-conduca-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-nu-lasa-inima-sa-conduca-bkz"
+  },
+  {
+    "title": "Viata e prea scurta sa fii mereu obosit",
+    "authors": [
+      "Dr. Răzvan Vintilescu"
+    ],
+    "isbn": "9786303056418",
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZZD7/viata-e-prea-scurta-sa-fii-mereu-obosit-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/viata-e-prea-scurta-sa-fii-mereu-obosit-bkz"
+  },
+  {
+    "title": "Pachet Resetare neurobiologica",
+    "authors": [
+      "Dr. Kevin J. Tracey"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZJD7/pachet-resetare-neurobiologica-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-resetare-neurobiologica-bkz"
+  },
+  {
+    "title": "Pachet Claritate medicala",
+    "authors": [
+      "Dr. Cezar"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZKD7/pachet-claritate-medicala-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-claritate-medicala-bkz"
+  },
+  {
+    "title": "Pachet Epuizare sau depresie",
+    "authors": [
+      "Dr. Judith Joseph"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZLD7/pachet-epuizare-sau-depresie-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-epuizare-sau-depresie-bkz"
+  },
+  {
+    "title": "Pachet Energiei metabolice",
+    "authors": [
+      "Dr. Adrian Copcea"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJZMD7/pachet-energiei-metabolice-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-energiei-metabolice-bkz"
+  },
+  {
+    "title": "Pachet Ritmul interior",
+    "authors": [
+      "Dr. Răzvan Vintilescu"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJDD7/pachet-ritmul-interior-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-ritmul-interior-bkz"
+  },
+  {
+    "title": "Pachet Copilul obosit de azi, adultul epuizat de maine",
+    "authors": [
+      "Catherine Price"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJED7/pachet-copilul-obosit-de-azi-adultul-epuizat-de-maine-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-copilul-obosit-de-azi-adultul-epuizat-de-maine-bkz"
+  },
+  {
+    "title": "Pachet Dincolo de Suficient",
+    "authors": [
+      "L.J. Shen"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone,",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJFD7/pachet-dincolo-de-suficient-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-dincolo-de-suficient-bkz"
+  },
+  {
+    "title": "Pachet VIRTUTEA PACATULUI",
+    "authors": [
+      "L.J. Shen"
+    ],
+    "isbn": null,
+    "publisher": "Midnight Books",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJGD7/pachet-virtutea-pacatului-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-virtutea-pacatului-bkz"
+  },
+  {
+    "title": "Pachet SERIA IUBIRE INTERZISA: PACATELE CASABLANCAS",
+    "authors": [
+      "L.J. Shen"
+    ],
+    "isbn": null,
+    "publisher": "Midnight Books",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJHD7/pachet-seria-iubire-interzisa-pacatele-casablancas-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-seria-iubire-interzisa-pacatele-casablancas-bkz"
+  },
+  {
+    "title": "Pachet Pacatul visurilor nebunesti",
+    "authors": [
+      "L.J. Shen"
+    ],
+    "isbn": null,
+    "publisher": "Bookzone",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJZD7/pachet-pacatul-visurilor-nebunesti-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-pacatul-visurilor-nebunesti-bkz"
+  },
+  {
+    "title": "Pachet Prada unei obsesii",
+    "authors": [
+      "L.J. Shen"
+    ],
+    "isbn": null,
+    "publisher": "Midnight Books",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJJD7/pachet-prada-unei-obsesii-bkz-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/pachet-prada-unei-obsesii-bkz"
+  },
+  {
+    "title": "Regele lacomiei. Seria Kings of Sin Vol. 3",
+    "authors": [
+      "Ana Huang"
+    ],
+    "isbn": "9786306711246",
+    "publisher": "Epica",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJKD7/regele-lacomiei-king-of-sin-bg2.jpg",
+    "source_url": "https://bookzone.ro/carte/regele-lacomiei-king-of-sin"
+  },
+  {
+    "title": "Leonardo. Viata",
+    "authors": [
+      "Carlo Vecce"
+    ],
+    "isbn": "9786303530505",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJJMD7/leonardo-viata-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/leonardo-viata"
+  },
+  {
+    "title": "Arta de a cunoaste oamenii",
+    "authors": [
+      "David Brooks"
+    ],
+    "isbn": "9786303530109",
+    "publisher": "Librex",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJKDD7/arta-de-a-cunoaste-oamenii-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/arta-de-a-cunoaste-oamenii"
+  },
+  {
+    "title": "Anatomia scuzelor. Cine ai fi fara scuzele tale?",
+    "authors": [
+      "Gina Veveriță"
+    ],
+    "isbn": "9786303033785",
+    "publisher": "Act si Politon",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEJMFD7/anatomia-scuzelor-cine-ai-fi-fara-scuzele-tale-ghid-practic-pentru-cei-care-stiu-ca-intre-maine-si-niciodata-nu-e-mare-diferenta-bg2.jpg",
+    "source_url": "https://bookzone.ro/carte/anatomia-scuzelor-cine-ai-fi-fara-scuzele-tale-ghid-practic-pentru-cei-care-stiu-ca-intre-maine-si-niciodata-nu-e-mare-diferenta"
+  },
+  {
+    "title": "Codul de procedura civila. Ianuarie 2026 Ed. Spiralata",
+    "authors": [
+      "Dan Lupascu"
+    ],
+    "isbn": "9786063918346",
+    "publisher": "Universul Juridic",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMGZD7/codul-de-procedura-civila-ianuarie-2026-ed-spiralata-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/codul-de-procedura-civila-ianuarie-2026-ed-spiralata"
+  },
+  {
+    "title": "Codul de procedura civila. Ianuarie 2026",
+    "authors": [
+      "Dan Lupascu"
+    ],
+    "isbn": "9786063918285",
+    "publisher": "Universul Juridic",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMGJD7/codul-de-procedura-civila-ianuarie-2026-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/codul-de-procedura-civila-ianuarie-2026"
+  },
+  {
+    "title": "Codul civil Ianuarie 2026 Ed. Spiralata",
+    "authors": [
+      "Dan Lupascu"
+    ],
+    "isbn": "9786063918261",
+    "publisher": "Universul Juridic",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMGKD7/codul-civil-ianuarie-2026-ed-spiralata-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/codul-civil-ianuarie-2026-ed-spiralata"
+  },
+  {
+    "title": "Codul civil Ianuarie 2026",
+    "authors": [
+      "Dan Lupascu"
+    ],
+    "isbn": "9786063918193",
+    "publisher": "Universul Juridic",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMGLD7/codul-civil-ianuarie-2026-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/codul-civil-ianuarie-2026"
+  },
+  {
+    "title": "Legea contenciosului administrativ Nr. 554 din 2004 Noiembrie 2025 Ed. Spiralata",
+    "authors": [
+      "Iuliana Riciu"
+    ],
+    "isbn": "9786063917400",
+    "publisher": "Universul Juridic",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMGMD7/legea-contenciosului-administrativ-nr-554-din-2004-noiembrie-2025-ed-spiralata-bg3.jpg",
+    "source_url": "https://bookzone.ro/carte/legea-contenciosului-administrativ-nr-554-din-2004-noiembrie-2025-ed-spiralata"
+  },
+  {
+    "title": "Kerdesek es Tesztek A B. Intrebari si teste pentru obtinerea permisului de conducere categoria B",
+    "authors": [],
+    "isbn": null,
+    "publisher": "National",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMHDD7/kerdesek-es-tesztek-a-b-intrebari-si-teste-pentru-obtinerea-permisului-de-conducere-categoria-b-bg1.webp",
+    "source_url": "https://bookzone.ro/carte/kerdesek-es-tesztek-a-b-intrebari-si-teste-pentru-obtinerea-permisului-de-conducere-categoria-b"
+  },
+  {
+    "title": "Intalnire cu scriitorii romani de ieri si de azi",
+    "authors": [
+      "Mihaela Daniela Cirstea"
+    ],
+    "isbn": "9786062621933",
+    "publisher": "Pro Universitaria",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMHED7/intalnire-cu-scriitorii-romani-de-ieri-si-de-azi-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/intalnire-cu-scriitorii-romani-de-ieri-si-de-azi"
+  },
+  {
+    "title": "Drept financiar si fiscal",
+    "authors": [
+      "Bogdan Cristian Trandafirescu"
+    ],
+    "isbn": "9786062621735",
+    "publisher": "Pro Universitaria",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMHFD7/drept-financiar-si-fiscal-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/drept-financiar-si-fiscal"
+  },
+  {
+    "title": "Momente si schite",
+    "authors": [
+      "Ion Luca Caragiale"
+    ],
+    "isbn": "9786062622039",
+    "publisher": "Pro Universitaria",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMHGD7/momente-si-schite-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/momente-si-schite"
+  },
+  {
+    "title": "Limba engleza prin teste-grila cu explicatii pentru toate nivelurile",
+    "authors": [
+      "Edward Deara"
+    ],
+    "isbn": "9786062622138",
+    "publisher": "Pro Universitaria",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMHHD7/limba-engleza-prin-teste-grila-cu-explicatii-pentru-toate-nivelurile-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/limba-engleza-prin-teste-grila-cu-explicatii-pentru-toate-nivelurile"
+  },
+  {
+    "title": "Interes fata de politica si atasament partinic",
+    "authors": [
+      "Alin Tomus"
+    ],
+    "isbn": "9786062621711",
+    "publisher": "Pro Universitaria",
+    "year": null,
+    "cover_image": "https://assets.bkz.ro/upload/produse/JEFEMHZD7/interes-fata-de-politica-si-atasament-partinic-bg1.jpg",
+    "source_url": "https://bookzone.ro/carte/interes-fata-de-politica-si-atasament-partinic"
   }
 ]

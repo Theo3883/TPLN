@@ -1,20 +1,21 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Search as SearchIcon, ArrowRight, Zap } from 'lucide-react';
-import { mockBooks } from '../data/mock';
+import { useEditions } from '../lib/useApi';
 
 import StarRating from '../components/ui/StarRating';
 
 export default function Search() {
   const [query, setQuery] = useState('');
+  const { data: books } = useEditions(200);
 
   // Simulating Meilisearch typo-tolerance and instant search
   const results = useMemo(() => {
     if (!query.trim()) return [];
-    
+
     const lowerQuery = query.toLowerCase();
-    
-    return mockBooks.filter(book => {
+
+    return (books || []).filter(book => {
       // Basic simulation of full-text match
       const searchableText = `${book.title} ${book.author} ${book.publisher} ${book.isbn} ${book.themes.join(' ')}`.toLowerCase();
       

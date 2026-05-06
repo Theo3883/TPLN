@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { mockBooks, mockReviews } from '../data/mock';
+import api from '../lib/api';
+import { backendReviewToReview, editionToBook } from '../lib/transformers';
 import { ArrowLeft, Star, Send, Fingerprint, ShieldAlert, BadgeCheck, BookOpen, ThumbsUp, X, ChevronLeft, ChevronRight, Gift } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -8,11 +9,34 @@ import StarRating from '../components/ui/StarRating';
 
 export default function EditionDetail() {
   const { id } = useParams<{ id: string }>();
-  const book = mockBooks.find(b => b.id === id);
-  // Using a local state to simulate likes for the session
-  const [localReviews, setLocalReviews] = useState(
-    mockReviews.filter(r => r.bookId === id && r.status === 'approved').map(r => ({ ...r, likes: r.likes || Math.floor(Math.random() * 10) }))
-  );
+  const [book, setBook] = useState<any | null>(null);
+  const [localReviews, setLocalReviews] = useState<any[]>([]);
+
+  useEffect(() => {
+    let mounted = true;
+    if (!id) return;
+    (async () => {
+      try {
+        const ed = await api.getEdition(id);
+        if (!mounted) return;
+        setBook(editionToBook(Array.isArray(ed) ? ed[0] : ed));
+      } catch (err) {
+        console.error(err);
+      }
+
+      try {
+        const reviews = await api.getEditionReviews(id);
+        if (!mounted) return;
+        const list = Array.isArray(reviews) ? reviews : reviews.items ?? [];
+        const approved = list.filter((r: any) => (r.status ?? 'pending') === 'approved').map(backendReviewToReview);
+        // add small random likes for UX
+        setLocalReviews(approved.map(r => ({ ...r, likes: r.likes ?? Math.floor(Math.random() * 10) })));
+      } catch (err) {
+        console.error(err);
+      }
+    })();
+    return () => { mounted = false; };
+  }, [id]);
 
   const [rating, setRating] = useState(5);
   const [reviewText, setReviewText] = useState('');
@@ -27,6 +51,13 @@ export default function EditionDetail() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    (async () => {
+      try {
+        await api.createReview({ edition_id: Number(id), content: reviewText, rating, reviewer_identifier: 'web-user' });
+      } catch (err) {
+        console.error(err);
+      }
+    })();
   };
 
   const handleLike = (reviewId: string) => {

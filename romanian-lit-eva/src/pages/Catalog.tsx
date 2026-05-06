@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { mockBooks } from '../data/mock';
+import { useEditions } from '../lib/useApi';
 import { Filter, ChevronDown, Download } from 'lucide-react';
 
 import StarRating from '../components/ui/StarRating';
 
 export default function Catalog() {
   const [filter, setFilter] = useState('all');
+  const { data: books, loading } = useEditions(90);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -30,7 +31,7 @@ export default function Catalog() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {mockBooks.map((book, index) => (
+        {(books || []).map((book, index) => (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

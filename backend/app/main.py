@@ -8,6 +8,9 @@ Modificări adăugate de Martinaș Ioana Maria (Backend API lead):
 """
 
 import logging
+from contextlib import asynccontextmanager
+
+from app.core.database import engine
 
 from fastapi import FastAPI
 from slowapi import _rate_limit_exceeded_handler
@@ -50,6 +53,7 @@ app = FastAPI(
         "catalog, recenzii, ranking-uri transparente, moderare, export și NLP sentiment."
     ),
     version="1.0.0",
+    lifespan=lifespan,
 )
 
 # --- Rate limiting middleware ---

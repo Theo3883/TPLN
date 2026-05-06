@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { mockBooks, mockAuditEvents } from '../data/mock';
+import { useEditions } from '../lib/useApi';
+import api from '../lib/api';
 import { Trophy, TrendingUp, Info, FileStack, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -8,7 +9,24 @@ import StarRating from '../components/ui/StarRating';
 
 export default function Rankings() {
   const [showAudit, setShowAudit] = useState(false);
-  const sortedBooks = [...mockBooks].sort((a, b) => b.bayesianScore - a.bayesianScore);
+  const { data: books = [] } = useEditions(200);
+  const [auditEvents, setAuditEvents] = useState<any[]>([]);
+  const sortedBooks = [...books].sort((a, b) => b.bayesianScore - a.bayesianScore);
+
+  useEffect(() => {
+    if (!showAudit) return;
+    // Attempt to fetch audit events for top 20 editions; fall back silently on error
+    (async () => {
+      try {
+        const top = sortedBooks.slice(0, 20);
+        const eventsPromises = top.map(b => api.getAudit(b.id).catch(() => []));
+        const res = await Promise.all(eventsPromises);
+        setAuditEvents(res.flat());
+      } catch {
+        setAuditEvents([]);
+      }
+    })();
+  }, [showAudit, sortedBooks]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -41,8 +59,8 @@ export default function Rankings() {
             </div>
             
             <div className="space-y-6">
-              {mockAuditEvents.map((event) => {
-                const book = mockBooks.find(b => b.id === event.bookId);
+              {auditEvents.map((event) => {
+                const book = books.find(b => b.id === String(event.bookId ?? event.edition_id ?? event.editionId));
                 return (
                   <div key={event.id} className="flex gap-6 pb-6 border-b border-[#1a1a1a]/5 last:border-0 last:pb-0">
                     <div className="w-12 text-[10px] uppercase tracking-widest opacity-50 pt-1">
