@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     meilisearch_api_key: str = "master_key_dev"
     meilisearch_index: str = "editions"
     rate_limit_reviews_per_hour: int = 10
+    db_ssl: bool = False  # set True in production
 
     class Config:
         env_file = ".env"
