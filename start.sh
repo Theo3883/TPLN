@@ -56,8 +56,7 @@ pip3 install -r backend/requirements.txt -q
 echo ">>> Installing crawler dependencies..."
 pip3 install -r crawler/requirements.txt -q
 
-echo ">>> Installing UI dependencies..."
-pip3 install -r ui/requirements.txt -q
+
 
 echo ">>> Running database migrations..."
 # Run alembic with retries in case DB is still initializing
@@ -91,35 +90,25 @@ if [ -n "${BACKEND_PID:-}" ]; then
   done
 fi
 
-UI_PID=""
-if [ -d ui ]; then
-  echo ">>> Starting Streamlit UI..."
-  (cd ui && streamlit run app.py --server.port 8501 --server.address 0.0.0.0) &
-  UI_PID=$!
-  CHILD_PIDS+=("$UI_PID")
-else
-  echo "Skipping Streamlit UI: ui directory not found." >&2
-fi
 
 FRONTEND_PID=""
-if [ -d romanian-lit-eva ]; then
-  echo ">>> Installing frontend dependencies (romanian-lit-eva)..."
-  (cd romanian-lit-eva && npm install --silent)
+if [ -d frontend ]; then
+  echo ">>> Installing frontend dependencies (frontend)..."
+  (cd frontend && npm install --silent)
 
   echo ">>> Starting frontend (Vite dev server)..."
   # Ensure the frontend uses the local backend API
-  (cd romanian-lit-eva && VITE_API_BASE="http://localhost:8000" npm run dev --silent) &
+  (cd frontend && VITE_API_BASE="http://localhost:8000" npm run dev --silent) &
   FRONTEND_PID=$!
   CHILD_PIDS+=("$FRONTEND_PID")
 else
-  echo "Skipping frontend: romanian-lit-eva directory not found." >&2
+  echo "Skipping frontend: frontend directory not found." >&2
 fi
 
 echo ""
 echo "=== Ready ==="
 echo "  Backend:  http://localhost:8000"
 echo "  API Docs: http://localhost:8000/docs"
-echo "  UI:       http://localhost:8501"
 echo "  Frontend: http://localhost:3000"
 echo ""
 echo "Press Ctrl+C to stop all services."

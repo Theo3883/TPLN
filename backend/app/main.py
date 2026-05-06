@@ -13,6 +13,7 @@ from contextlib import asynccontextmanager
 from app.core.database import engine
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
@@ -28,12 +29,15 @@ async def lifespan(app: FastAPI):
     import asyncio
     from app.services.search import get_search_client
     from app.services.crawler_runner import run_crawler
+    from app.services.json_ingest import ingest_from_crawler_output
     from app.core.config import settings
     try:
         from app.services.search import configure_search_index
         configure_search_index()
     except Exception:
         pass
+    # Ingest any existing crawler JSON files into the DB on startup
+    asyncio.create_task(ingest_from_crawler_output())
     asyncio.create_task(run_crawler())
     yield
     await engine.dispose()
@@ -54,6 +58,15 @@ app = FastAPI(
     ),
     version="1.0.0",
     lifespan=lifespan,
+)
+
+# --- CORS ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # --- Rate limiting middleware ---
