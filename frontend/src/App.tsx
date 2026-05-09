@@ -15,6 +15,7 @@ import Rankings from './pages/Rankings';
 import EditionDetail from './pages/EditionDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import OtherBooks from './pages/OtherBooks';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="catalog" element={<Catalog />} />
+            <Route path="other-books" element={<OtherBooks />} />
             <Route path="search" element={<Search />} />
             <Route path="rankings" element={<Rankings />} />
             <Route path="edition/:id" element={<EditionDetail />} />

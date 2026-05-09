@@ -1,9 +1,11 @@
 """
 Ingest endpoints cu rate limiting adăugat pe /run-crawler.
 Modificare: Martinaș Ioana Maria — rate limiting pe trigger crawler.
+Modificare: Tracking source și crawler_name pentru cărți din crawlere.
 """
 
 import asyncio
+from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field, field_validator
@@ -29,12 +31,13 @@ def _normalize(s: str) -> str:
 
 
 class IngestItem(BaseModel):
-    """Schema de ingestie cu validare îmbunătățită."""
+    """Schema de ingestie cu validare îmbunătățită și tracking crawler."""
     title: str = Field(..., min_length=1, max_length=500, description="Titlul cărții")
     authors: list[str] = Field(default_factory=list, description="Lista de autori")
     isbn: str | None = Field(default=None, description="ISBN-10 sau ISBN-13")
     publisher: str | None = Field(default=None, max_length=255)
     year: int | None = Field(default=None, ge=1800, le=2100, description="Anul publicării")
+    crawler_name: str | None = Field(default=None, description="Numele crawler-ului (bookzone, carturesti, libris)")
 
     @field_validator("title")
     @classmethod
@@ -47,6 +50,16 @@ class IngestItem(BaseModel):
     @classmethod
     def authors_not_empty_strings(cls, v: list[str]) -> list[str]:
         return [a.strip() for a in v if a and a.strip()]
+    
+    @field_validator("crawler_name")
+    @classmethod
+    def validate_crawler_name(cls, v: str | None) -> str | None:
+        if v is not None:
+            valid_crawlers = ["bookzone", "carturesti", "libris"]
+            if v.lower() not in valid_crawlers:
+                raise ValueError(f"crawler_name must be one of: {', '.join(valid_crawlers)}")
+            return v.lower()
+        return None
 
 
 @router.post("")
@@ -96,6 +109,9 @@ async def ingest_edition(
         isbn=isbn or None,
         publisher=data.publisher or None,
         year=data.year,
+        source='crawler' if data.crawler_name else 'manual',
+        crawler_name=data.crawler_name,
+        imported_at=datetime.now(timezone.utc) if data.crawler_name else None,
     )
     edition.authors = author_objs
     db.add(edition)

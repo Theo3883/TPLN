@@ -10,6 +10,35 @@ export interface Book {
   confidence: number;
   reviewCount: number;
   themes: string[];
+  // Source tracking for crawler vs manual
+  source?: 'manual' | 'crawler';
+  crawler_name?: 'bookzone' | 'carturesti' | 'libris';
+  imported_at?: string;
+}
+
+export type EditionSource = 'manual' | 'crawler';
+export type CrawlerName = 'bookzone' | 'carturesti' | 'libris';
+
+export interface Edition {
+  id: number;
+  book_id: number;
+  isbn?: string;
+  publisher?: string;
+  year?: number;
+  score?: number;
+  confidence?: number;
+  review_count: number;
+  source: EditionSource;
+  crawler_name?: CrawlerName;
+  imported_at?: string;
+  book?: {
+    id: number;
+    title: string;
+  };
+  authors?: Array<{
+    id: number;
+    name: string;
+  }>;
 }
 
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';

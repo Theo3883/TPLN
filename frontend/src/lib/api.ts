@@ -57,6 +57,23 @@ export async function listEditions(limit = 90) {
   return handleResponse(res);
 }
 
+export async function listEditionsFiltered(filters?: {
+  source?: 'manual' | 'crawler';
+  crawler_name?: 'bookzone' | 'carturesti' | 'libris';
+  skip?: number;
+  limit?: number;
+}) {
+  const params = new URLSearchParams();
+  if (filters?.source) params.append('source', filters.source);
+  if (filters?.crawler_name) params.append('crawler_name', filters.crawler_name);
+  if (filters?.skip !== undefined) params.append('skip', filters.skip.toString());
+  if (filters?.limit !== undefined) params.append('limit', filters.limit.toString());
+  
+  const res = await fetch(`${API_BASE}/editions?${params.toString()}`);
+  if (!res.ok) throw new Error(`listEditionsFiltered failed: ${res.status}`);
+  return handleResponse(res);
+}
+
 export async function getEdition(id: number | string) {
   const res = await fetch(`${API_BASE}/editions/${id}`);
   if (!res.ok) throw new Error(`getEdition failed: ${res.status}`);

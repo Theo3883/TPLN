@@ -12,6 +12,7 @@ export default function Layout() {
   const navLinks = [
     { name: 'Home', path: '/', icon: BookOpen },
     { name: 'Catalog', path: '/catalog', icon: BookOpen },
+    { name: 'Other Books', path: '/other-books', icon: BookOpen },
     { name: 'Search', path: '/search', icon: Search },
     { name: 'Rankings', path: '/rankings', icon: Trophy },
     { name: 'Moderation Workspace', path: '/moderation', icon: Shield },
