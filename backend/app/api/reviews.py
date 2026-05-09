@@ -4,8 +4,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
 from app.core.config import settings
-from app.core.security import limiter
-from app.models import Edition, Review, Reviewer
+from app.core.security import get_current_user, limiter
+from app.models import Edition, Review, Reviewer, User
 from app.schemas.review import ReviewCreate, ReviewResponse
 
 router = APIRouter()
@@ -34,18 +34,31 @@ async def list_reviews(
 async def create_review(
     request: Request,
     review_in: ReviewCreate,
+    current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
+    """
+    Create a new review (requires authentication).
+    Uses the authenticated user's associated reviewer.
+    """
     edition_result = await db.execute(select(Edition).where(Edition.id == review_in.edition_id))
     if not edition_result.scalar_one_or_none():
         raise HTTPException(status_code=404, detail="Edition not found")
 
+    # Get or create reviewer for the authenticated user
     reviewer_result = await db.execute(
-        select(Reviewer).where(Reviewer.identifier == review_in.reviewer_identifier)
+        select(Reviewer).where(Reviewer.user_id == current_user.id)
     )
     reviewer = reviewer_result.scalar_one_or_none()
+    
     if not reviewer:
-        reviewer = Reviewer(identifier=review_in.reviewer_identifier)
+        # This shouldn't happen as reviewer is created during registration,
+        # but handle it just in case
+        reviewer = Reviewer(
+            identifier=current_user.email,
+            user_id=current_user.id,
+            migrated=True
+        )
         db.add(reviewer)
         await db.flush()
 

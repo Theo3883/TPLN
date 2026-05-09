@@ -9,6 +9,48 @@ async function handleResponse(resp: Response) {
   }
 }
 
+/**
+ * Make an authenticated request with JWT token
+ */
+async function authFetch(url: string, options: RequestInit = {}) {
+  const token = localStorage.getItem('access_token');
+  const headers = {
+    'Content-Type': 'application/json',
+    ...options.headers,
+  } as HeadersInit;
+
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  let response = await fetch(url, { ...options, headers });
+
+  // If 401, try to refresh token
+  if (response.status === 401 && token) {
+    const refreshToken = localStorage.getItem('refresh_token');
+    if (refreshToken) {
+      try {
+        // Import auth functions dynamically to avoid circular dependency
+        const { refreshAccessToken } = await import('./auth');
+        const newTokens = await refreshAccessToken(refreshToken);
+        localStorage.setItem('access_token', newTokens.access_token);
+        localStorage.setItem('refresh_token', newTokens.refresh_token);
+
+        // Retry original request with new token
+        headers['Authorization'] = `Bearer ${newTokens.access_token}`;
+        response = await fetch(url, { ...options, headers });
+      } catch (error) {
+        // Refresh failed, clear tokens
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+        throw new Error('Session expired. Please login again.');
+      }
+    }
+  }
+
+  return response;
+}
+
 export async function listEditions(limit = 90) {
   const res = await fetch(`${API_BASE}/editions?limit=${limit}`);
   if (!res.ok) throw new Error(`listEditions failed: ${res.status}`);
@@ -47,9 +89,8 @@ export async function listPendingReviews() {
 }
 
 export async function createReview(payload: any) {
-  const res = await fetch(`${API_BASE}/reviews`, {
+  const res = await authFetch(`${API_BASE}/reviews`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });
   if (!res.ok) throw new Error(`createReview failed: ${res.status}`);

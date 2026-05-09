@@ -38,7 +38,28 @@ export interface ScoreEvent {
 }
 
 export interface User {
-  id: string;
-  name: string;
-  role: 'user' | 'moderator' | 'admin';
+  id: number;
+  email: string;
+  username: string;
+  bio?: string;
+  is_active: boolean;
+  is_verified: boolean;
+  created_at: string;
+}
+
+export interface LoginCredentials {
+  email: string;
+  password: string;
+}
+
+export interface RegisterData {
+  email: string;
+  username: string;
+  password: string;
+}
+
+export interface TokenResponse {
+  access_token: string;
+  refresh_token: string;
+  token_type: string;
 }
