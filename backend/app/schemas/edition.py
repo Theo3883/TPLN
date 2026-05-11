@@ -56,6 +56,9 @@ class EditionResponse(EditionBase):
     source: EditionSource = EditionSource.MANUAL
     crawler_name: CrawlerName | None = None
     imported_at: datetime | None = None
+    
+    # Preview text for review eligibility
+    preview_text: str | None = None
 
     class Config:
         from_attributes = True

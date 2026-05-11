@@ -1,12 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
+from typing import Optional
 
 from app.core.database import get_db
 from app.core.config import settings
-from app.core.security import get_current_user, limiter
-from app.models import Edition, Review, Reviewer, User
-from app.schemas.review import ReviewCreate, ReviewResponse
+from app.core.security import get_current_user, get_current_user_optional, limiter
+from app.models import Edition, Review, Reviewer, User, ReviewLike
+from app.schemas.review import ReviewCreate, ReviewResponse, SentimentLabel
+from app.services.sentiment_analyzer import analyze_review_sentiment
 
 router = APIRouter()
 create_router = APIRouter()
@@ -17,13 +19,34 @@ async def list_reviews(
     edition_id: int,
     skip: int = Query(0, ge=0),
     limit: int = Query(20, ge=1, le=100),
+    current_user: Optional[User] = Depends(get_current_user_optional),
     db: AsyncSession = Depends(get_db),
 ):
     result = await db.execute(
         select(Review).where(Review.edition_id == edition_id).offset(skip).limit(limit)
     )
     reviews = result.scalars().all()
-    return [ReviewResponse.model_validate(r) for r in reviews]
+    
+    # Build response with liked_by_user field
+    response = []
+    for review in reviews:
+        review_dict = ReviewResponse.model_validate(review).model_dump()
+        
+        # Check if current user has liked this review
+        if current_user:
+            like_result = await db.execute(
+                select(ReviewLike).where(
+                    ReviewLike.review_id == review.id,
+                    ReviewLike.user_id == current_user.id
+                )
+            )
+            review_dict["liked_by_user"] = like_result.scalar_one_or_none() is not None
+        else:
+            review_dict["liked_by_user"] = False
+        
+        response.append(ReviewResponse(**review_dict))
+    
+    return response
 
 
 @create_router.post(
@@ -39,10 +62,13 @@ async def create_review(
 ):
     """
     Create a new review (requires authentication).
-    Uses the authenticated user's associated reviewer.
+    Automatically analyzes sentiment using NLP.
     """
+    # Fetch edition
     edition_result = await db.execute(select(Edition).where(Edition.id == review_in.edition_id))
-    if not edition_result.scalar_one_or_none():
+    edition = edition_result.scalar_one_or_none()
+    
+    if not edition:
         raise HTTPException(status_code=404, detail="Edition not found")
 
     # Get or create reviewer for the authenticated user
@@ -62,11 +88,17 @@ async def create_review(
         db.add(reviewer)
         await db.flush()
 
+    # ANALYZE SENTIMENT AUTOMATICALLY
+    sentiment = await analyze_review_sentiment(review_in.content)
+
     review = Review(
         edition_id=review_in.edition_id,
         reviewer_id=reviewer.id,
         content=review_in.content,
         rating=review_in.rating,
+        sentiment_label=sentiment["label"],
+        sentiment_score=sentiment["score"],
+        sentiment_confidence=sentiment["confidence"],
     )
     db.add(review)
     await db.flush()
@@ -74,7 +106,6 @@ async def create_review(
     from app.services.scoring import compute_score
     from app.models import ScoreEvent
 
-    edition = edition_result.scalar_one_or_none()
     ratings_result = await db.execute(
         select(Review.rating).where(
             Review.edition_id == review_in.edition_id,

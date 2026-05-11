@@ -28,6 +28,7 @@ from app.api import (
     editions,
     export,
     ingest,
+    likes,
     moderation,
     rankings,
     reviews,
@@ -104,6 +105,9 @@ app.include_router(export.router, prefix="/export", tags=["Export"])
 app.include_router(ingest.router, prefix="/ingest", tags=["Ingestie"])
 app.include_router(search.router, tags=["Căutare"])
 app.include_router(audit.router, prefix="/audit", tags=["Audit"])
+
+# --- Router gamification (likes și unlocks) ---
+app.include_router(likes.router, tags=["Gamification"])
 
 # --- Router NLP sentiment (Martinaș Ioana Maria) ---
 app.include_router(

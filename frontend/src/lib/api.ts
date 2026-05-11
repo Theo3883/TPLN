@@ -1,5 +1,7 @@
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000';
 
+import type { ReviewCreate, Review, LikeResponse, TopReview, UnlockedBook, UnlockStatus } from '../types';
+
 async function handleResponse(resp: Response) {
   const text = await resp.text();
   try {
@@ -105,12 +107,15 @@ export async function listPendingReviews() {
   return handleResponse(res);
 }
 
-export async function createReview(payload: any) {
+export async function createReview(payload: ReviewCreate): Promise<Review> {
   const res = await authFetch(`${API_BASE}/reviews`, {
     method: 'POST',
     body: JSON.stringify(payload),
   });
-  if (!res.ok) throw new Error(`createReview failed: ${res.status}`);
+  if (!res.ok) {
+    const error = await handleResponse(res);
+    throw new Error(error.detail || `createReview failed: ${res.status}`);
+  }
   return handleResponse(res);
 }
 
@@ -126,6 +131,48 @@ export async function rejectReview(id: number | string) {
   return handleResponse(res);
 }
 
+// --- Gamification: Likes & Unlocks ---
+
+export async function likeReview(reviewId: number): Promise<LikeResponse> {
+  const res = await authFetch(`${API_BASE}/reviews/${reviewId}/like`, {
+    method: 'POST',
+  });
+  if (!res.ok) {
+    const error = await handleResponse(res);
+    throw new Error(error.detail || `likeReview failed: ${res.status}`);
+  }
+  return handleResponse(res);
+}
+
+export async function unlikeReview(reviewId: number): Promise<LikeResponse> {
+  const res = await authFetch(`${API_BASE}/reviews/${reviewId}/like`, {
+    method: 'DELETE',
+  });
+  if (!res.ok) {
+    const error = await handleResponse(res);
+    throw new Error(error.detail || `unlikeReview failed: ${res.status}`);
+  }
+  return handleResponse(res);
+}
+
+export async function getTopReview(editionId: number): Promise<TopReview | null> {
+  const res = await fetch(`${API_BASE}/editions/${editionId}/top-review`);
+  if (!res.ok) throw new Error(`getTopReview failed: ${res.status}`);
+  return handleResponse(res);
+}
+
+export async function checkEditionUnlocked(editionId: number): Promise<UnlockStatus> {
+  const res = await authFetch(`${API_BASE}/editions/${editionId}/is-unlocked`);
+  if (!res.ok) throw new Error(`checkEditionUnlocked failed: ${res.status}`);
+  return handleResponse(res);
+}
+
+export async function getUnlockedBooks(): Promise<UnlockedBook[]> {
+  const res = await authFetch(`${API_BASE}/unlocked-books`);
+  if (!res.ok) throw new Error(`getUnlockedBooks failed: ${res.status}`);
+  return handleResponse(res);
+}
+
 export async function getAudit(editionId: number | string) {
   const res = await fetch(`${API_BASE}/audit/editions/${editionId}`);
   if (!res.ok) throw new Error(`getAudit failed: ${res.status}`);
@@ -134,6 +181,7 @@ export async function getAudit(editionId: number | string) {
 
 export default {
   listEditions,
+  listEditionsFiltered,
   getEdition,
   searchEditions,
   listRankings,
@@ -142,5 +190,10 @@ export default {
   createReview,
   approveReview,
   rejectReview,
+  likeReview,
+  unlikeReview,
+  getTopReview,
+  checkEditionUnlocked,
+  getUnlockedBooks,
   getAudit,
 };

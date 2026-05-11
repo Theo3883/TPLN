@@ -6,11 +6,15 @@ import { ArrowLeft, Star, Send, Fingerprint, ShieldAlert, BadgeCheck, BookOpen, 
 import { motion, AnimatePresence } from 'motion/react';
 
 import StarRating from '../components/ui/StarRating';
+import { SentimentBadge } from '../components/ui/SentimentBadge';
+import { LikeButton } from '../components/ui/LikeButton';
+import type { Edition, Review } from '../types';
 
 export default function EditionDetail() {
   const { id } = useParams<{ id: string }>();
   const [book, setBook] = useState<any | null>(null);
-  const [localReviews, setLocalReviews] = useState<any[]>([]);
+  const [edition, setEdition] = useState<Edition | null>(null);
+  const [localReviews, setLocalReviews] = useState<Review[]>([]);
 
   useEffect(() => {
     let mounted = true;
@@ -19,7 +23,9 @@ export default function EditionDetail() {
       try {
         const ed = await api.getEdition(id);
         if (!mounted) return;
-        setBook(editionToBook(Array.isArray(ed) ? ed[0] : ed));
+        const editionData = Array.isArray(ed) ? ed[0] : ed;
+        setEdition(editionData);
+        setBook(editionToBook(editionData));
       } catch (err) {
         console.error(err);
       }
@@ -28,9 +34,8 @@ export default function EditionDetail() {
         const reviews = await api.getEditionReviews(id);
         if (!mounted) return;
         const list = Array.isArray(reviews) ? reviews : reviews.items ?? [];
-        const approved = list.filter((r: any) => (r.status ?? 'pending') === 'approved').map(backendReviewToReview);
-        // add small random likes for UX
-        setLocalReviews(approved.map(r => ({ ...r, likes: r.likes ?? Math.floor(Math.random() * 10) })));
+        const approved = list.filter((r: any) => (r.status ?? 'pending') === 'approved');
+        setLocalReviews(approved);
       } catch (err) {
         console.error(err);
       }
@@ -53,9 +58,17 @@ export default function EditionDetail() {
     setSubmitted(true);
     (async () => {
       try {
-        await api.createReview({ edition_id: Number(id), content: reviewText, rating, reviewer_identifier: 'web-user' });
-      } catch (err) {
+        const newReview = await api.createReview({ 
+          edition_id: Number(id), 
+          content: reviewText, 
+          rating 
+        });
+        // Add new review to the list
+        setLocalReviews(prev => [newReview, ...prev]);
+      } catch (err: any) {
         console.error(err);
+        alert(err.message || 'Failed to submit review');
+        setSubmitted(false);
       }
     })();
   };
@@ -161,6 +174,7 @@ export default function EditionDetail() {
           {/* Submit Review */}
           <div className="mb-16 bg-white p-8 rounded-[2rem] border border-[#1a1a1a]/10 shadow-sm relative overflow-hidden">
             <h3 className="font-serif text-2xl mb-6">Evaluate Edition</h3>
+            
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-8 text-center">
                 <div className="w-16 h-16 bg-green-50 rounded-full border border-green-200 flex items-center justify-center mb-4 text-green-600">
@@ -232,42 +246,28 @@ export default function EditionDetail() {
                   <div className="flex justify-between items-start mb-4 relative z-10">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-[#1a1a1a]/10 flex items-center justify-center font-serif italic text-xs">
-                        {review.userName[0]}
+                        R
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-sm font-medium">{review.userName}</span>
-                        <span className="text-[10px] opacity-50 font-mono">{new Date(review.createdAt).toLocaleDateString()}</span>
+                        <span className="text-sm font-medium">Reviewer</span>
+                        <span className="text-[10px] opacity-50 font-mono">{new Date(review.created_at).toLocaleDateString()}</span>
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-2">
-                       <div className="flex border border-[#1a1a1a]/10 rounded-md overflow-hidden bg-white items-center gap-2 px-2 py-1">
-                        <StarRating rating={review.rating} size="sm" />
-                        {review.sentiment && (
-                          <div className={`px-2 py-0.5 text-[8px] uppercase tracking-wider flex items-center rounded-sm
-                            ${review.sentiment === 'positive' ? 'bg-green-50 text-green-700' : 
-                              review.sentiment === 'negative' ? 'bg-red-50 text-red-700' : 'bg-gray-50 text-gray-700'}`}
-                          >
-                            {review.sentiment}
-                          </div>
+                       <div className="flex items-center gap-2">
+                        {review.rating && <StarRating rating={review.rating} size="sm" />}
+                        {review.sentiment_label && (
+                          <SentimentBadge 
+                            label={review.sentiment_label} 
+                            score={review.sentiment_score}
+                            confidence={review.sentiment_confidence}
+                            showDetails={true}
+                          />
                         )}
                       </div>
-                      <button 
-                        onClick={() => handleLike(review.id)}
-                        className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold text-[#1a1a1a]/60 hover:text-[#1a1a1a] transition-colors"
-                      >
-                        <ThumbsUp className={`w-3 h-3 ${review.likes && review.likes > 0 ? 'fill-[#1a1a1a]/10' : ''}`} />
-                        {review.likes || 0} Appreciations
-                      </button>
                     </div>
                   </div>
-                  <p className="font-serif text-sm leading-relaxed opacity-80 relative z-10">{review.text}</p>
-                  
-                  {/* Contest indicator if high likes */}
-                  {(review.likes || 0) > 5 && (
-                    <div className="absolute top-0 right-0 p-2 opacity-5 pointer-events-none">
-                      <TrophyIcon className="w-24 h-24 rotate-12" />
-                    </div>
-                  )}
+                  <p className="font-serif text-sm leading-relaxed opacity-80 relative z-10">{review.content}</p>
                 </div>
               )) : (
                 <div className="text-center py-12 border border-dashed border-[#1a1a1a]/20 rounded-2xl">

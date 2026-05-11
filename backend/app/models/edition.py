@@ -29,6 +29,9 @@ class Edition(Base):
     crawler_name = Column(String(50), nullable=True, index=True)
     imported_at = Column(DateTime(timezone=True), nullable=True)
     
+    # Preview text for review eligibility
+    preview_text = Column(String, nullable=True)
+    
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
@@ -40,3 +43,4 @@ class Edition(Base):
     )
     reviews = relationship("Review", back_populates="edition")
     score_events = relationship("ScoreEvent", back_populates="edition")
+    unlocks = relationship("UnlockedBook", back_populates="edition", cascade="all, delete-orphan")

@@ -23,3 +23,5 @@ class User(Base):
         "RefreshToken", back_populates="user", cascade="all, delete-orphan"
     )
     reviewer = relationship("Reviewer", back_populates="user", uselist=False)
+    review_likes = relationship("ReviewLike", back_populates="user", cascade="all, delete-orphan")
+    unlocked_books = relationship("UnlockedBook", back_populates="user", cascade="all, delete-orphan")

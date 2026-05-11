@@ -4,7 +4,15 @@ Responsabilitatea: Martinaș Ioana Maria (Backend API lead).
 """
 
 from datetime import datetime
+from enum import Enum
 from pydantic import BaseModel, Field, field_validator, model_validator
+
+
+class SentimentLabel(str, Enum):
+    """Etichete pentru clasificarea sentiment-ului."""
+    POZITIV = "pozitiv"
+    NEGATIV = "negativ"
+    NEUTRU = "neutru"
 
 
 class ReviewCreate(BaseModel):
@@ -70,15 +78,22 @@ class ReviewResponse(BaseModel):
     rating: float | None = None
     status: str
     created_at: datetime
-    # Câmp opțional sentiment — populat dacă NLP e disponibil
-    sentiment_label: str | None = Field(
+    # Câmpuri sentiment — populat automat după creare
+    sentiment_label: SentimentLabel | None = Field(
         default=None,
-        description="Eticheta de sentiment: 'pozitiv', 'negativ', 'neutru' sau None",
+        description="Eticheta de sentiment: pozitiv, negativ sau neutru",
     )
     sentiment_score: float | None = Field(
         default=None,
         description="Scor sentiment în [-1.0, 1.0] sau None dacă nu e calculat",
     )
+    sentiment_confidence: float | None = Field(
+        default=None,
+        description="Confidence score al modelului NLP în [0.0, 1.0]",
+    )
+    # Gamification fields
+    like_count: int = Field(default=0, description="Numărul de like-uri primite")
+    liked_by_user: bool = Field(default=False, description="Dacă utilizatorul curent a apreciat review-ul")
 
     class Config:
         from_attributes = True
