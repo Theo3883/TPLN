@@ -97,6 +97,17 @@
     "source_url": "https://carturesti.ro/carte/disparitia-lui-adele-bedeau-2328536"
   },
   {
+    "title": "Lumina in august",
+    "authors": [
+      "William Faulkner"
+    ],
+    "isbn": "9786067104707",
+    "publisher": "Art",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1976844-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/lumina-in-august-1976844"
+  },
+  {
     "title": "Casuta din ceata translucida",
     "authors": [
       "Radu Popescu"
@@ -294,17 +305,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/110543739-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/iubiri-dificile-110543739"
-  },
-  {
-    "title": "Cavalerul",
-    "authors": [
-      "Gene Wolfe"
-    ],
-    "isbn": "9786068673721",
-    "publisher": "Paladin",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/110543961-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/cavalerul-110543961"
   },
   {
     "title": "Vremea schimbarii",
@@ -538,6 +538,17 @@
     "source_url": "https://carturesti.ro/carte/noapte-credincioasa-si-virtuoasa-1213489951"
   },
   {
+    "title": "Civilizatii",
+    "authors": [
+      "Laurent Binet"
+    ],
+    "isbn": "9786069783962",
+    "publisher": "Pandora M",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1222157038-0-240.png",
+    "source_url": "https://carturesti.ro/carte/civilizatii-1222157038"
+  },
+  {
     "title": "Ghidul tau pentru succes si fericire",
     "authors": [],
     "isbn": "9786064409386",
@@ -767,17 +778,6 @@
     "source_url": "https://carturesti.ro/carte/a-saptea-functie-a-limbajului-1331452274"
   },
   {
-    "title": "Armata, spionaj si economie in Romania (1945-1991)",
-    "authors": [
-      "Petre Opris"
-    ],
-    "isbn": "9786064008060",
-    "publisher": "Trei",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1335403538-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/armata-spionaj-si-economie-in-romania-1945-1991-1335403538"
-  },
-  {
     "title": "Magia divanului",
     "authors": [
       "Claudia Guderian"
@@ -863,17 +863,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1351570-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/raiul-pe-pamant-1351570"
-  },
-  {
-    "title": "Primul meu dictionar cu ferestre - Animale",
-    "authors": [
-      "Martina Badstuber"
-    ],
-    "isbn": "9786067871777",
-    "publisher": "Casa",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1353222527-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/primul-meu-dictionar-cu-ferestre-animale-1353222527"
   },
   {
     "title": "Mamma Mu se da cu sania",
@@ -1164,17 +1153,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1495247885-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/madame-piaf-si-cantecul-iubirii-1495247885"
-  },
-  {
-    "title": "Chirurgul si cutitul de gheata",
-    "authors": [
-      "Sam Kean"
-    ],
-    "isbn": "9786067224719",
-    "publisher": "Publica",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1505377245-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/chirurgul-si-cutitul-de-gheata-1505377245"
   },
   {
     "title": "Degenerat",
@@ -1531,17 +1509,6 @@
     "source_url": "https://carturesti.ro/carte/ajuta-l-doamne-pe-copil-1658058"
   },
   {
-    "title": "Kraken",
-    "authors": [
-      "China Mieville"
-    ],
-    "isbn": "9786068673165",
-    "publisher": "Paladin",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1658073-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/kraken-1658073"
-  },
-  {
     "title": "Jurnalul secret al lui Adrian Mole",
     "authors": [
       "Sue Townsend"
@@ -1551,6 +1518,17 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1658083-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/jurnalul-secret-al-lui-adrian-mole-1658083"
+  },
+  {
+    "title": "Simpatizantul",
+    "authors": [
+      "Viet Thanh Nguyen"
+    ],
+    "isbn": "9786067104455",
+    "publisher": "Art",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1658257-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/simpatizantul-1658257"
   },
   {
     "title": "Gargara cu gudron",
@@ -2022,6 +2000,17 @@
     "source_url": "https://carturesti.ro/carte/fii-bun-cu-tine-1911913045"
   },
   {
+    "title": "Din America, experiment in doi",
+    "authors": [
+      "Elena Armas"
+    ],
+    "isbn": "9786069713204",
+    "publisher": "Epica",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1924736733-0-240.png",
+    "source_url": "https://carturesti.ro/carte/din-america-experiment-in-doi-1924736733"
+  },
+  {
     "title": "Fericirea incepe azi",
     "authors": [
       "Jamie McGuire"
@@ -2066,6 +2055,17 @@
     "source_url": "https://carturesti.ro/carte/amazon-descatusat-1964396703"
   },
   {
+    "title": "Cei care cumpara stele",
+    "authors": [
+      "Anca Mizumschi"
+    ],
+    "isbn": "9786064015440",
+    "publisher": "Trei",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1964397278-1-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/cei-care-cumpara-stele-1964397278"
+  },
+  {
     "title": "Taci si saruta-ma!",
     "authors": [
       "Rachel Gibson"
@@ -2099,6 +2099,17 @@
     "source_url": "https://carturesti.ro/carte/galveston-1975256"
   },
   {
+    "title": "Scurta domnie a lui Pepin al IV-lea - Colectia Nobel",
+    "authors": [
+      "John Steinbeck"
+    ],
+    "isbn": "9789731247694",
+    "publisher": "Art",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/9789731247694-2439898-240.jpg",
+    "source_url": "https://carturesti.ro/carte/scurta-domnie-a-lui-pepin-al-iv-lea-colectia-nobel-197558"
+  },
+  {
     "title": "Vinegar Girl",
     "authors": [
       "Anne Tyler"
@@ -2130,17 +2141,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/5051535922-0-240.png",
     "source_url": "https://carturesti.ro/carte/new-boy-5051535922"
-  },
-  {
-    "title": "Hag-Seed",
-    "authors": [
-      "Margaret Atwood"
-    ],
-    "isbn": "9781784878832",
-    "publisher": "Vintage Classics",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/5051535916-0-240.webp",
-    "source_url": "https://carturesti.ro/carte/hag-seed-5051535916"
   },
   {
     "title": "The Gap of Time",

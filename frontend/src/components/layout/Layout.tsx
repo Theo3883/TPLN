@@ -1,14 +1,18 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, Search, Shield, Trophy, Menu, X } from 'lucide-react';
+import { BookOpen, Search, Shield, Trophy, Menu, X, User, LogOut } from 'lucide-react';
 import { useState } from 'react';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const location = useLocation();
+  const { user, logout } = useAuth();
 
   const navLinks = [
     { name: 'Home', path: '/', icon: BookOpen },
     { name: 'Catalog', path: '/catalog', icon: BookOpen },
+    { name: 'Other Books', path: '/other-books', icon: BookOpen },
     { name: 'Search', path: '/search', icon: Search },
     { name: 'Rankings', path: '/rankings', icon: Trophy },
     { name: 'Moderation Workspace', path: '/moderation', icon: Shield },
@@ -43,6 +47,54 @@ export default function Layout() {
                 </Link>
               ))}
             </nav>
+
+            {/* User menu */}
+            <div className="hidden md:block relative">
+              {user ? (
+                <>
+                  <button
+                    onClick={() => setUserMenuOpen(!userMenuOpen)}
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#1a1a1a]/20 hover:bg-[#1a1a1a]/5 transition"
+                  >
+                    <User className="w-4 h-4" />
+                    <span className="text-sm">{user.username}</span>
+                  </button>
+                  {userMenuOpen && (
+                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-[#1a1a1a]/10 py-2">
+                      <div className="px-4 py-2 border-b border-[#1a1a1a]/10">
+                        <p className="text-sm font-medium">{user.username}</p>
+                        <p className="text-xs text-gray-500">{user.email}</p>
+                      </div>
+                      <button
+                        onClick={async () => {
+                          await logout();
+                          setUserMenuOpen(false);
+                        }}
+                        className="w-full px-4 py-2 text-left text-sm hover:bg-[#1a1a1a]/5 flex items-center gap-2 text-red-600"
+                      >
+                        <LogOut className="w-4 h-4" />
+                        Deconectare
+                      </button>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div className="flex gap-3">
+                  <Link
+                    to="/login"
+                    className="text-[11px] uppercase tracking-[0.1em] font-medium px-4 py-2 opacity-60 hover:opacity-100 transition"
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/register"
+                    className="text-[11px] uppercase tracking-[0.1em] font-medium px-4 py-2 bg-[#1a1a1a] text-white rounded hover:bg-[#1a1a1a]/90 transition"
+                  >
+                    Register
+                  </Link>
+                </div>
+              )}
+            </div>
 
             <button 
               className="md:hidden p-2 opacity-60 hover:opacity-100"

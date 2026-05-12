@@ -1,5 +1,7 @@
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000';
 
+import type { ReviewCreate, Review, LikeResponse, TopReview, UnlockedBook, UnlockStatus } from '../types';
+
 async function handleResponse(resp: Response) {
   const text = await resp.text();
   try {
@@ -9,9 +11,68 @@ async function handleResponse(resp: Response) {
   }
 }
 
+/**
+ * Make an authenticated request with JWT token
+ */
+async function authFetch(url: string, options: RequestInit = {}) {
+  const token = localStorage.getItem('access_token');
+  const headers = {
+    'Content-Type': 'application/json',
+    ...options.headers,
+  } as HeadersInit;
+
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  let response = await fetch(url, { ...options, headers });
+
+  // If 401, try to refresh token
+  if (response.status === 401 && token) {
+    const refreshToken = localStorage.getItem('refresh_token');
+    if (refreshToken) {
+      try {
+        // Import auth functions dynamically to avoid circular dependency
+        const { refreshAccessToken } = await import('./auth');
+        const newTokens = await refreshAccessToken(refreshToken);
+        localStorage.setItem('access_token', newTokens.access_token);
+        localStorage.setItem('refresh_token', newTokens.refresh_token);
+
+        // Retry original request with new token
+        headers['Authorization'] = `Bearer ${newTokens.access_token}`;
+        response = await fetch(url, { ...options, headers });
+      } catch (error) {
+        // Refresh failed, clear tokens
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+        throw new Error('Session expired. Please login again.');
+      }
+    }
+  }
+
+  return response;
+}
+
 export async function listEditions(limit = 90) {
   const res = await fetch(`${API_BASE}/editions?limit=${limit}`);
   if (!res.ok) throw new Error(`listEditions failed: ${res.status}`);
+  return handleResponse(res);
+}
+
+export async function listEditionsFiltered(filters?: {
+  source?: 'manual' | 'crawler';
+  crawler_name?: 'bookzone' | 'carturesti' | 'libris';
+  skip?: number;
+  limit?: number;
+}) {
+  const params = new URLSearchParams();
+  if (filters?.source) params.append('source', filters.source);
+  if (filters?.crawler_name) params.append('crawler_name', filters.crawler_name);
+  if (filters?.skip !== undefined) params.append('skip', filters.skip.toString());
+  if (filters?.limit !== undefined) params.append('limit', filters.limit.toString());
+  
+  const res = await fetch(`${API_BASE}/editions?${params.toString()}`);
+  if (!res.ok) throw new Error(`listEditionsFiltered failed: ${res.status}`);
   return handleResponse(res);
 }
 
@@ -46,13 +107,15 @@ export async function listPendingReviews() {
   return handleResponse(res);
 }
 
-export async function createReview(payload: any) {
-  const res = await fetch(`${API_BASE}/reviews`, {
+export async function createReview(payload: ReviewCreate): Promise<Review> {
+  const res = await authFetch(`${API_BASE}/reviews`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });
-  if (!res.ok) throw new Error(`createReview failed: ${res.status}`);
+  if (!res.ok) {
+    const error = await handleResponse(res);
+    throw new Error(error.detail || `createReview failed: ${res.status}`);
+  }
   return handleResponse(res);
 }
 
@@ -68,6 +131,48 @@ export async function rejectReview(id: number | string) {
   return handleResponse(res);
 }
 
+// --- Gamification: Likes & Unlocks ---
+
+export async function likeReview(reviewId: number): Promise<LikeResponse> {
+  const res = await authFetch(`${API_BASE}/reviews/${reviewId}/like`, {
+    method: 'POST',
+  });
+  if (!res.ok) {
+    const error = await handleResponse(res);
+    throw new Error(error.detail || `likeReview failed: ${res.status}`);
+  }
+  return handleResponse(res);
+}
+
+export async function unlikeReview(reviewId: number): Promise<LikeResponse> {
+  const res = await authFetch(`${API_BASE}/reviews/${reviewId}/like`, {
+    method: 'DELETE',
+  });
+  if (!res.ok) {
+    const error = await handleResponse(res);
+    throw new Error(error.detail || `unlikeReview failed: ${res.status}`);
+  }
+  return handleResponse(res);
+}
+
+export async function getTopReview(editionId: number): Promise<TopReview | null> {
+  const res = await fetch(`${API_BASE}/editions/${editionId}/top-review`);
+  if (!res.ok) throw new Error(`getTopReview failed: ${res.status}`);
+  return handleResponse(res);
+}
+
+export async function checkEditionUnlocked(editionId: number): Promise<UnlockStatus> {
+  const res = await authFetch(`${API_BASE}/editions/${editionId}/is-unlocked`);
+  if (!res.ok) throw new Error(`checkEditionUnlocked failed: ${res.status}`);
+  return handleResponse(res);
+}
+
+export async function getUnlockedBooks(): Promise<UnlockedBook[]> {
+  const res = await authFetch(`${API_BASE}/unlocked-books`);
+  if (!res.ok) throw new Error(`getUnlockedBooks failed: ${res.status}`);
+  return handleResponse(res);
+}
+
 export async function getAudit(editionId: number | string) {
   const res = await fetch(`${API_BASE}/audit/editions/${editionId}`);
   if (!res.ok) throw new Error(`getAudit failed: ${res.status}`);
@@ -76,6 +181,7 @@ export async function getAudit(editionId: number | string) {
 
 export default {
   listEditions,
+  listEditionsFiltered,
   getEdition,
   searchEditions,
   listRankings,
@@ -84,5 +190,10 @@ export default {
   createReview,
   approveReview,
   rejectReview,
+  likeReview,
+  unlikeReview,
+  getTopReview,
+  checkEditionUnlocked,
+  getUnlockedBooks,
   getAudit,
 };

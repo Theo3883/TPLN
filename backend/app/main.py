@@ -22,17 +22,32 @@ from app.core.security import limiter
 from app.core.error_handlers import register_error_handlers
 
 # Importuri routere existente
-from app.api import editions, reviews, rankings, moderation, export, ingest, search, audit
+from app.api import (
+    audit,
+    auth,
+    editions,
+    export,
+    ingest,
+    likes,
+    moderation,
+    rankings,
+    reviews,
+    search,
+    sentiment,
+    users,
+)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     import asyncio
-    from app.services.search import get_search_client
+
     from app.services.crawler_runner import run_crawler
     from app.services.json_ingest import ingest_from_crawler_output
-    from app.core.config import settings
+
     try:
         from app.services.search import configure_search_index
+
         configure_search_index()
     except Exception:
         pass
@@ -41,8 +56,7 @@ async def lifespan(app: FastAPI):
     asyncio.create_task(run_crawler())
     yield
     await engine.dispose()
-# Router NLP sentiment (nou)
-from app.api import sentiment
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -77,6 +91,10 @@ app.add_middleware(SlowAPIMiddleware)
 # --- Error handlers globali (Martinaș Ioana Maria) ---
 register_error_handlers(app)
 
+# --- Routere de autentificare și utilizatori ---
+app.include_router(auth.router, prefix="/auth", tags=["Autentificare"])
+app.include_router(users.router, prefix="/users", tags=["Utilizatori"])
+
 # --- Routere existente ---
 app.include_router(editions.router, prefix="/editions", tags=["Ediții"])
 app.include_router(reviews.router, prefix="/editions", tags=["Recenzii"])
@@ -87,6 +105,9 @@ app.include_router(export.router, prefix="/export", tags=["Export"])
 app.include_router(ingest.router, prefix="/ingest", tags=["Ingestie"])
 app.include_router(search.router, tags=["Căutare"])
 app.include_router(audit.router, prefix="/audit", tags=["Audit"])
+
+# --- Router gamification (likes și unlocks) ---
+app.include_router(likes.router, tags=["Gamification"])
 
 # --- Router NLP sentiment (Martinaș Ioana Maria) ---
 app.include_router(

@@ -14,13 +14,20 @@ FILES = [
 ]
 
 
-def normalize_item(item: dict) -> dict:
+def get_crawler_name(filename: str) -> str:
+    """Extract crawler name from filename (e.g., 'bookzone.json' -> 'bookzone')."""
+    return Path(filename).stem
+
+
+def normalize_item(item: dict, crawler_name: str) -> dict:
+    """Normalize crawler output item and add crawler_name."""
     return {
         "title": item.get("title") or "",
         "authors": item.get("authors") or [],
         "isbn": item.get("isbn"),
         "publisher": item.get("publisher"),
         "year": item.get("year"),
+        "crawler_name": crawler_name,  # Add crawler tracking
     }
 
 
@@ -38,14 +45,15 @@ def main():
                 print(f"[SKIP] {path} does not exist")
                 continue
 
+            crawler_name = get_crawler_name(filename)
             with path.open("r", encoding="utf-8") as f:
                 items = json.load(f)
 
-            print(f"\nImporting {filename}: {len(items)} items")
+            print(f"\nImporting {filename} ({crawler_name}): {len(items)} items")
 
             for item in items:
                 total += 1
-                payload = normalize_item(item)
+                payload = normalize_item(item, crawler_name)
 
                 if not payload["title"]:
                     errors += 1
