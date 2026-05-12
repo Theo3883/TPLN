@@ -41,10 +41,11 @@ async def _ingest_item(db: AsyncSession, item: dict) -> str:
 
     normalized_title = _normalize(title)
 
-    # Dedup by ISBN
+    # Dedup by ISBN — already exists, skip
     if isbn:
         r = await db.execute(select(Edition).where(Edition.isbn == isbn))
-        if r.scalar_one_or_none():
+        existing = r.scalar_one_or_none()
+        if existing:
             return "duplicate"
 
     # Authors

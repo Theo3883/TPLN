@@ -55,17 +55,6 @@
     "source_url": "https://www.libris.ro/carte/invatam-usor-cifrele-4-6-ani/923268"
   },
   {
-    "title": "Marele dictionar al bolilor si afectiunilor",
-    "authors": [
-      "Jacques Martel"
-    ],
-    "isbn": "9786069050491",
-    "publisher": "ASCENDENT",
-    "year": 2023,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/28926/28925848-1.jpg",
-    "source_url": "https://www.libris.ro/carte/marele-dictionar-al-bolilor-si-afectiunilor-jacques-martel/28925848"
-  },
-  {
     "title": "Pana cand raul cel mare ne va desparti",
     "authors": [
       "Elizabeth Gilbert"
@@ -77,26 +66,15 @@
     "source_url": "https://www.libris.ro/carte/pana-cand-raul-cel-mare-ne-va-desparti-elizabeth-gilbert/45541874"
   },
   {
-    "title": "Nopti albe",
+    "title": "Marele dictionar al bolilor si afectiunilor",
     "authors": [
-      "F.M. Dostoievski"
+      "Jacques Martel"
     ],
-    "isbn": "9786060298960",
-    "publisher": "EDITURA CREATOR",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42052/42051093-1.jpg",
-    "source_url": "https://www.libris.ro/carte/nopti-albe-feodor-m-dostoievski/42051093"
-  },
-  {
-    "title": "101 povesti de noapte buna",
-    "authors": [
-      "Anonim"
-    ],
-    "isbn": "9786060093671",
-    "publisher": "ARAMIS",
-    "year": 2022,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21875/21874061-1.jpg",
-    "source_url": "https://www.libris.ro/carte/101-povesti-de-noapte-buna/21874061"
+    "isbn": "9786069050491",
+    "publisher": "ASCENDENT",
+    "year": 2023,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/28926/28925848-1.jpg",
+    "source_url": "https://www.libris.ro/carte/marele-dictionar-al-bolilor-si-afectiunilor-jacques-martel/28925848"
   },
   {
     "title": "Meditatii",
@@ -121,15 +99,26 @@
     "source_url": "https://www.libris.ro/carte/micul-dejun-al-campionilor-kurt-vonnegut/10898379"
   },
   {
-    "title": "Noul Cod Rutier 2026 pe intelesul tuturor",
+    "title": "Nopti albe",
     "authors": [
-      "Marius Stanculescu"
+      "F.M. Dostoievski"
     ],
-    "isbn": "9789731934150",
-    "publisher": "TEOCORA",
+    "isbn": "9786060298960",
+    "publisher": "EDITURA CREATOR",
     "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1047/1046815-1.jpg?ver=1763379576",
-    "source_url": "https://www.libris.ro/carte/noul-cod-rutier-2026-pe-intelesul-tuturor-marius-stanculescu/1046815"
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42052/42051093-1.jpg",
+    "source_url": "https://www.libris.ro/carte/nopti-albe-feodor-m-dostoievski/42051093"
+  },
+  {
+    "title": "101 povesti de noapte buna",
+    "authors": [
+      "Anonim"
+    ],
+    "isbn": "9786060093671",
+    "publisher": "ARAMIS",
+    "year": 2022,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21875/21874061-1.jpg",
+    "source_url": "https://www.libris.ro/carte/101-povesti-de-noapte-buna/21874061"
   },
   {
     "title": "Codul bunelor maniere. Cei sapte ani de-acasa...",
@@ -143,6 +132,17 @@
     "source_url": "https://www.libris.ro/carte/codul-bunelor-maniere-cei-sapte-ani-de-acasa/24393082"
   },
   {
+    "title": "Noul Cod Rutier 2026 pe intelesul tuturor",
+    "authors": [
+      "Marius Stanculescu"
+    ],
+    "isbn": "9789731934150",
+    "publisher": "TEOCORA",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1047/1046815-1.jpg?ver=1763379576",
+    "source_url": "https://www.libris.ro/carte/noul-cod-rutier-2026-pe-intelesul-tuturor-marius-stanculescu/1046815"
+  },
+  {
     "title": "Omul in cautarea sensului vietii",
     "authors": [
       "Viktor E. Frankl"
@@ -152,6 +152,17 @@
     "year": 2018,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/10868/10867961-1.jpg",
     "source_url": "https://www.libris.ro/carte/omul-in-cautarea-sensului-vietii-viktor-e-frankl/10867961"
+  },
+  {
+    "title": "Iubirea",
+    "authors": [
+      "Octavian Blaga"
+    ],
+    "isbn": "9786060531074",
+    "publisher": "AGNOS",
+    "year": 2024,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/39621/39620868-1.jpg",
+    "source_url": "https://www.libris.ro/carte/iubirea-octavian-blaga/39620868"
   },
   {
     "title": "Cititorul din pestera",
@@ -165,15 +176,15 @@
     "source_url": "https://www.libris.ro/carte/cititorul-din-pestera-rui-zink/45037573"
   },
   {
-    "title": "Iubirea",
+    "title": "Trenul de la miezul noptii",
     "authors": [
-      "Octavian Blaga"
+      "Matt Haig"
     ],
-    "isbn": "9786060531074",
-    "publisher": "AGNOS",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/39621/39620868-1.jpg",
-    "source_url": "https://www.libris.ro/carte/iubirea-octavian-blaga/39620868"
+    "isbn": "9786064323149",
+    "publisher": "NEMIRA",
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/46513/46512627-1.jpg?ver=1776253866",
+    "source_url": "https://www.libris.ro/carte/trenul-de-la-miezul-noptii-matt-haig/46512627"
   },
   {
     "title": "Puterea extraordinara a subconstientului tau",
@@ -198,17 +209,6 @@
     "source_url": "https://www.libris.ro/carte/cand-esti-fericit-loveste-primul-tatiana-tibuleac/43799770"
   },
   {
-    "title": "Trenul de la miezul noptii",
-    "authors": [
-      "Matt Haig"
-    ],
-    "isbn": "9786064323149",
-    "publisher": "NEMIRA",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/46513/46512627-1.jpg?ver=1776253866",
-    "source_url": "https://www.libris.ro/carte/trenul-de-la-miezul-noptii-matt-haig/46512627"
-  },
-  {
     "title": "Jocuri pentru copii inteligenti. Carte de activitati +3 ani",
     "authors": [
       "Anonim"
@@ -218,17 +218,6 @@
     "year": 2016,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/1036/1035895-1.jpg",
     "source_url": "https://www.libris.ro/carte/jocuri-pentru-copii-inteligenti-carte-de-activitati-3-ani/1035895"
-  },
-  {
-    "title": "La rascruce de vanturi",
-    "authors": [
-      "Emily Bronte"
-    ],
-    "isbn": "9786306500246",
-    "publisher": "DAFFI S BOOKS",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/32896/32895352-1.jpg",
-    "source_url": "https://www.libris.ro/carte/la-rascruce-de-vanturi-emily-bronte/32895352"
   },
   {
     "title": "Si-n fiecare dimineata drumul spre casa e tot mai lung",
@@ -242,6 +231,17 @@
     "source_url": "https://www.libris.ro/carte/si-n-fiecare-dimineata-drumul-spre-casa-e-tot-mai-lung-fredrik-backman/42139944"
   },
   {
+    "title": "La rascruce de vanturi",
+    "authors": [
+      "Emily Bronte"
+    ],
+    "isbn": "9786306500246",
+    "publisher": "DAFFI S BOOKS",
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/32896/32895352-1.jpg",
+    "source_url": "https://www.libris.ro/carte/la-rascruce-de-vanturi-emily-bronte/32895352"
+  },
+  {
     "title": "Invat sa citesc! Nivelul 2 - La cirese",
     "authors": [
       "Ion Creanga"
@@ -251,6 +251,17 @@
     "year": 2016,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/1073/1072463-1.jpg",
     "source_url": "https://www.libris.ro/carte/invat-sa-citesc-nivelul-2-la-cirese-ion-creanga/1072463"
+  },
+  {
+    "title": "Pollyanna. Secretul multumirii",
+    "authors": [
+      "Eleanor H. Porter"
+    ],
+    "isbn": "9786068487076",
+    "publisher": "REGIS",
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42439/42438879-1.jpg",
+    "source_url": "https://www.libris.ro/carte/pollyanna-secretul-multumirii-eleanor-h-porter/42438879"
   },
   {
     "title": "Primele poezii si cantecele pentru cei mai mici pitici",
@@ -275,17 +286,6 @@
     "source_url": "https://www.libris.ro/carte/te-rog-sa-nu-vii-in-timp-ce-dorm-iulian-tanase/44217110"
   },
   {
-    "title": "Pollyanna. Secretul multumirii",
-    "authors": [
-      "Eleanor H. Porter"
-    ],
-    "isbn": "9786068487076",
-    "publisher": "REGIS",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42439/42438879-1.jpg",
-    "source_url": "https://www.libris.ro/carte/pollyanna-secretul-multumirii-eleanor-h-porter/42438879"
-  },
-  {
     "title": "Oameni care vor fi mereu cu mine",
     "authors": [
       "Narine Abgarian"
@@ -295,6 +295,17 @@
     "year": 2025,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/44402/44401917-1.jpg?ver=1761894445",
     "source_url": "https://www.libris.ro/carte/oameni-care-vor-fi-mereu-cu-mine-narine-abgarian/44401917"
+  },
+  {
+    "title": "Stiu de ce canta pasarea din colivie",
+    "authors": [
+      "Maya Angelou"
+    ],
+    "isbn": "9786303056654",
+    "publisher": "BOOKZONE",
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/46316/46315591-1.jpg?ver=1775117125",
+    "source_url": "https://www.libris.ro/carte/stiu-de-ce-canta-pasarea-din-colivie-maya-angelou/46315591"
   },
   {
     "title": "Omul devine ceea ce gandeste",
@@ -319,17 +330,6 @@
     "source_url": "https://www.libris.ro/carte/lectia-de-greaca-han-kang/45941994"
   },
   {
-    "title": "Stiu de ce canta pasarea din colivie",
-    "authors": [
-      "Maya Angelou"
-    ],
-    "isbn": "9786303056654",
-    "publisher": "BOOKZONE",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/46316/46315591-1.jpg?ver=1775117125",
-    "source_url": "https://www.libris.ro/carte/stiu-de-ce-canta-pasarea-din-colivie-maya-angelou/46315591"
-  },
-  {
     "title": "Vara in care mama a avut ochii verzi Ed.13",
     "authors": [
       "Tatiana Tibuleac"
@@ -339,6 +339,17 @@
     "year": 2025,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/44479/44478385-1.jpg?ver=1763619425",
     "source_url": "https://www.libris.ro/carte/vara-in-care-mama-a-avut-ochii-verzi-ed-13-tatiana-tibuleac/44478385"
+  },
+  {
+    "title": "Clubul Exploratorilor. Elicopterul Papagal",
+    "authors": [
+      "Bobbie Peers"
+    ],
+    "isbn": "9789734738267",
+    "publisher": "PARALELA 45",
+    "year": 2023,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/29099/29098685-1.jpg",
+    "source_url": "https://www.libris.ro/carte/clubul-exploratorilor-elicopterul-papagal-bobbie-peers/29098685"
   },
   {
     "title": "Nervul vag. Adio stres, inflamatii, tulburari digestive si probleme imunitare",
@@ -351,17 +362,6 @@
     "year": 2023,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/35977/35976682-1.jpg",
     "source_url": "https://www.libris.ro/carte/nervul-vag-adio-stres-inflamatii-tulburari-digestive-si-probleme-imunitare-yann/35976682"
-  },
-  {
-    "title": "Clubul Exploratorilor. Elicopterul Papagal",
-    "authors": [
-      "Bobbie Peers"
-    ],
-    "isbn": "9789734738267",
-    "publisher": "PARALELA 45",
-    "year": 2023,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/29099/29098685-1.jpg",
-    "source_url": "https://www.libris.ro/carte/clubul-exploratorilor-elicopterul-papagal-bobbie-peers/29098685"
   },
   {
     "title": "Secretul Secretelor",
@@ -408,17 +408,6 @@
     "source_url": "https://www.libris.ro/carte/ghidul-fetelor-despre-aproape-tot-ce-trebuie-sa-stie-la-varsta-pre-adolescentei/28761026"
   },
   {
-    "title": "Peter Iepurasul si alte povesti",
-    "authors": [
-      "Beatrix Potter"
-    ],
-    "isbn": "9786309513489",
-    "publisher": "REGIS",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45755/45754030-1.jpg?ver=1772025012",
-    "source_url": "https://www.libris.ro/carte/peter-iepurasul-si-alte-povesti-beatrix-potter/45754030"
-  },
-  {
     "title": "Visul jaguarului",
     "authors": [
       "Miguel Bonnefoy"
@@ -430,15 +419,26 @@
     "source_url": "https://www.libris.ro/carte/visul-jaguarului-miguel-bonnefoy/44672068"
   },
   {
-    "title": "Ganduri catre sine insusi",
+    "title": "Refugiul meu, furtuna mea",
     "authors": [
-      "Marcus Aurelius"
+      "Arundhati Roy"
     ],
-    "isbn": "9789735089900",
+    "isbn": "9786060977568",
     "publisher": "HUMANITAS",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44403/44402645-1.jpg?ver=1762173337",
-    "source_url": "https://www.libris.ro/carte/ganduri-catre-sine-insusi-marcus-aurelius/44402645"
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45327/45326659-1.jpg?ver=1770098802",
+    "source_url": "https://www.libris.ro/carte/refugiul-meu-furtuna-mea-arundhati-roy/45326659"
+  },
+  {
+    "title": "Peter Iepurasul si alte povesti",
+    "authors": [
+      "Beatrix Potter"
+    ],
+    "isbn": "9786309513489",
+    "publisher": "REGIS",
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45755/45754030-1.jpg?ver=1772025012",
+    "source_url": "https://www.libris.ro/carte/peter-iepurasul-si-alte-povesti-beatrix-potter/45754030"
   },
   {
     "title": "De ce esueaza natiunile. Originile puterii, ale prosperitatii si ale saraciei",
@@ -475,17 +475,6 @@
     "source_url": "https://www.libris.ro/carte/gandire-rapida-gandire-lenta-daniel-kahneman/572992"
   },
   {
-    "title": "Avutia natiunilor",
-    "authors": [
-      "Adam Smith"
-    ],
-    "isbn": "9789731931784",
-    "publisher": "PUBLICA",
-    "year": 2011,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/571/570657-1.jpg",
-    "source_url": "https://www.libris.ro/carte/avutia-natiunilor-adam-smith/570657"
-  },
-  {
     "title": "Centimetrul financiar al vietii",
     "authors": [
       "Remus Ungureanu"
@@ -495,6 +484,17 @@
     "year": 2026,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/45943/45942778-1.jpg?ver=1773653635",
     "source_url": "https://www.libris.ro/carte/centimetrul-financiar-al-vietii-remus-ungureanu/45942778"
+  },
+  {
+    "title": "Avutia natiunilor",
+    "authors": [
+      "Adam Smith"
+    ],
+    "isbn": "9789731931784",
+    "publisher": "PUBLICA",
+    "year": 2011,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/571/570657-1.jpg",
+    "source_url": "https://www.libris.ro/carte/avutia-natiunilor-adam-smith/570657"
   },
   {
     "title": "The Inner Game of Tennis. Jocul interior in tenis",
@@ -610,6 +610,19 @@
     "source_url": "https://www.libris.ro/carte/peak-secretele-performantei-de-top-si-noua-stiinta-a-expertizei-anders-ericsson/1072039"
   },
   {
+    "title": "Limbajul personalitatii. PCM in coaching",
+    "authors": [
+      "John Parr",
+      "Gerard Collignon",
+      "Pascal Legrand"
+    ],
+    "isbn": "9786069655207",
+    "publisher": "LEGACY",
+    "year": 2020,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/41578/41577991-1.jpg",
+    "source_url": "https://www.libris.ro/carte/limbajul-personalitatii-pcm-in-coaching-gerard-collignon-pascal-legrand-john/41577991"
+  },
+  {
     "title": "Bazele contabilitatii. Caiet de aplicatii",
     "authors": [
       "Luminita Jalba"
@@ -632,17 +645,26 @@
     "source_url": "https://www.libris.ro/carte/secretele-mintii-de-milionar-t-harv-eker/10903532"
   },
   {
-    "title": "Limbajul personalitatii. PCM in coaching",
+    "title": "Incepe cu de ce Ed.2",
     "authors": [
-      "John Parr",
-      "Gerard Collignon",
-      "Pascal Legrand"
+      "Simon Sinek"
     ],
-    "isbn": "9786069655207",
-    "publisher": "LEGACY",
-    "year": 2020,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/41578/41577991-1.jpg",
-    "source_url": "https://www.libris.ro/carte/limbajul-personalitatii-pcm-in-coaching-gerard-collignon-pascal-legrand-john/41577991"
+    "isbn": "9786067226591",
+    "publisher": "PUBLICA",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42454/42453971-1.jpg",
+    "source_url": "https://www.libris.ro/carte/incepe-cu-de-ce-ed-2-simon-sinek/42453971"
+  },
+  {
+    "title": "Legile succesului in afaceri si in cariera",
+    "authors": [
+      "Bert Hellinger"
+    ],
+    "isbn": "9786306614110",
+    "publisher": "PHILOBIA",
+    "year": 2024,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/37242/37241890-1.jpg",
+    "source_url": "https://www.libris.ro/carte/legile-succesului-in-afaceri-si-in-cariera-bert-hellinger/37241890"
   },
   {
     "title": "Planul de conturi general 2024, Conform OMF 2649 din 2023",
@@ -654,51 +676,6 @@
     "year": 2024,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/37240/37239321-1.jpg",
     "source_url": "https://www.libris.ro/carte/planul-de-conturi-general-2024-conform-omf-2649-din-2023/37239321"
-  },
-  {
-    "title": "Contabilitatea pentru incepatori. Aplicatii practice",
-    "authors": [
-      "Mariana Vlad",
-      "Florin Boghean"
-    ],
-    "isbn": "6421000000281",
-    "publisher": "PRO UNIVERSITARIA",
-    "year": 2019,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/13280/13279547-1.jpg",
-    "source_url": "https://www.libris.ro/carte/contabilitatea-pentru-incepatori-aplicatii-practice-florin-boghean-mariana-vlad/13279547"
-  },
-  {
-    "title": "Intrebari puternice si coaching sistemic",
-    "authors": [
-      "Alain Cardon"
-    ],
-    "isbn": "9786068038933",
-    "publisher": "BMI",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/38031/38030895-1.jpg",
-    "source_url": "https://www.libris.ro/carte/intrebari-puternice-si-coaching-sistemic-alain-cardon/38030895"
-  },
-  {
-    "title": "Cele 7 deprinderi ale persoanelor eficace",
-    "authors": [
-      "Stephen R. Covey"
-    ],
-    "isbn": "9786067830316",
-    "publisher": "ALL",
-    "year": 2016,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1073/1072663-1.jpg",
-    "source_url": "https://www.libris.ro/carte/cele-7-deprinderi-ale-persoanelor-eficace-stephen-r-covey/1072663"
-  },
-  {
-    "title": "Incepe cu de ce Ed.2",
-    "authors": [
-      "Simon Sinek"
-    ],
-    "isbn": "9786067226591",
-    "publisher": "PUBLICA",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42454/42453971-1.jpg",
-    "source_url": "https://www.libris.ro/carte/incepe-cu-de-ce-ed-2-simon-sinek/42453971"
   },
   {
     "title": "Slefuitorul de diamante",
@@ -713,26 +690,37 @@
     "source_url": "https://www.libris.ro/carte/slefuitorul-de-diamante-geshe-michael-roach-lama-christie-mcnally/1257100"
   },
   {
-    "title": "Legile succesului in afaceri si in cariera",
+    "title": "TED Talks. Ghidul oficial TED pentru vorbit in public",
     "authors": [
-      "Bert Hellinger"
+      "Chris Anderson"
     ],
-    "isbn": "9786306614110",
-    "publisher": "PHILOBIA",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/37242/37241890-1.jpg",
-    "source_url": "https://www.libris.ro/carte/legile-succesului-in-afaceri-si-in-cariera-bert-hellinger/37241890"
+    "isbn": "9786067222241",
+    "publisher": "PUBLICA",
+    "year": 2016,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1073/1072041-1.jpg",
+    "source_url": "https://www.libris.ro/carte/ted-talks-ghidul-oficial-ted-pentru-vorbit-in-public-chris-anderson/1072041"
   },
   {
-    "title": "Primal Intelligence",
+    "title": "Cele 7 deprinderi ale persoanelor eficace",
     "authors": [
-      "Angus Fletcher"
+      "Stephen R. Covey"
     ],
-    "isbn": "9786303055367",
-    "publisher": "BOOKZONE",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44217/44216564-1.jpg?ver=1760429268",
-    "source_url": "https://www.libris.ro/carte/primal-intelligence-angus-fletcher/44216564"
+    "isbn": "9786067830316",
+    "publisher": "ALL",
+    "year": 2016,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1073/1072663-1.jpg",
+    "source_url": "https://www.libris.ro/carte/cele-7-deprinderi-ale-persoanelor-eficace-stephen-r-covey/1072663"
+  },
+  {
+    "title": "Intrebari puternice si coaching sistemic",
+    "authors": [
+      "Alain Cardon"
+    ],
+    "isbn": "9786068038933",
+    "publisher": "BMI",
+    "year": 2024,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/38031/38030895-1.jpg",
+    "source_url": "https://www.libris.ro/carte/intrebari-puternice-si-coaching-sistemic-alain-cardon/38030895"
   },
   {
     "title": "Veriga slaba in afaceri",
@@ -746,27 +734,15 @@
     "source_url": "https://www.libris.ro/carte/veriga-slaba-in-afaceri-cristian-onetiu/45542357"
   },
   {
-    "title": "Coaching pentru performanta",
+    "title": "Primal Intelligence",
     "authors": [
-      "John Whitmore",
-      "Tiffany Gaskell"
+      "Angus Fletcher"
     ],
-    "isbn": "9786067226218",
-    "publisher": "PUBLICA",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/38405/38404863-1.jpg",
-    "source_url": "https://www.libris.ro/carte/coaching-pentru-performanta-john-whitmore-tiffany-gaskell/38404863"
-  },
-  {
-    "title": "Harta diferentelor culturale",
-    "authors": [
-      "Erin Meyer"
-    ],
-    "isbn": "9786303214733",
-    "publisher": "GRUPUL EDITORIAL ART",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/38416/38415804-1.jpg",
-    "source_url": "https://www.libris.ro/carte/harta-diferentelor-culturale-erin-meyer/38415804"
+    "isbn": "9786303055367",
+    "publisher": "BOOKZONE",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44217/44216564-1.jpg?ver=1760429268",
+    "source_url": "https://www.libris.ro/carte/primal-intelligence-angus-fletcher/44216564"
   },
   {
     "title": "Jurnalul unui CEO. 33 de legi ale succesului in viata si in business",
@@ -780,6 +756,19 @@
     "source_url": "https://www.libris.ro/carte/jurnalul-unui-ceo-33-de-legi-ale-succesului-in-viata-si-in-business-steven/38398521"
   },
   {
+    "title": "Bate fierul cat e... rece",
+    "authors": [
+      "Calin Iepure",
+      "Ciprian Babita",
+      "Andy Szekely"
+    ],
+    "isbn": "6427664007611",
+    "publisher": "TU MEMORABIL",
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/46031/46030208-1.jpg?ver=1774269988",
+    "source_url": "https://www.libris.ro/carte/bate-fierul-cat-e-rece-calin-iepure-andy-szekely-ciprian-babita/46030208"
+  },
+  {
     "title": "Ecommerce. No Bullshit",
     "authors": [
       "Cosmin Daraban"
@@ -789,19 +778,6 @@
     "year": 2025,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/42446/42445158-1.jpg",
     "source_url": "https://www.libris.ro/carte/ecommerce-no-bullshit-cosmin-daraban/42445158"
-  },
-  {
-    "title": "Bate fierul cat e... rece",
-    "authors": [
-      "Andy Szekely",
-      "Ciprian Babita",
-      "Calin Iepure"
-    ],
-    "isbn": "6427664007611",
-    "publisher": "TU MEMORABIL",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/46031/46030208-1.jpg?ver=1774269988",
-    "source_url": "https://www.libris.ro/carte/bate-fierul-cat-e-rece-calin-iepure-andy-szekely-ciprian-babita/46030208"
   },
   {
     "title": "Regula 10X",
@@ -815,6 +791,17 @@
     "source_url": "https://www.libris.ro/carte/regula-10x-grant-cardone/11041158"
   },
   {
+    "title": "Mitul antreprenorial. Contractul",
+    "authors": [
+      "Michael E. Gerber"
+    ],
+    "isbn": "9786069135662",
+    "publisher": "ACT SI POLITON",
+    "year": 2020,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/13212/13211466-1.jpg",
+    "source_url": "https://www.libris.ro/carte/mitul-antreprenorial-contractul-michael-e-gerber/13211466"
+  },
+  {
     "title": "Cele cinci disfunctii ale unei echipe: O fabula despre leadership",
     "authors": [
       "Patrick Lencioni"
@@ -824,6 +811,17 @@
     "year": 2023,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/35887/35886144-1.jpg",
     "source_url": "https://www.libris.ro/carte/cele-cinci-disfunctii-ale-unei-echipe-o-fabula-despre-leadership-patrick/35886144"
+  },
+  {
+    "title": "Deep Work",
+    "authors": [
+      "Cal Newport"
+    ],
+    "isbn": "9786067223255",
+    "publisher": "PUBLICA",
+    "year": 2018,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1259/1258010-1.jpg",
+    "source_url": "https://www.libris.ro/carte/deep-work-cal-newport/1258010"
   },
   {
     "title": "Cele 21 de calitati ale liderului",
@@ -837,22 +835,22 @@
     "source_url": "https://www.libris.ro/carte/cele-21-de-calitati-ale-liderului-john-c-maxwell/690034"
   },
   {
-    "title": "Mitul antreprenorial. Contractul",
+    "title": "Harta diferentelor culturale",
     "authors": [
-      "Michael E. Gerber"
+      "Erin Meyer"
     ],
-    "isbn": "9786069135662",
-    "publisher": "ACT SI POLITON",
-    "year": 2020,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/13212/13211466-1.jpg",
-    "source_url": "https://www.libris.ro/carte/mitul-antreprenorial-contractul-michael-e-gerber/13211466"
+    "isbn": "9786303214733",
+    "publisher": "GRUPUL EDITORIAL ART",
+    "year": 2024,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/38416/38415804-1.jpg",
+    "source_url": "https://www.libris.ro/carte/harta-diferentelor-culturale-erin-meyer/38415804"
   },
   {
     "title": "Inteligenta financiara",
     "authors": [
-      "Joe Knight",
       "John Case",
-      "Karen Berman"
+      "Karen Berman",
+      "Joe Knight"
     ],
     "isbn": "9786064412669",
     "publisher": "CURTEA VECHE",
@@ -883,15 +881,15 @@
     "source_url": "https://www.libris.ro/carte/contabilitatea-nu-i-doar-pentru-contabili-ed-3-costel-istrate/44141055"
   },
   {
-    "title": "Deep Work",
+    "title": "Coaching transformational",
     "authors": [
-      "Cal Newport"
+      "Marcia Reynolds"
     ],
-    "isbn": "9786067223255",
-    "publisher": "PUBLICA",
-    "year": 2018,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1259/1258010-1.jpg",
-    "source_url": "https://www.libris.ro/carte/deep-work-cal-newport/1258010"
+    "isbn": "9786068038667",
+    "publisher": "BMI",
+    "year": 2021,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/24619/24618139-1.jpg",
+    "source_url": "https://www.libris.ro/carte/coaching-transformational-marcia-reynolds/24618139"
   },
   {
     "title": "Alba ca Zapada. Carte de colorat",
@@ -971,28 +969,6 @@
     "source_url": "https://www.libris.ro/carte/terapie-si-culoare-carte-de-colorat-cu-mandale-ghid-terapeutic-florina-lungu/42110446"
   },
   {
-    "title": "Gandirea vizuala",
-    "authors": [
-      "Rudolf Arnheim"
-    ],
-    "isbn": "9786303442679",
-    "publisher": "POLIROM",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45612/45611776-1.jpg?ver=1771225982",
-    "source_url": "https://www.libris.ro/carte/gandirea-vizuala-rudolf-arnheim/45611776"
-  },
-  {
-    "title": "Pictura, secrete si dezvaluiri",
-    "authors": [
-      "Nadeije Laneyrie Dagen"
-    ],
-    "isbn": "9789737932235",
-    "publisher": "RAO",
-    "year": 2004,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/324/323404-1.jpg",
-    "source_url": "https://www.libris.ro/carte/pictura-secrete-si-dezvaluiri-nadeije-laneyrie-dagen/323404"
-  },
-  {
     "title": "Atlasul frumusetii. Femeile lumii in 500 de portrete",
     "authors": [
       "Mihaela Noroc"
@@ -1015,15 +991,26 @@
     "source_url": "https://www.libris.ro/carte/romania-natura-cladiri-viata-populara-kurt-kielscher/42139440"
   },
   {
-    "title": "O istorie a artei moderne",
+    "title": "Gandirea vizuala",
     "authors": [
-      "Will Gompertz"
+      "Rudolf Arnheim"
     ],
-    "isbn": "9786303440507",
+    "isbn": "9786303442679",
     "publisher": "POLIROM",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42051/42050848-1.jpg",
-    "source_url": "https://www.libris.ro/carte/o-istorie-a-artei-moderne-will-gompertz/42050848"
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45612/45611776-1.jpg?ver=1771225982",
+    "source_url": "https://www.libris.ro/carte/gandirea-vizuala-rudolf-arnheim/45611776"
+  },
+  {
+    "title": "Pictura, secrete si dezvaluiri",
+    "authors": [
+      "Nadeije Laneyrie Dagen"
+    ],
+    "isbn": "9789737932235",
+    "publisher": "RAO",
+    "year": 2004,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/324/323404-1.jpg",
+    "source_url": "https://www.libris.ro/carte/pictura-secrete-si-dezvaluiri-nadeije-laneyrie-dagen/323404"
   },
   {
     "title": "Arta pentru copii si parinti",
@@ -1057,6 +1044,17 @@
     "year": 2016,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/1052/1051999-1.jpg",
     "source_url": "https://www.libris.ro/carte/motive-florale-carte-de-colorat-pentru-adulti/1051999"
+  },
+  {
+    "title": "O istorie a artei moderne",
+    "authors": [
+      "Will Gompertz"
+    ],
+    "isbn": "9786303440507",
+    "publisher": "POLIROM",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/42051/42050848-1.jpg",
+    "source_url": "https://www.libris.ro/carte/o-istorie-a-artei-moderne-will-gompertz/42050848"
   },
   {
     "title": "Povesti cu talc despre Bucuresti si casele, bisericile, targurile, strazile lui",
@@ -1103,17 +1101,6 @@
     "source_url": "https://www.libris.ro/carte/vanatoare-de-comori-prin-bucuresti-vol-1-silvia-colfescu/42438424"
   },
   {
-    "title": "Albastru. Istoria unei culori fascinante",
-    "authors": [
-      "Michel Pastoureau"
-    ],
-    "isbn": "9786066394253",
-    "publisher": "FOR YOU",
-    "year": 2022,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/27845/27844460-1.jpg",
-    "source_url": "https://www.libris.ro/carte/albastru-istoria-unei-culori-fascinante-michel-pastoureau/27844460"
-  },
-  {
     "title": "Semne de carte de colorat: Pisicute irezistibile",
     "authors": [
       "Anonim"
@@ -1158,6 +1145,17 @@
     "source_url": "https://www.libris.ro/carte/relaxare-prin-culoare-carte-de-colorat-pentru-adulti/27310696"
   },
   {
+    "title": "Albastru. Istoria unei culori fascinante",
+    "authors": [
+      "Michel Pastoureau"
+    ],
+    "isbn": "9786066394253",
+    "publisher": "FOR YOU",
+    "year": 2022,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/27845/27844460-1.jpg",
+    "source_url": "https://www.libris.ro/carte/albastru-istoria-unei-culori-fascinante-michel-pastoureau/27844460"
+  },
+  {
     "title": "Culorile. O istorie culturala",
     "authors": [
       "Victoria Finlay"
@@ -1167,6 +1165,17 @@
     "year": 2025,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/42443/42442806-1.jpg",
     "source_url": "https://www.libris.ro/carte/culorile-o-istorie-culturala-victoria-finlay/42442806"
+  },
+  {
+    "title": "Instinctul artistic. Frumusete, placere si evolutie umana",
+    "authors": [
+      "Denis Dutton"
+    ],
+    "isbn": "9786067106619",
+    "publisher": "GRUPUL EDITORIAL ART",
+    "year": 2024,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/38402/38401265-1.jpg",
+    "source_url": "https://www.libris.ro/carte/instinctul-artistic-frumusete-placere-si-evolutie-umana-denis-dutton/38401265"
   },
   {
     "title": "Pe-un picior de plai. Carte de colorat despre satul romanesc",
@@ -1213,6 +1222,17 @@
     "source_url": "https://www.libris.ro/carte/arta-si-iluzie-e-h-gombrich/34639927"
   },
   {
+    "title": "Lumea fetelor. Portrete si povesti din jurul pamantului",
+    "authors": [
+      "Mihaela Noroc"
+    ],
+    "isbn": "9789735083052",
+    "publisher": "HUMANITAS",
+    "year": 2024,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/36649/36648416-1.jpg",
+    "source_url": "https://www.libris.ro/carte/lumea-fetelor-portrete-si-povesti-din-jurul-pamantului-mihaela-noroc/36648416"
+  },
+  {
     "title": "Pasari fantastice. Carte de colorat pentru adulti",
     "authors": [
       "Anonim"
@@ -1234,28 +1254,6 @@
     "year": 2018,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/10897/10896134-1.jpg",
     "source_url": "https://www.libris.ro/carte/cartea-scrierii-caligrafice-chineze-li-shenghong-liu-zheng/10896134"
-  },
-  {
-    "title": "Lumea fetelor. Portrete si povesti din jurul pamantului",
-    "authors": [
-      "Mihaela Noroc"
-    ],
-    "isbn": "9789735083052",
-    "publisher": "HUMANITAS",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/36649/36648416-1.jpg",
-    "source_url": "https://www.libris.ro/carte/lumea-fetelor-portrete-si-povesti-din-jurul-pamantului-mihaela-noroc/36648416"
-  },
-  {
-    "title": "Instinctul artistic. Frumusete, placere si evolutie umana",
-    "authors": [
-      "Denis Dutton"
-    ],
-    "isbn": "9786067106619",
-    "publisher": "GRUPUL EDITORIAL ART",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/38402/38401265-1.jpg",
-    "source_url": "https://www.libris.ro/carte/instinctul-artistic-frumusete-placere-si-evolutie-umana-denis-dutton/38401265"
   },
   {
     "title": "Flori transilvane",
@@ -1302,6 +1300,17 @@
     "source_url": "https://www.libris.ro/carte/peter-pan-carte-de-colorat/1049842"
   },
   {
+    "title": "Semne de carte de colorat: Ingeri",
+    "authors": [
+      "Anonim"
+    ],
+    "isbn": "5948495010614",
+    "publisher": "DIDACTICA PUBLISHING HOUSE",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44478/44477237-1.jpg?ver=1763454897",
+    "source_url": "https://www.libris.ro/carte/semne-de-carte-de-colorat-ingeri/44477237"
+  },
+  {
     "title": "Arta pe intelesul tuturor. 500 de capodopere explicate",
     "authors": [
       "Anonim",
@@ -1314,21 +1323,10 @@
     "source_url": "https://www.libris.ro/carte/arta-pe-intelesul-tuturor-500-de-capodopere-explicate/44403156"
   },
   {
-    "title": "Semne de carte de colorat: Ingeri",
-    "authors": [
-      "Anonim"
-    ],
-    "isbn": "5948495010614",
-    "publisher": "DIDACTICA PUBLISHING HOUSE",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44478/44477237-1.jpg?ver=1763454897",
-    "source_url": "https://www.libris.ro/carte/semne-de-carte-de-colorat-ingeri/44477237"
-  },
-  {
     "title": "O suta de limbaje in scurte povestiri. Relatate de profesori si copii din Reggio Emilia",
     "authors": [
-      "Carla Rinaldi",
       "Lella Gandini",
+      "Carla Rinaldi",
       "Amelia Gambetti"
     ],
     "isbn": "9786065359932",
@@ -1360,15 +1358,15 @@
     "source_url": "https://www.libris.ro/carte/cd-povesti-ion-creanga/1071445"
   },
   {
-    "title": "Audiobook: Ghidul de viata al optimistului inteligent",
+    "title": "Audiobook. 30 de lectii de viata",
     "authors": [
-      "Jurriaan Kamp"
+      "Karl Pillemer"
     ],
-    "isbn": "9786069130315",
+    "isbn": "9786069132821",
     "publisher": "ACT SI POLITON",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1162/1161341-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-ghidul-de-viata-al-optimistului-inteligent-jurriaan-kamp/1161341"
+    "year": 2017,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887679-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-30-de-lectii-de-viata-karl-pillemer/10887679"
   },
   {
     "title": "Audiobook: Cum sa ajungi la pacea interioara",
@@ -1382,26 +1380,15 @@
     "source_url": "https://www.libris.ro/carte/audiobook-cum-sa-ajungi-la-pacea-interioara-eckhart-tolle/1258748"
   },
   {
-    "title": "Audiobook. 30 de lectii de viata",
+    "title": "Audiobook: Ghidul de viata al optimistului inteligent",
     "authors": [
-      "Karl Pillemer"
+      "Jurriaan Kamp"
     ],
-    "isbn": "9786069132821",
+    "isbn": "9786069130315",
     "publisher": "ACT SI POLITON",
-    "year": 2017,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887679-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-30-de-lectii-de-viata-karl-pillemer/10887679"
-  },
-  {
-    "title": "Audiobook: Cum sa castigi prieteni si sa influentezi oameni",
-    "authors": [
-      "Dale Carnegie"
-    ],
-    "isbn": "9786069130759",
-    "publisher": "ACT SI POLITON",
-    "year": 2016,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1073/1072170-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-cum-sa-castigi-prieteni-si-sa-influentezi-oameni-dale-carnegie/1072170"
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1162/1161341-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-ghidul-de-viata-al-optimistului-inteligent-jurriaan-kamp/1161341"
   },
   {
     "title": "CD Chiar daca ti-e frica, actioneaza",
@@ -1413,6 +1400,17 @@
     "year": 2016,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/1072/1071434-1.jpg",
     "source_url": "https://www.libris.ro/carte/cd-chiar-daca-ti-e-frica-actioneaza-susan-jeffers/1071434"
+  },
+  {
+    "title": "Audiobook: Cum sa castigi prieteni si sa influentezi oameni",
+    "authors": [
+      "Dale Carnegie"
+    ],
+    "isbn": "9786069130759",
+    "publisher": "ACT SI POLITON",
+    "year": 2016,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1073/1072170-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-cum-sa-castigi-prieteni-si-sa-influentezi-oameni-dale-carnegie/1072170"
   },
   {
     "title": "Audiobook. Cum sa creezi o aplicatie de un miliard de dolari",
@@ -1440,8 +1438,8 @@
   {
     "title": "Audiobook CD: Bine faci, bine gasesti!",
     "authors": [
-      "Rares Prisecariu",
       "Carmen Ivanov",
+      "Rares Prisecariu",
       "Ciprian Filip"
     ],
     "isbn": null,
@@ -1473,17 +1471,6 @@
     "source_url": "https://www.libris.ro/carte/audiobook-taci-si-saruta-ma-rachel-gibson/10887758"
   },
   {
-    "title": "Audiobook. Efectul compus: Impulsioneaza-ti venitul, viata si succesul",
-    "authors": [
-      "Darren Hardy"
-    ],
-    "isbn": "9786069136652",
-    "publisher": "ACT SI POLITON",
-    "year": 2020,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21420/21419399-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-efectul-compus-impulsioneaza-ti-venitul-viata-si-succesul-darren-hardy/21419399"
-  },
-  {
     "title": "CD Carte Audio Strafurnica Si Prietenii Sai - Manual De Dictie Pentru Copii",
     "authors": [
       "Carmen Ivanov"
@@ -1493,6 +1480,17 @@
     "year": 2015,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/914/913845-1.jpg",
     "source_url": "https://www.libris.ro/carte/cd-carte-audio-strafurnica-si-prietenii-sai-manual-de-dictie-pentru-copii/913845"
+  },
+  {
+    "title": "Audiobook. Efectul compus: Impulsioneaza-ti venitul, viata si succesul",
+    "authors": [
+      "Darren Hardy"
+    ],
+    "isbn": "9786069136652",
+    "publisher": "ACT SI POLITON",
+    "year": 2020,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21420/21419399-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-efectul-compus-impulsioneaza-ti-venitul-viata-si-succesul-darren-hardy/21419399"
   },
   {
     "title": "Audiobook. Uita de griji, incepe sa traiesti",
@@ -1506,17 +1504,6 @@
     "source_url": "https://www.libris.ro/carte/audiobook-uita-de-griji-incepe-sa-traiesti-dale-carnegie/20870903"
   },
   {
-    "title": "CD 69 de poeme de dragoste",
-    "authors": [
-      "Leonard Ancuta"
-    ],
-    "isbn": "9786068739762",
-    "publisher": "ACT SI POLITON",
-    "year": 2016,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1072/1071422-1.jpg",
-    "source_url": "https://www.libris.ro/carte/cd-69-de-poeme-de-dragoste-leonard-ancuta/1071422"
-  },
-  {
     "title": "Audiobook. Supranatural",
     "authors": [
       "Joe Dispenza"
@@ -1526,17 +1513,6 @@
     "year": 2019,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/13111/13110755-1.jpg",
     "source_url": "https://www.libris.ro/carte/audiobook-supranatural-joe-dispenza/13110755"
-  },
-  {
-    "title": "Audiobook. Mancarea: O poveste de dragoste",
-    "authors": [
-      "Jim Gaffigan"
-    ],
-    "isbn": "9786069132609",
-    "publisher": "ACT SI POLITON",
-    "year": 2018,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887781-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-mancarea-o-poveste-de-dragoste-jim-gaffigan/10887781"
   },
   {
     "title": "Audiobook. Calea usoara catre succes",
@@ -1550,15 +1526,26 @@
     "source_url": "https://www.libris.ro/carte/audiobook-calea-usoara-catre-succes-marc-allen/10880380"
   },
   {
-    "title": "Sase sasi in sase saci. Audiobook",
+    "title": "Audiobook. Mancarea: O poveste de dragoste",
     "authors": [
-      "Carmen Ivanov"
+      "Jim Gaffigan"
     ],
-    "isbn": "9786068804040",
-    "publisher": "FAVORIT",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1044/1043517-1.jpg",
-    "source_url": "https://www.libris.ro/carte/sase-sasi-in-sase-saci-audiobook-carmen-ivanov/1043517"
+    "isbn": "9786069132609",
+    "publisher": "ACT SI POLITON",
+    "year": 2018,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887781-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-mancarea-o-poveste-de-dragoste-jim-gaffigan/10887781"
+  },
+  {
+    "title": "CD 69 de poeme de dragoste",
+    "authors": [
+      "Leonard Ancuta"
+    ],
+    "isbn": "9786068739762",
+    "publisher": "ACT SI POLITON",
+    "year": 2016,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1072/1071422-1.jpg",
+    "source_url": "https://www.libris.ro/carte/cd-69-de-poeme-de-dragoste-leonard-ancuta/1071422"
   },
   {
     "title": "CD Cine a zis sa fii normal?",
@@ -1570,6 +1557,17 @@
     "year": 2016,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/1072/1071420-1.jpg",
     "source_url": "https://www.libris.ro/carte/cd-cine-a-zis-sa-fii-normal-dale-archer/1071420"
+  },
+  {
+    "title": "Sase sasi in sase saci. Audiobook",
+    "authors": [
+      "Carmen Ivanov"
+    ],
+    "isbn": "9786068804040",
+    "publisher": "FAVORIT",
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1044/1043517-1.jpg",
+    "source_url": "https://www.libris.ro/carte/sase-sasi-in-sase-saci-audiobook-carmen-ivanov/1043517"
   },
   {
     "title": "Audiobook. Alege-te pe tine insuti. Povestile",
@@ -1603,107 +1601,6 @@
     "year": 2018,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887777-1.jpg",
     "source_url": "https://www.libris.ro/carte/audiobook-poarta-te-ca-un-om-de-succes-gandeste-ca-un-om-de-succes-steve-harvey/10887777"
-  },
-  {
-    "title": "CD Pitch de mare succes",
-    "authors": [
-      "Alexander Taub",
-      "Ellen Dasilva"
-    ],
-    "isbn": "9786068739175",
-    "publisher": "ACT SI POLITON",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/972/971636-1.jpg",
-    "source_url": "https://www.libris.ro/carte/cd-pitch-de-mare-succes-alexander-taub-ellen-dasilva/971636"
-  },
-  {
-    "title": "CD Lansarea",
-    "authors": [
-      "Jeff Walker"
-    ],
-    "isbn": "9786068637907",
-    "publisher": "ACT SI POLITON",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1002/1001559-1.jpg",
-    "source_url": "https://www.libris.ro/carte/cd-lansarea-jeff-walker/1001559"
-  },
-  {
-    "title": "Audiobook. Captivat",
-    "authors": [
-      "Nir Eyal"
-    ],
-    "isbn": "9786069133446",
-    "publisher": "ACT SI POLITON",
-    "year": 2018,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887857-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-captivat-nir-eyal/10887857"
-  },
-  {
-    "title": "Audiobook. Finis",
-    "authors": [
-      "Jon Acuff"
-    ],
-    "isbn": "9786069137260",
-    "publisher": "ACT SI POLITON",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/24505/24504585-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-finis-jon-acuff/24504585"
-  },
-  {
-    "title": "Audiobook. Schimbarea",
-    "authors": [
-      "Chip Heath",
-      "Dan Heath"
-    ],
-    "isbn": "9786069137888",
-    "publisher": "ACT SI POLITON",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/27425/27424782-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-schimbarea-chip-heath-dan-heath/27424782"
-  },
-  {
-    "title": "Audiobook. Magia din minte",
-    "authors": [
-      "U.S. Andersen"
-    ],
-    "isbn": "9786069135600",
-    "publisher": "ACT SI POLITON",
-    "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/20527/20526832-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-magia-din-minte-u-s-andersen/20526832"
-  },
-  {
-    "title": "Audiobook. Scara magica spre succes",
-    "authors": [
-      "Napoleon Hill"
-    ],
-    "isbn": "9786069136225",
-    "publisher": "ACT SI POLITON",
-    "year": 2020,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21293/21292688-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-scara-magica-spre-succes-napoleon-hill/21292688"
-  },
-  {
-    "title": "Audiobook. Afuristele bogate",
-    "authors": [
-      "Nicole Lapin"
-    ],
-    "isbn": "9786069136744",
-    "publisher": "ACT SI POLITON",
-    "year": 2021,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21718/21717021-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-afuristele-bogate-nicole-lapin/21717021"
-  },
-  {
-    "title": "VINIL: Muzica pentru cameleon",
-    "authors": [
-      "Truman Capote"
-    ],
-    "isbn": "9786067105940",
-    "publisher": "GRUPUL EDITORIAL ART",
-    "year": 2018,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/27772/27771779-1.jpg",
-    "source_url": "https://www.libris.ro/carte/vinil-muzica-pentru-cameleon-truman-capote/27771779"
   },
   {
     "title": "Audiobook. Arta relatiilor",
@@ -1740,15 +1637,70 @@
     "source_url": "https://www.libris.ro/carte/audiobook-companie-de-mare-viteza-jason-jennings-laurence-haughton/21196956"
   },
   {
-    "title": "Audiobook. Nu degeaba ii spune munca!",
+    "title": "Cd Am iubit patimirea",
     "authors": [
-      "Larry Winget"
+      "Sfantul Luca Al Crimeii"
     ],
-    "isbn": "9786069136836",
+    "isbn": "9786068739366",
     "publisher": "ACT SI POLITON",
-    "year": 2021,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/27080/27079087-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-nu-degeaba-ii-spune-munca-larry-winget/27079087"
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/988/987721-1.jpg",
+    "source_url": "https://www.libris.ro/carte/cd-am-iubit-patimirea-sfantul-luca-al-crimeii/987721"
+  },
+  {
+    "title": "Audiobook. Scara magica spre succes",
+    "authors": [
+      "Napoleon Hill"
+    ],
+    "isbn": "9786069136225",
+    "publisher": "ACT SI POLITON",
+    "year": 2020,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21293/21292688-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-scara-magica-spre-succes-napoleon-hill/21292688"
+  },
+  {
+    "title": "Audiobook Nebunul In Lectura Autorului",
+    "authors": [
+      "Anonim"
+    ],
+    "isbn": "9786068272122",
+    "publisher": "CATHISMA",
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/692/691259-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-nebunul-in-lectura-autorului/691259"
+  },
+  {
+    "title": "Audiobook. Realimentare",
+    "authors": [
+      "John La Puma"
+    ],
+    "isbn": "9786069132760",
+    "publisher": "ACT SI POLITON",
+    "year": 2017,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887747-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-realimentare-john-la-puma/10887747"
+  },
+  {
+    "title": "Audiobook. 101 cai de a-ti transforma viata",
+    "authors": [
+      "Wayne W. Dyer"
+    ],
+    "isbn": "9786068739359",
+    "publisher": "ACT SI POLITON",
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/870/869077-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-101-cai-de-a-ti-transforma-viata-wayne-w-dyer/869077"
+  },
+  {
+    "title": "Audiobook. Inamicul este egoul",
+    "authors": [
+      "Ryan Holiday"
+    ],
+    "isbn": "9786069134801",
+    "publisher": "ACT SI POLITON",
+    "year": 2019,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/11055/11054879-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-inamicul-este-egoul-ryan-holiday/11054879"
   },
   {
     "title": "Audiobook. Secrete de la Capra Chicotitoare",
@@ -1773,37 +1725,60 @@
     "source_url": "https://www.libris.ro/carte/cd-corigent-la-limba-romana-ion-minulescu/1071442"
   },
   {
-    "title": "Audiobook Nebunul In Lectura Autorului",
+    "title": "Audiobook. Captivat",
     "authors": [
-      "Anonim"
+      "Nir Eyal"
     ],
-    "isbn": "9786068272122",
-    "publisher": "CATHISMA",
+    "isbn": "9786069133446",
+    "publisher": "ACT SI POLITON",
+    "year": 2018,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/10888/10887857-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-captivat-nir-eyal/10887857"
+  },
+  {
+    "title": "CD Pitch de mare succes",
+    "authors": [
+      "Alexander Taub",
+      "Ellen Dasilva"
+    ],
+    "isbn": "9786068739175",
+    "publisher": "ACT SI POLITON",
     "year": null,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/692/691259-1.jpg",
-    "source_url": "https://www.libris.ro/carte/audiobook-nebunul-in-lectura-autorului/691259"
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/972/971636-1.jpg",
+    "source_url": "https://www.libris.ro/carte/cd-pitch-de-mare-succes-alexander-taub-ellen-dasilva/971636"
   },
   {
-    "title": "Poezii",
+    "title": "CD Lansarea",
     "authors": [
-      "Mihai Eminescu"
+      "Jeff Walker"
     ],
-    "isbn": "6426092301100",
-    "publisher": "EDUARD",
-    "year": 2022,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/981/980491-1.jpg",
-    "source_url": "https://www.libris.ro/carte/poezii-mihai-eminescu/980491"
+    "isbn": "9786068637907",
+    "publisher": "ACT SI POLITON",
+    "year": null,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/1002/1001559-1.jpg",
+    "source_url": "https://www.libris.ro/carte/cd-lansarea-jeff-walker/1001559"
   },
   {
-    "title": "Din cer au cazut trei mere",
+    "title": "VINIL: Muzica pentru cameleon",
     "authors": [
-      "Narine Abgarian"
+      "Truman Capote"
     ],
-    "isbn": "9786060977155",
-    "publisher": "HUMANITAS",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44473/44472043-1.jpg?ver=1776940912",
-    "source_url": "https://www.libris.ro/carte/din-cer-au-cazut-trei-mere-narine-abgarian/44472043"
+    "isbn": "9786067105940",
+    "publisher": "GRUPUL EDITORIAL ART",
+    "year": 2018,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/27772/27771779-1.jpg",
+    "source_url": "https://www.libris.ro/carte/vinil-muzica-pentru-cameleon-truman-capote/27771779"
+  },
+  {
+    "title": "Audiobook. Obisnuinte noi, obisnuinte vechi",
+    "authors": [
+      "Jeremy Dean"
+    ],
+    "isbn": "9786069135402",
+    "publisher": "ACT SI POLITON",
+    "year": 2020,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/13212/13211583-1.jpg",
+    "source_url": "https://www.libris.ro/carte/audiobook-obisnuinte-noi-obisnuinte-vechi-jeremy-dean/13211583"
   },
   {
     "title": "Ferma animalelor",
@@ -1817,15 +1792,26 @@
     "source_url": "https://www.libris.ro/carte/ferma-animalelor-george-orwell/37642731"
   },
   {
-    "title": "Plecare, plecari",
+    "title": "Din cer au cazut trei mere",
     "authors": [
-      "Julian Barnes"
+      "Narine Abgarian"
     ],
-    "isbn": "9786064322609",
-    "publisher": "NEMIRA",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45320/45319449-1.jpg?ver=1768805353",
-    "source_url": "https://www.libris.ro/carte/plecare-plecari-julian-barnes/45319449"
+    "isbn": "9786060977155",
+    "publisher": "HUMANITAS",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44473/44472043-1.jpg?ver=1776940912",
+    "source_url": "https://www.libris.ro/carte/din-cer-au-cazut-trei-mere-narine-abgarian/44472043"
+  },
+  {
+    "title": "Poezii",
+    "authors": [
+      "Mihai Eminescu"
+    ],
+    "isbn": "6426092301100",
+    "publisher": "EDUARD",
+    "year": 2022,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/981/980491-1.jpg",
+    "source_url": "https://www.libris.ro/carte/poezii-mihai-eminescu/980491"
   },
   {
     "title": "Oscar si Tanti Roz",
@@ -1837,6 +1823,17 @@
     "year": 2025,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/45157/45157000-1.jpg?ver=1767085054",
     "source_url": "https://www.libris.ro/carte/oscar-si-tanti-roz-eric-emmanuel-schmitt/45157000"
+  },
+  {
+    "title": "Plecare, plecari",
+    "authors": [
+      "Julian Barnes"
+    ],
+    "isbn": "9786064322609",
+    "publisher": "NEMIRA",
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45320/45319449-1.jpg?ver=1768805353",
+    "source_url": "https://www.libris.ro/carte/plecare-plecari-julian-barnes/45319449"
   },
   {
     "title": "1984",
@@ -1870,6 +1867,17 @@
     "year": 2025,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/42441/42440342-1.jpg",
     "source_url": "https://www.libris.ro/carte/maruru-si-hachi-vol-1-pisicile-hoinare-yuri-sonoda/42440342"
+  },
+  {
+    "title": "Istoria romantata a unui safari",
+    "authors": [
+      "Daniela Zeca-Buzura"
+    ],
+    "isbn": "9786303443546",
+    "publisher": "POLIROM",
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45943/45942162-1.jpg?ver=1773408801",
+    "source_url": "https://www.libris.ro/carte/istoria-romantata-a-unui-safari-daniela-zeca-buzura/45942162"
   },
   {
     "title": "Supravietuitorul. Marturia zguduitoare a unui detinut din lagarele naziste",
@@ -1916,39 +1924,6 @@
     "source_url": "https://www.libris.ro/carte/tot-ceea-ce-cauti-se-afla-in-biblioteca-michiko-aoyama/44215360"
   },
   {
-    "title": "Hamnet. Coperta film (Editie tie-in)",
-    "authors": [
-      "Maggie O. Farrell"
-    ],
-    "isbn": "9786064028518",
-    "publisher": "TREI",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45246/45245158-1.jpg?ver=1768215360",
-    "source_url": "https://www.libris.ro/carte/hamnet-coperta-film-editie-tie-in-maggie-o-farrell/45245158"
-  },
-  {
-    "title": "Viata mincinoasa a adultilor",
-    "authors": [
-      "Elena Ferrante"
-    ],
-    "isbn": "9786069783634",
-    "publisher": "PANDORA",
-    "year": 2021,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21684/21683403-1.jpg",
-    "source_url": "https://www.libris.ro/carte/viata-mincinoasa-a-adultilor-elena-ferrante/21683403"
-  },
-  {
-    "title": "Cat timp infloresc lamaii",
-    "authors": [
-      "Zoulfa Katouh"
-    ],
-    "isbn": "9786303050942",
-    "publisher": "BOOKZONE",
-    "year": 2023,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/33692/33691441-1.jpg",
-    "source_url": "https://www.libris.ro/carte/cat-timp-infloresc-lamaii-zoulfa-katouh/33691441"
-  },
-  {
     "title": "Fabule moderne",
     "authors": [
       "Tatiana Tibuleac"
@@ -1971,15 +1946,37 @@
     "source_url": "https://www.libris.ro/carte/alchimistul-editie-aniversara-paulo-coelho/45156832"
   },
   {
-    "title": "Pachet 2 volume: Ultima noapte de dragoste, intaia noapte de razboi",
+    "title": "Viata mincinoasa a adultilor",
     "authors": [
-      "Camil Petrescu"
+      "Elena Ferrante"
     ],
-    "isbn": "9786068391076",
-    "publisher": "AGORA",
-    "year": 2012,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/571/570550-1.jpg?ver=1776429028",
-    "source_url": "https://www.libris.ro/carte/pachet-2-volume-ultima-noapte-de-dragoste-intaia-noapte-de-razboi-camil-petrescu/570550"
+    "isbn": "9786069783634",
+    "publisher": "PANDORA",
+    "year": 2021,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/21684/21683403-1.jpg",
+    "source_url": "https://www.libris.ro/carte/viata-mincinoasa-a-adultilor-elena-ferrante/21683403"
+  },
+  {
+    "title": "Hamnet. Coperta film (Editie tie-in)",
+    "authors": [
+      "Maggie O. Farrell"
+    ],
+    "isbn": "9786064028518",
+    "publisher": "TREI",
+    "year": 2026,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45246/45245158-1.jpg?ver=1768215360",
+    "source_url": "https://www.libris.ro/carte/hamnet-coperta-film-editie-tie-in-maggie-o-farrell/45245158"
+  },
+  {
+    "title": "Cat timp infloresc lamaii",
+    "authors": [
+      "Zoulfa Katouh"
+    ],
+    "isbn": "9786303050942",
+    "publisher": "BOOKZONE",
+    "year": 2023,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/33692/33691441-1.jpg",
+    "source_url": "https://www.libris.ro/carte/cat-timp-infloresc-lamaii-zoulfa-katouh/33691441"
   },
   {
     "title": "Marele Gatsby",
@@ -1993,15 +1990,15 @@
     "source_url": "https://www.libris.ro/carte/marele-gatsby-f-scott-fitzgerald/35002954"
   },
   {
-    "title": "Tigrul noptii",
+    "title": "Pachet 2 volume: Ultima noapte de dragoste, intaia noapte de razboi",
     "authors": [
-      "Yangsze Choo"
+      "Camil Petrescu"
     ],
-    "isbn": "9786060881872",
-    "publisher": "LEDA",
-    "year": 2023,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/33019/33018769-1.jpg",
-    "source_url": "https://www.libris.ro/carte/tigrul-noptii-yangsze-choo/33018769"
+    "isbn": "9786068391076",
+    "publisher": "AGORA",
+    "year": 2012,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/571/570550-1.jpg?ver=1776429028",
+    "source_url": "https://www.libris.ro/carte/pachet-2-volume-ultima-noapte-de-dragoste-intaia-noapte-de-razboi-camil-petrescu/570550"
   },
   {
     "title": "Strainul",
@@ -2026,15 +2023,15 @@
     "source_url": "https://www.libris.ro/carte/fratii-karamazov-vol-1-vol-2-dostoievski/38418044"
   },
   {
-    "title": "Camasa lui Hristos",
+    "title": "Tigrul noptii",
     "authors": [
-      "Lloyd C. Douglas"
+      "Yangsze Choo"
     ],
-    "isbn": "9786309508096",
-    "publisher": "CARTHEMIA",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/41879/41878214-1.jpg",
-    "source_url": "https://www.libris.ro/carte/camasa-lui-hristos-lloyd-c-douglas/41878214"
+    "isbn": "9786060881872",
+    "publisher": "LEDA",
+    "year": 2023,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/33019/33018769-1.jpg",
+    "source_url": "https://www.libris.ro/carte/tigrul-noptii-yangsze-choo/33018769"
   },
   {
     "title": "Hippie",
@@ -2048,26 +2045,26 @@
     "source_url": "https://www.libris.ro/carte/hippie-paulo-coelho/10749631"
   },
   {
-    "title": "Trenul de noapte spre Marrakech. Trilogia Fiicele razboiului Vol.3",
+    "title": "Camasa lui Hristos",
     "authors": [
-      "Dinah Jefferies"
+      "Lloyd C. Douglas"
     ],
-    "isbn": "9786064321602",
-    "publisher": "NEMIRA",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45828/45827684-1.jpg?ver=1772704158",
-    "source_url": "https://www.libris.ro/carte/trenul-de-noapte-spre-marrakech-trilogia-fiicele-razboiului-vol-3-dinah/45827684"
+    "isbn": "9786309508096",
+    "publisher": "CARTHEMIA",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/41879/41878214-1.jpg",
+    "source_url": "https://www.libris.ro/carte/camasa-lui-hristos-lloyd-c-douglas/41878214"
   },
   {
-    "title": "Refugiul meu, furtuna mea",
+    "title": "Moonwalk",
     "authors": [
-      "Arundhati Roy"
+      "Michael Jackson"
     ],
-    "isbn": "9786060977568",
-    "publisher": "HUMANITAS",
-    "year": 2026,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45327/45326659-1.jpg?ver=1770098802",
-    "source_url": "https://www.libris.ro/carte/refugiul-meu-furtuna-mea-arundhati-roy/45326659"
+    "isbn": "9786064316882",
+    "publisher": "NEMIRA",
+    "year": 2024,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/37075/37074261-1.jpg",
+    "source_url": "https://www.libris.ro/carte/moonwalk-michael-jackson/37074261"
   },
   {
     "title": "Hai ca am reusit, pustiule",
@@ -2092,18 +2089,6 @@
     "source_url": "https://www.libris.ro/carte/spitalul-coranul-talmudul-cahalul-francmasoneria-nicolae-c-paulescu/413037"
   },
   {
-    "title": "Prin desert spre libertate. Fuga mea din Coreea de Nord",
-    "authors": [
-      "Sebastien Falletti",
-      "Eunsun Kim"
-    ],
-    "isbn": "9786060883265",
-    "publisher": "CORINT",
-    "year": 2023,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/34363/34362076-1.jpg",
-    "source_url": "https://www.libris.ro/carte/prin-desert-spre-libertate-fuga-mea-din-coreea-de-nord-eunsun-kim-sebastien/34362076"
-  },
-  {
     "title": "Strigoii nostri",
     "authors": [
       "Gabriel Liiceanu"
@@ -2115,15 +2100,16 @@
     "source_url": "https://www.libris.ro/carte/strigoii-nostri-gabriel-liiceanu/45942260"
   },
   {
-    "title": "Moonwalk",
+    "title": "Prin desert spre libertate. Fuga mea din Coreea de Nord",
     "authors": [
-      "Michael Jackson"
+      "Sebastien Falletti",
+      "Eunsun Kim"
     ],
-    "isbn": "9786064316882",
-    "publisher": "NEMIRA",
-    "year": 2024,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/37075/37074261-1.jpg",
-    "source_url": "https://www.libris.ro/carte/moonwalk-michael-jackson/37074261"
+    "isbn": "9786060883265",
+    "publisher": "CORINT",
+    "year": 2023,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/34363/34362076-1.jpg",
+    "source_url": "https://www.libris.ro/carte/prin-desert-spre-libertate-fuga-mea-din-coreea-de-nord-eunsun-kim-sebastien/34362076"
   },
   {
     "title": "Curajul sa-ti pese",
@@ -2137,17 +2123,6 @@
     "source_url": "https://www.libris.ro/carte/curajul-sa-ti-pese-christie-watson/27310528"
   },
   {
-    "title": "Bellu, povestea unei familii si a necropolei unei natiuni",
-    "authors": [
-      "Constantin-Iulian Tanascu"
-    ],
-    "isbn": "9786060299912",
-    "publisher": "EDITURA CREATOR",
-    "year": 2025,
-    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45246/45245627-1.jpg?ver=1768375316",
-    "source_url": "https://www.libris.ro/carte/bellu-povestea-unei-familii-si-a-necropolei-unei-natiuni-constantin-iulian/45245627"
-  },
-  {
     "title": "Regina Maria. Insemnari din ultima parte a vietii",
     "authors": [
       "Sorin Cristescu"
@@ -2157,6 +2132,17 @@
     "year": 2018,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/1258/1257317-1.jpg",
     "source_url": "https://www.libris.ro/carte/regina-maria-insemnari-din-ultima-parte-a-vietii-sorin-cristescu/1257317"
+  },
+  {
+    "title": "Bellu, povestea unei familii si a necropolei unei natiuni",
+    "authors": [
+      "Constantin-Iulian Tanascu"
+    ],
+    "isbn": "9786060299912",
+    "publisher": "EDITURA CREATOR",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/45246/45245627-1.jpg?ver=1768375316",
+    "source_url": "https://www.libris.ro/carte/bellu-povestea-unei-familii-si-a-necropolei-unei-natiuni-constantin-iulian/45245627"
   },
   {
     "title": "Dor de tata",
@@ -2226,5 +2212,16 @@
     "year": 2023,
     "cover_image": "https://cdn4.libris.ro/img/pozeprod/34363/34362090-1.jpg",
     "source_url": "https://www.libris.ro/carte/ce-am-vazut-in-romania-mica-anecdote-istorice-gheorghe-radulescu-archibald/34362090"
+  },
+  {
+    "title": "27 de pasi. Zece ani mai tarziu",
+    "authors": [
+      "Tibi Useriu"
+    ],
+    "isbn": "9789730423051",
+    "publisher": "AQUA FORTE",
+    "year": 2025,
+    "cover_image": "https://cdn4.libris.ro/img/pozeprod/44142/44141839-1.jpg?ver=1759838176",
+    "source_url": "https://www.libris.ro/carte/27-de-pasi-zece-ani-mai-tarziu-tibi-useriu/44141839"
   }
 ]

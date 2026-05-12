@@ -41,7 +41,7 @@ export default function Catalog() {
             <Link to={`/edition/${book.id}`} className="group flex flex-col h-full bg-white p-6 rounded-[2rem] border border-[#1a1a1a]/5 shadow-sm hover:shadow-md transition-shadow">
               <div className="aspect-[3/4] overflow-hidden rounded-2xl mb-6 bg-[#xf5f2ed] border border-[#1a1a1a]/5">
                  {book.coverUrl ? (
-                   <img src={book.coverUrl} alt={book.title} className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" />
+                   <img src={book.coverUrl} alt={book.title} className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                  ) : (
                    <div className="w-full h-full flex items-center justify-center font-serif text-2xl italic opacity-30 bg-[#eae7e0]">
                      {book.title[0]}

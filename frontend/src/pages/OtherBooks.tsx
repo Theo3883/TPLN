@@ -159,6 +159,21 @@ export default function OtherBooks() {
               key={edition.id}
               className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-4 border border-gray-200"
             >
+              {/* Cover Image */}
+              {edition.cover_url ? (
+                <div className="mb-3 aspect-[3/4] overflow-hidden rounded-lg bg-gray-100">
+                  <img
+                    src={edition.cover_url}
+                    alt={edition.book?.title || 'Book cover'}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="mb-3 aspect-[3/4] flex items-center justify-center rounded-lg bg-gray-100 text-gray-300 text-4xl font-serif italic">
+                  {(edition.book?.title || '?')[0]}
+                </div>
+              )}
+
               {/* Crawler Badge */}
               <div className="mb-2">
                 <span

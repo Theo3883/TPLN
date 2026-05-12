@@ -33,6 +33,7 @@ export interface Edition {
   crawler_name?: CrawlerName;
   imported_at?: string;
   preview_text?: string; // For review eligibility
+  cover_url?: string;
   book?: {
     id: number;
     title: string;

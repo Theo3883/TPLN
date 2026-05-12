@@ -51,6 +51,11 @@ async def lifespan(app: FastAPI):
         configure_search_index()
     except Exception:
         pass
+
+    # Load cover image URL cache from crawler JSON files
+    from app.services.cover_cache import load_cover_cache
+    load_cover_cache()
+
     # Ingest any existing crawler JSON files into the DB on startup
     asyncio.create_task(ingest_from_crawler_output())
     asyncio.create_task(run_crawler())

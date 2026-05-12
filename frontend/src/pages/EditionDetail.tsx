@@ -97,7 +97,7 @@ export default function EditionDetail() {
             animate={{ opacity: 1, scale: 1 }}
             className="aspect-[3/4] bg-[#e8e4dc] rounded-2xl overflow-hidden shadow-xl border border-[#1a1a1a]/10 mb-8 sticky top-28 group"
           >
-            {book.coverUrl && <img src={book.coverUrl} className="w-full h-full object-cover mix-blend-multiply" alt={book.title} />}
+            {book.coverUrl && <img src={book.coverUrl} className="w-full h-full object-cover mix-blend-multiply" alt={book.title} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />}
             <div className="absolute inset-0 bg-[#1a1a1a]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                <button 
                 onClick={() => setIsPreviewOpen(true)}

@@ -51,6 +51,7 @@ class EditionResponse(EditionBase):
     review_count: int = 0
     book: BookSchema | None = None
     authors: list[AuthorSchema] = []
+    cover_url: str | None = None
     
     # Source tracking fields
     source: EditionSource = EditionSource.MANUAL

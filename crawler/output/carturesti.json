@@ -977,6 +977,17 @@
     "source_url": "https://carturesti.ro/carte/12-zile-cu-dash-si-lily-1385591296"
   },
   {
+    "title": "Vieti intretesute",
+    "authors": [
+      "Merlin Sheldrake"
+    ],
+    "isbn": "9786067224634",
+    "publisher": "Publica",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1401598257-1-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/vieti-intretesute-1401598257"
+  },
+  {
     "title": "Orasul solitar",
     "authors": [
       "Olivia Laing"
@@ -1153,6 +1164,17 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1495247885-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/madame-piaf-si-cantecul-iubirii-1495247885"
+  },
+  {
+    "title": "Chirurgul si cutitul de gheata",
+    "authors": [
+      "Sam Kean"
+    ],
+    "isbn": "9786067224719",
+    "publisher": "Publica",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1505377245-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/chirurgul-si-cutitul-de-gheata-1505377245"
   },
   {
     "title": "Degenerat",
@@ -1634,6 +1656,17 @@
     "source_url": "https://carturesti.ro/carte/cafe-gourmand-1689579381"
   },
   {
+    "title": "Soare si otel",
+    "authors": [
+      "Yukio Mishima"
+    ],
+    "isbn": "9789735074289",
+    "publisher": "Humanitas",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1694764953-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/soare-si-otel-1694764953"
+  },
+  {
     "title": "Vaccinul",
     "authors": [
       "Joe Miller"
@@ -1643,6 +1676,17 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/1696839265-0-240.jpeg",
     "source_url": "https://carturesti.ro/carte/vaccinul-1696839265"
+  },
+  {
+    "title": "Bourdain. Biografia orala definitiva",
+    "authors": [
+      "Laurie Woolever"
+    ],
+    "isbn": "9786067225259",
+    "publisher": "Publica",
+    "year": null,
+    "cover_image": "https://cdn.dc5.ro/img-prod/1703065341-0-240.jpeg",
+    "source_url": "https://carturesti.ro/carte/bourdain-biografia-orala-definitiva-1703065341"
   },
   {
     "title": "Ascultati",
@@ -1932,17 +1976,6 @@
     "source_url": "https://carturesti.ro/carte/ophanim-1846423564"
   },
   {
-    "title": "Cartea postala",
-    "authors": [
-      "Anne Berest"
-    ],
-    "isbn": "9786064014795",
-    "publisher": "Trei",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1867163685-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/cartea-postala-1867163685"
-  },
-  {
     "title": "Asculta-ma cum soptesc",
     "authors": [
       "Mons Kallentoft"
@@ -2075,39 +2108,6 @@
     "year": null,
     "cover_image": "https://cdn.dc5.ro/img-prod/19674007-1-240.jpeg",
     "source_url": "https://carturesti.ro/carte/taci-si-saruta-ma-19674007"
-  },
-  {
-    "title": "Regina",
-    "authors": [
-      "Matthew Dennison"
-    ],
-    "isbn": "9786064314536",
-    "publisher": "Nemira",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1975193613-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/regina-1975193613"
-  },
-  {
-    "title": "Galveston",
-    "authors": [
-      "Nic Pizzolatto"
-    ],
-    "isbn": "9786068673271",
-    "publisher": "Paladin",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/1975256-0-240.jpeg",
-    "source_url": "https://carturesti.ro/carte/galveston-1975256"
-  },
-  {
-    "title": "Scurta domnie a lui Pepin al IV-lea - Colectia Nobel",
-    "authors": [
-      "John Steinbeck"
-    ],
-    "isbn": "9789731247694",
-    "publisher": "Art",
-    "year": null,
-    "cover_image": "https://cdn.dc5.ro/img-prod/9789731247694-2439898-240.jpg",
-    "source_url": "https://carturesti.ro/carte/scurta-domnie-a-lui-pepin-al-iv-lea-colectia-nobel-197558"
   },
   {
     "title": "Vinegar Girl",
