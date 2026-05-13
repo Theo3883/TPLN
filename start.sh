@@ -1,120 +1,197 @@
-#!/bin/bash
-set -euo pipefail
-cd "$(dirname "$0")"
+#!/usr/bin/env pwsh
+# This script is Windows-compatible. Run with: pwsh ./start.sh
+# On Windows with PowerShell: Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned; .\start.sh
+# Or simply use: powershell -ExecutionPolicy RemoteSigned -File start.sh
 
-# Helper: retry a command up to N times with delay
-retry() {
-  local -r -i max_attempts="$1"; shift
-  local -r cmd=("$@")
-  local -i attempt=1
-  local rc=0
-  while :; do
-    "${cmd[@]}" && rc=0 || rc=$?
-    if [ $rc -eq 0 ]; then
-      return 0
-    fi
-    attempt=$((attempt + 1))
-    if [ $attempt -gt $max_attempts ]; then
-      return $rc
-    fi
-    sleep 2
-  done
+$ErrorActionPreference = "Stop"
+Set-Location -Path $PSScriptRoot
+
+# Track child processes so we can clean up
+$childProcesses = @()
+
+# Cleanup function for graceful shutdown
+$cleanupBlock = {
+    Write-Host "Shutting down..."
+    foreach ($proc in $childProcesses) {
+        try {
+            if ($proc.HasExited -eq $false) {
+                Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+            }
+        }
+        catch {
+            # Process may have already exited
+        }
+    }
 }
 
-# Track child PIDs so we can clean up
-CHILD_PIDS=()
-cleanup() {
-  echo "Shutting down..."
-  for pid in "${CHILD_PIDS[@]:-}"; do
-    if kill -0 "$pid" 2>/dev/null; then
-      kill "$pid" 2>/dev/null || true
-    fi
-  done
-}
-trap cleanup EXIT
+# Register cleanup on exit
+$null = Register-EngineEvent -SourceIdentifier PowerShell.Exiting -Action $cleanupBlock
 
-echo "=== Starting Platformă Evaluare Literatură Română ==="
+Write-Host "=== Starting Platformă Evaluare Literatură Română ==="
 
-echo ">>> Starting Docker (PostgreSQL + Meilisearch)..."
+Write-Host ">>> Starting Docker (PostgreSQL + Meilisearch)..."
 docker-compose up -d
 
-echo ">>> Waiting for PostgreSQL..."
-for i in {1..30}; do
-  docker-compose exec -T postgres pg_isready -U tpln -d tpln 2>/dev/null && break
-  sleep 2
-done
+Write-Host ">>> Waiting for PostgreSQL to be healthy..."
+$postgresReady = $false
+for ($i = 0; $i -lt 60; $i++) {
+    try {
+        $health = docker-compose ps postgres --format "table {{.Status}}" 2>$null
+        if ($health -match "healthy|running") {
+            # Double-check that we can actually connect
+            $result = docker-compose exec -T postgres pg_isready -U tpln -d tpln 2>&1
+            if ($LASTEXITCODE -eq 0 -or $result -match "accepting") {
+                Write-Host "PostgreSQL is ready."
+                $postgresReady = $true
+                break
+            }
+        }
+    }
+    catch {
+        # Ignore errors while waiting
+    }
+    Write-Host "  Still waiting for PostgreSQL... ($i/60)"
+    Start-Sleep -Seconds 1
+}
 
-echo ">>> Waiting for Meilisearch..."
-for i in {1..30}; do
-  curl -s http://localhost:7700/health 2>/dev/null | grep -q "available" && break
-  sleep 2
-done
+if (-not $postgresReady) {
+    Write-Warning "PostgreSQL did not become ready in time. Attempting to continue..."
+}
 
-echo ">>> Installing backend dependencies..."
+Write-Host ">>> Waiting for Meilisearch..."
+$meiliReady = $false
+for ($i = 0; $i -lt 30; $i++) {
+    try {
+        $health = Invoke-RestMethod -Uri "http://localhost:7700/health" -Method Get -TimeoutSec 2 -ErrorAction SilentlyContinue
+        if ($health.status -eq "available") {
+            $meiliReady = $true
+            break
+        }
+    }
+    catch {
+        # Ignore transient errors
+    }
+    Start-Sleep -Seconds 2
+}
+
+if (-not $meiliReady) {
+    Write-Warning "Meilisearch did not become ready in time."
+}
+
+Write-Host ">>> Installing backend dependencies..."
 pip3 install -r backend/requirements.txt -q
 
-echo ">>> Installing crawler dependencies..."
+Write-Host ">>> Installing crawler dependencies..."
 pip3 install -r crawler/requirements.txt -q
 
+Write-Host ">>> Running database migrations..."
+if (Test-Path "backend") {
+    Push-Location backend
+    $env:DATABASE_URL = "postgresql+asyncpg://tpln:tpln@127.0.0.1:5433/tpln"
+    
+    # Give postgres a moment to be fully ready for connections
+    Start-Sleep -Seconds 2
+    
+    try {
+        for ($attempt = 1; $attempt -le 10; $attempt++) {
+            try {
+                Write-Host "  Running migrations (attempt $attempt/10)..."
+                alembic upgrade head 2>&1
+                if ($LASTEXITCODE -eq 0) {
+                    Write-Host "  ✓ Migrations completed successfully."
+                    Pop-Location
+                    break
+                }
+                else {
+                    throw "Alembic exited with code $LASTEXITCODE"
+                }
+            }
+            catch {
+                if ($attempt -lt 10) {
+                    Write-Host "  ⚠ Migration attempt $attempt failed, retrying in 2 seconds..."
+                    Start-Sleep -Seconds 2
+                }
+                else {
+                    throw $_
+                }
+            }
+        }
+    }
+    catch {
+        Pop-Location
+        Write-Warning "Alembic migrations failed after 10 retries."
+        Write-Warning "Try running: powershell ./reset-db.ps1"
+        Write-Warning "Error details: $_"
+    }
+}
+else {
+    Write-Warning "Backend directory not found, skipping migrations."
+}
 
+Write-Host ">>> Starting backend (FastAPI)..."
+$backendProcess = $null
+if (Test-Path "backend") {
+    $backendProcess = Start-Process -FilePath "python" -ArgumentList "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000" `
+        -WorkingDirectory (Join-Path $PSScriptRoot "backend") -PassThru
+    $childProcesses += $backendProcess
+}
+else {
+    Write-Warning "Backend directory not found, skipping backend start."
+}
 
-echo ">>> Running database migrations..."
-# Run alembic with retries in case DB is still initializing
-if [ -d backend ]; then
-  # Run alembic from the backend directory so it finds the 'alembic' scripts folder
-  if ! retry 10 bash -c "cd backend && DATABASE_URL=\"postgresql+asyncpg://tpln:tpln@127.0.0.1:5433/tpln\" alembic upgrade head"; then
-    echo "Warning: alembic migrations failed after retries. Continuing but the backend may not work." >&2
-  fi
-else
-  echo "Warning: backend directory not found, skipping migrations." >&2
-fi
+Write-Host ">>> Waiting for backend to be ready..."
+if ($backendProcess) {
+    for ($i = 0; $i -lt 30; $i++) {
+        try {
+            $response = Invoke-WebRequest -Uri "http://localhost:8000/health" -UseBasicParsing -TimeoutSec 2 -ErrorAction SilentlyContinue
+            if ($response.StatusCode -eq 200) {
+                break
+            }
+        }
+        catch {
+            # Backend is still starting
+        }
+        Start-Sleep -Seconds 2
+    }
+}
 
-echo ">>> Starting backend (FastAPI)..."
-BACKEND_PID=""
-if [ -d backend ]; then
-  (cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8000) &
-  BACKEND_PID=$!
-  CHILD_PIDS+=("$BACKEND_PID")
-else
-  echo "Warning: backend directory not found, skipping backend start." >&2
-fi
+Write-Host ">>> Installing frontend dependencies..."
+$frontendProcess = $null
+if (Test-Path "frontend") {
+    Push-Location frontend
+    npm install --silent
+    Pop-Location
 
-echo ">>> Waiting for backend to be ready..."
-if [ -n "${BACKEND_PID:-}" ]; then
-  echo ">>> Waiting for backend to be ready..."
-  for i in {1..30}; do
-    if curl -sSf http://localhost:8000/health > /dev/null 2>&1; then
-      break
-    fi
-    sleep 2
-  done
-fi
+    Write-Host ">>> Starting frontend (Vite dev server)..."
+    $env:VITE_API_BASE = "http://localhost:8000"
+    $frontendProcess = Start-Process -FilePath "npm" -ArgumentList "run", "dev" `
+        -WorkingDirectory (Join-Path $PSScriptRoot "frontend") -PassThru
+    $childProcesses += $frontendProcess
+}
+else {
+    Write-Warning "Frontend directory not found, skipping frontend start."
+}
 
+Write-Host ""
+Write-Host "=== Ready ==="
+Write-Host "  Backend:  http://localhost:8000"
+Write-Host "  API Docs: http://localhost:8000/docs"
+Write-Host "  Frontend: http://localhost:3000"
+Write-Host ""
+Write-Host "Press Ctrl+C to stop all services."
 
-FRONTEND_PID=""
-if [ -d frontend ]; then
-  echo ">>> Installing frontend dependencies (frontend)..."
-  (cd frontend && npm install --silent)
-
-  echo ">>> Starting frontend (Vite dev server)..."
-  # Ensure the frontend uses the local backend API
-  (cd frontend && VITE_API_BASE="http://localhost:8000" npm run dev --silent) &
-  FRONTEND_PID=$!
-  CHILD_PIDS+=("$FRONTEND_PID")
-else
-  echo "Skipping frontend: frontend directory not found." >&2
-fi
-
-echo ""
-echo "=== Ready ==="
-echo "  Backend:  http://localhost:8000"
-echo "  API Docs: http://localhost:8000/docs"
-echo "  Frontend: http://localhost:3000"
-echo ""
-echo "Press Ctrl+C to stop all services."
-# Wait for background PIDs if they were started
-for pid in "${CHILD_PIDS[@]:-}"; do
-  if [ -n "$pid" ]; then
-    wait "$pid" || true
-  fi
-done
+# Wait for processes - this will block until Ctrl+C is pressed
+try {
+    if ($childProcesses.Count -gt 0) {
+        foreach ($proc in $childProcesses) {
+            Wait-Process -Id $proc.Id -ErrorAction SilentlyContinue
+        }
+    }
+    else {
+        # If no processes, just wait indefinitely
+        while ($true) { Start-Sleep -Seconds 10 }
+    }
+}
+finally {
+    & $cleanupBlock
+}

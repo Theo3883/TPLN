@@ -1,6 +1,7 @@
 from app.models.author import Author
 from app.models.book import Book
 from app.models.edition import Edition, edition_authors
+from app.models.preview_book_review import PreviewBookReview
 from app.models.refresh_token import RefreshToken
 from app.models.review import Review
 from app.models.review_like import ReviewLike

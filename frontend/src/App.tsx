@@ -15,7 +15,9 @@ import Rankings from './pages/Rankings';
 import EditionDetail from './pages/EditionDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import OtherBooks from './pages/OtherBooks';
+import BookPreviews from './pages/BookPreviews';
+import BookPreviewDetail from './pages/BookPreviewDetail';
+import MyGiftBooks from './pages/MyGiftBooks';
 
 export default function App() {
   return (
@@ -25,7 +27,9 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="catalog" element={<Catalog />} />
-            <Route path="other-books" element={<OtherBooks />} />
+            <Route path="book-previews" element={<BookPreviews />} />
+            <Route path="book-previews/:slug" element={<BookPreviewDetail />} />
+            <Route path="my-gift-books" element={<MyGiftBooks />} />
             <Route path="search" element={<Search />} />
             <Route path="rankings" element={<Rankings />} />
             <Route path="edition/:id" element={<EditionDetail />} />

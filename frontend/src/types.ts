@@ -129,3 +129,27 @@ export interface LikeResponse {
   unlocked_user_id?: number;
   locked_user_ids?: number[];
 }
+
+export interface PreviewBook {
+  slug: string;
+  title: string;
+  author: string;
+  pages: number;
+  cover_url: string;
+}
+
+export interface PreviewBookReview {
+  id: number;
+  slug: string;
+  user_id: number;
+  username: string;
+  content: string;
+  rating?: number;
+  status: string;
+  created_at: string;
+  sentiment_label?: SentimentLabel;
+  sentiment_score?: number;
+  sentiment_confidence?: number;
+  like_count: number;
+  liked_by_user: boolean;
+}

@@ -1,6 +1,6 @@
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000';
 
-import type { ReviewCreate, Review, LikeResponse, TopReview, UnlockedBook, UnlockStatus } from '../types';
+import type { ReviewCreate, Review, LikeResponse, TopReview, UnlockedBook, UnlockStatus, PreviewBook, PreviewBookReview } from '../types';
 
 async function handleResponse(resp: Response) {
   const text = await resp.text();
@@ -179,6 +179,47 @@ export async function getAudit(editionId: number | string) {
   return handleResponse(res);
 }
 
+// --- Preview Books ---
+
+export async function listPreviewBooks(): Promise<PreviewBook[]> {
+  const res = await fetch(`${API_BASE}/preview-books`);
+  if (!res.ok) throw new Error(`listPreviewBooks failed: ${res.status}`);
+  return handleResponse(res);
+}
+
+export function getPreviewBookCoverUrl(slug: string): string {
+  return `${API_BASE}/preview-books/${slug}/cover`;
+}
+
+export function getPreviewBookPdfUrl(slug: string): string {
+  return `${API_BASE}/preview-books/${slug}/preview`;
+}
+
+export function getFullBookPdfUrl(slug: string): string {
+  return `${API_BASE}/preview-books/${slug}/full`;
+}
+
+export async function getPreviewBookReviews(slug: string): Promise<PreviewBookReview[]> {
+  const res = await fetch(`${API_BASE}/preview-books/${slug}/reviews`);
+  if (!res.ok) throw new Error(`getPreviewBookReviews failed: ${res.status}`);
+  return handleResponse(res);
+}
+
+export async function createPreviewBookReview(
+  slug: string,
+  payload: { content: string; rating?: number }
+): Promise<PreviewBookReview> {
+  const res = await authFetch(`${API_BASE}/preview-books/${slug}/reviews`, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const error = await handleResponse(res);
+    throw new Error(error.detail || `createPreviewBookReview failed: ${res.status}`);
+  }
+  return handleResponse(res);
+}
+
 export default {
   listEditions,
   listEditionsFiltered,
@@ -196,4 +237,10 @@ export default {
   checkEditionUnlocked,
   getUnlockedBooks,
   getAudit,
+  listPreviewBooks,
+  getPreviewBookCoverUrl,
+  getPreviewBookPdfUrl,
+  getFullBookPdfUrl,
+  getPreviewBookReviews,
+  createPreviewBookReview,
 };

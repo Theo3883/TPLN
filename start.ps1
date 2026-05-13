@@ -53,11 +53,15 @@ Write-Host ">>> Installing crawler dependencies..."
 python -m pip install -r crawler/requirements.txt -q
 
 Write-Host ">>> Installing UI dependencies..."
-python -m pip install -r ui/requirements.txt -q
+if (Test-Path "ui/requirements.txt") {
+    python -m pip install -r ui/requirements.txt -q
+} else {
+    Write-Host "  (No ui/requirements.txt found, skipping.)"
+}
 
 Write-Host ">>> Running database migrations..."
 Push-Location backend
-alembic upgrade head
+python -m alembic upgrade head
 Pop-Location
 
 Write-Host ">>> Starting backend (FastAPI)..."

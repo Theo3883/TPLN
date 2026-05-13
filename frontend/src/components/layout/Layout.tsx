@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, Search, Shield, Trophy, Menu, X, User, LogOut } from 'lucide-react';
+import { BookOpen, Search, Shield, Trophy, Menu, X, User, LogOut, Gift, Eye } from 'lucide-react';
 import { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -12,10 +12,11 @@ export default function Layout() {
   const navLinks = [
     { name: 'Home', path: '/', icon: BookOpen },
     { name: 'Catalog', path: '/catalog', icon: BookOpen },
-    { name: 'Other Books', path: '/other-books', icon: BookOpen },
+    { name: 'Previews', path: '/book-previews', icon: Eye },
     { name: 'Search', path: '/search', icon: Search },
     { name: 'Rankings', path: '/rankings', icon: Trophy },
-    { name: 'Moderation Workspace', path: '/moderation', icon: Shield },
+    ...(user ? [{ name: 'My Gift Books', path: '/my-gift-books', icon: Gift }] : []),
+    { name: 'Moderation', path: '/moderation', icon: Shield },
   ];
 
   return (

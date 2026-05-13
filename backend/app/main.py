@@ -30,6 +30,7 @@ from app.api import (
     ingest,
     likes,
     moderation,
+    preview_books,
     rankings,
     reviews,
     search,
@@ -113,6 +114,9 @@ app.include_router(audit.router, prefix="/audit", tags=["Audit"])
 
 # --- Router gamification (likes și unlocks) ---
 app.include_router(likes.router, tags=["Gamification"])
+
+# --- Router preview books ---
+app.include_router(preview_books.router, tags=["Preview Books"])
 
 # --- Router NLP sentiment (Martinaș Ioana Maria) ---
 app.include_router(
